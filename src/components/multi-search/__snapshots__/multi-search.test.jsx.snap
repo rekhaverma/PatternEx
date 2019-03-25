@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MultiSearch /> should renders correctly 1`] = `
+<div
+  className="multi-search multi-search"
+  style={Object {}}
+>
+  <div
+    className="multi-search__container multi-search__container"
+  >
+    <div
+      className="multi-search__tags multi-search__tags"
+    >
+      <span />
+    </div>
+    <div
+      className="multi-search__input multi-search__input"
+    >
+      <input
+        onChange={[Function]}
+        onKeyDown={[Function]}
+        placeholder=""
+        type="text"
+        value=""
+      />
+      <span
+        className="icon-search"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form /> should match with snapshot 1`] = `
+<form
+  className="login__form"
+  noValidate={true}
+  onSubmit={[Function]}
+>
+  <div
+    className="login__field login-field"
+  >
+    <div
+      className="login-field__icon"
+    >
+      <label
+        htmlFor="login-username"
+      >
+        <span
+          className="icon-user-login"
+        />
+      </label>
+    </div>
+    <div
+      className="login-field__input"
+    >
+      <MatField
+        errorMessage="login.form.username.error"
+        hasError={false}
+        label="login.form.username.label"
+        name="username"
+        onChange={[Function]}
+        onErrorFound={[Function]}
+        prefix="login"
+        type="text"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    className="login__field login-field"
+  >
+    <div
+      className="login-field__icon"
+    >
+      <label
+        htmlFor="login-password"
+      >
+        <span
+          className="icon-lock"
+        />
+      </label>
+    </div>
+    <div
+      className="login-field__input"
+    >
+      <MatField
+        errorMessage="login.form.password.error"
+        hasError={false}
+        label="login.form.password.label"
+        name="password"
+        onChange={[Function]}
+        onErrorFound={[Function]}
+        prefix="login"
+        type="password"
+        value=""
+      />
+    </div>
+  </div>
+  <div
+    className="login__field login__submit"
+  >
+    <button
+      className="button--success +medium"
+      disabled={false}
+      type="submit"
+    >
+      <FormattedMessage
+        id="login.form.submit"
+        values={Object {}}
+      />
+    </button>
+  </div>
+</form>
+`;

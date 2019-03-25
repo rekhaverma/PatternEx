@@ -1,0 +1,29 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('iconSelectBox') {
+  position: relative;
+  cursor: pointer;
+
+  @include element('box') {
+    @include flex(row);
+    justify-content: flex-end;
+  }
+
+  span {
+    font-size: setFontSize('h3');
+    color: setColor('white');
+    padding: setSize('4px');
+  }
+
+  .icon-cog {
+    font-size: setFontSize('h2');
+    color: setColor('orange');
+  }
+
+  .selectBox__optionList{
+    width: 200px;
+    left: auto;
+    right: 0;
+}
+}

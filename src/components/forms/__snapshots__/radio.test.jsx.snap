@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioButton /> renders correctly 1`] = `
+<div
+  className="radio "
+>
+  <input
+    checked={false}
+    id=""
+    name=""
+    onChange={[Function]}
+    type="radio"
+    value=""
+  />
+  <label
+    className="radio-label"
+    htmlFor=""
+  />
+</div>
+`;

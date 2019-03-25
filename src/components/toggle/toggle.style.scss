@@ -1,0 +1,64 @@
+@import 'theme';
+
+$toggle: '.toggle';
+#{$toggle} {
+  border: 1px solid setColor('hover-orange');
+  border-radius: 18px;
+  height: 18px;
+  padding: 1px;
+  transition: background-color .4s, opacity .1s;
+  width: 45px;
+
+  &--disabled {
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    align-items: center;
+    color: setColor('white');
+    cursor: pointer;
+    display: flex;
+    font-size: setFontSizeNew('h5');
+    font-weight: setFontWeight('medium');
+    justify-content: space-between;
+    text-transform: uppercase;
+
+    &:before {
+      background-color: setColor('white');
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      filter: drop-shadow(3px 3px 4px setColor('black', .4));
+      height: 14px;
+      pointer-events: none;
+      width: 14px;
+      order: 2;
+    }
+
+    span {
+      display: inline-block;
+      padding: 0 5px;
+      text-align: center;
+      width: 28px;
+      order: 1;
+    }
+  }
+
+  &--checked {
+    background-color: setColor('hover-orange');
+
+    label {
+      &:before {
+        order: 1;
+      }
+      span {
+        order: 2;
+      }
+    }
+  }
+}

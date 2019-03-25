@@ -1,0 +1,151 @@
+@import 'xbem';
+@import 'theme';
+@include block(Select-control) {
+    @include flex($direction: row);
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid white;
+    border-radius: 0;
+    max-height: 100px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: setColor('cod-grey');
+      border-radius: setRadius('medium');
+      height: 30px;
+    }
+
+  .Select-multi-value-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    .Select-value {
+      margin: setMultipliedSize(1, -3);
+      padding: setMultipliedSize(2, -2);
+      border-radius: 2px;
+      background-color: setColor('orange');
+      color: setColor('white');
+      font-size: setFontSizeNew('h5','big');
+      .Select-value-icon {
+        padding-left: setMultipliedSize();
+        cursor: pointer;
+        float: right;
+      }
+    }
+  }
+  .Select-placeholder {
+    font-size: setFontSizeNew('h5','big');
+    padding-left: 0;
+    position: relative;
+    top: 8px;
+  }
+  .Select-aria-only {
+    display: none;
+  }
+  .Select-clear-zone {
+    cursor: pointer;
+    height: 10px;
+  }
+}
+@include block(Select-menu) {
+  @include element(menu) {
+    height: 14px;
+    font-size: setFontSizeNew('h5','big');
+    font-weight: setFontWeight('book');
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: justify;
+    color: setColor('white');
+    margin-bottom: setMultipliedSize(2);
+    cursor: pointer;
+
+    @include setFontFamily('roboto');
+    @include modifier(control) {
+      color: setColor('orange');
+    }
+  }
+  .Select-menu__menu:hover {
+    background: setColor('orange');
+  }
+}
+
+
+.Select.is-focused > .Select-control{
+  background-color: transparent;
+}
+
+.Select {
+  position: relative;
+}
+
+.Select-menu-outer {
+  margin-top: setMultipliedSize();
+  width: 240px;
+  background: #2D2C2C; // todo: use function to set the color
+  border: 1px solid #757575; // todo: use function to set the color
+  border-radius: 5px;
+  z-index: 10;
+  position: absolute;
+  .Select-menu{
+    background: transparent;
+    padding: setMultipliedSize(2);
+  }
+  .Select-option {
+    background-color: transparent;
+    color: setColor('white');
+    font-size: setFontSizeNew('h4');
+    padding: setMultipliedSize() setMultipliedSize(2);
+    white-space: nowrap;
+  }
+}
+
+@include block('multi-select') {
+  @include element('header') {
+    @include flex($direction: row);
+    justify-content: space-between;
+    padding: setMultipliedSize() 0 setMultipliedSize(2);
+    border-bottom: 2px solid setColor('mid-grey');
+    font-size: setFontSizeNew('h4');
+    span {
+      color: setColor('orange');
+      font-weight: setFontWeight('strong');
+      cursor: pointer;
+    }
+  }
+
+  .checkboxWithLabel{
+    width: 24%;
+    margin-right: 1%;
+    display: inline-block;
+    overflow: hidden;
+  }
+}
+
+@include block('menuRendererCR') {
+
+  @include element('body') {
+    border-bottom: 1px solid setColor('light-grey');
+  }
+  @include element('footer') {
+    cursor: pointer;
+    padding: setMultipliedSize(2) 0;
+    color: setColor('white');
+    font-weight: setFontWeight('bold');
+    .icon-close {
+      border: 2px solid setColor('white');
+      padding: setMultipliedSize(1, -2) setMultipliedSize(1, -1);
+      border-radius: setRadius('circle');
+      margin-right: setMultipliedSize();
+      display: inline-block;
+      transform: rotate(45deg);
+      font-size: setFontSizeNew('h5') !important;
+    }
+  }
+
+}
+

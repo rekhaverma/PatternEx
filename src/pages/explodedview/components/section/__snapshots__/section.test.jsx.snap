@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Section /> should match with snapshot with default props and loading 1`] = `
+<div
+  className="section section--small +"
+>
+  <div
+    className="section__header"
+  />
+  <div
+    className="section__content"
+  >
+    <LoaderBar />
+  </div>
+</div>
+`;
+
+exports[`<Section /> should match with snapshot with default props and not loading 1`] = `
+<div
+  className="section section--small +"
+>
+  <div
+    className="section__header"
+  />
+  <div
+    className="section__content"
+  >
+    <div
+      className="section__children"
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AmbariStatus /> render:  should match with snapshot 1`] = `
+<ServiceStatus
+  className="serviceStatus"
+  states={
+    Array [
+      Object {
+        "name": "HDFS",
+        "order": 1,
+        "running": "",
+        "state": "STARTED",
+      },
+    ]
+  }
+/>
+`;

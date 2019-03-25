@@ -1,0 +1,23 @@
+@import 'xbem';
+@import 'theme';
+
+@include block(pipeline-settings) {
+	margin-top: setMultipliedSize(4);
+
+	@include element(row) {
+    display: flex;
+    width: 100%;
+    padding-top: setMultipliedSize();
+    padding-bottom: setMultipliedSize();
+    	&:last-child{
+			margin-top: setMultipliedSize(3);
+		}
+	    &.pipeline-actions {
+	      margin-top: setMultipliedSize(4);
+	      text-align: right;
+	      display: block;
+	    }
+
+	}
+
+}

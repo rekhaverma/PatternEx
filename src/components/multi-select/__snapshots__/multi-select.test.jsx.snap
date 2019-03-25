@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MultiSelect /> should match with snapshot with default type 1`] = `
+<Select
+  arrowRenderer={[Function]}
+  autosize={true}
+  backspaceRemoves={true}
+  backspaceToRemoveMessage="Press backspace to remove {label}"
+  clearAllText="Clear all"
+  clearRenderer={[Function]}
+  clearValueText="Clear value"
+  clearable={true}
+  closeOnSelect={false}
+  deleteRemoves={true}
+  delimiter=","
+  disabled={false}
+  escapeClearsValue={true}
+  filterOptions={[Function]}
+  ignoreAccents={true}
+  ignoreCase={true}
+  inputProps={Object {}}
+  isLoading={false}
+  joinValues={false}
+  labelKey="label"
+  matchPos="any"
+  matchProp="any"
+  menuBuffer={0}
+  menuRenderer={[Function]}
+  multi={true}
+  noResultsText="No results found"
+  onBlurResetsInput={true}
+  onChange={[Function]}
+  onCloseResetsInput={true}
+  onOpen={[Function]}
+  onSelectResetsInput={true}
+  openOnClick={true}
+  optionComponent={[Function]}
+  options={
+    Array [
+      "test",
+      "another-test",
+    ]
+  }
+  pageSize={5}
+  placeholder="Select features"
+  removeSelected={false}
+  required={false}
+  rtl={false}
+  scrollMenuIntoView={true}
+  searchable={true}
+  simpleValue={true}
+  tabSelectsValue={true}
+  trimFilter={true}
+  value="test"
+  valueComponent={[Function]}
+  valueKey="value"
+/>
+`;
+
+exports[`<MultiSelect /> should match with snapshot with type "customReportSpecific" 1`] = `
+<Select
+  arrowRenderer={[Function]}
+  autosize={true}
+  backspaceRemoves={true}
+  backspaceToRemoveMessage="Press backspace to remove {label}"
+  clearAllText="Clear all"
+  clearRenderer={[Function]}
+  clearValueText="Clear value"
+  clearable={true}
+  closeOnSelect={false}
+  deleteRemoves={true}
+  delimiter=","
+  disabled={false}
+  escapeClearsValue={true}
+  filterOptions={[Function]}
+  ignoreAccents={true}
+  ignoreCase={true}
+  inputProps={Object {}}
+  isLoading={false}
+  joinValues={false}
+  labelKey="label"
+  matchPos="any"
+  matchProp="any"
+  menuBuffer={0}
+  menuRenderer={[Function]}
+  multi={true}
+  noResultsText={
+    <AddNewRuleFooterComponent
+      className="menuRendererCR__footer"
+      onFooterClick={[Function]}
+    />
+  }
+  onBlurResetsInput={true}
+  onChange={[Function]}
+  onCloseResetsInput={true}
+  onOpen={[Function]}
+  onSelectResetsInput={true}
+  openOnClick={true}
+  optionComponent={[Function]}
+  options={
+    Array [
+      "test",
+      "another-test",
+    ]
+  }
+  pageSize={5}
+  placeholder="Select features"
+  removeSelected={false}
+  required={false}
+  rtl={false}
+  scrollMenuIntoView={true}
+  searchable={true}
+  simpleValue={true}
+  tabSelectsValue={true}
+  trimFilter={true}
+  value="test"
+  valueComponent={[Function]}
+  valueKey="value"
+/>
+`;
+
+exports[`<MultiSelect /> should match with snapshot with type "withHeader" 1`] = `
+<Select
+  arrowRenderer={[Function]}
+  autosize={true}
+  backspaceRemoves={true}
+  backspaceToRemoveMessage="Press backspace to remove {label}"
+  clearAllText="Clear all"
+  clearRenderer={[Function]}
+  clearValueText="Clear value"
+  clearable={true}
+  closeOnSelect={false}
+  deleteRemoves={true}
+  delimiter=","
+  disabled={false}
+  escapeClearsValue={true}
+  filterOptions={[Function]}
+  ignoreAccents={true}
+  ignoreCase={true}
+  inputProps={Object {}}
+  isLoading={false}
+  joinValues={false}
+  labelKey="label"
+  matchPos="any"
+  matchProp="any"
+  menuBuffer={0}
+  menuRenderer={[Function]}
+  multi={true}
+  noResultsText="No results found"
+  onBlurResetsInput={true}
+  onChange={[Function]}
+  onCloseResetsInput={true}
+  onOpen={[Function]}
+  onSelectResetsInput={true}
+  openOnClick={true}
+  optionComponent={[Function]}
+  options={
+    Array [
+      "test",
+      "another-test",
+    ]
+  }
+  pageSize={5}
+  placeholder="Select features"
+  removeSelected={false}
+  required={false}
+  rtl={false}
+  scrollMenuIntoView={true}
+  searchable={true}
+  simpleValue={true}
+  tabSelectsValue={true}
+  trimFilter={true}
+  value="test"
+  valueComponent={[Function]}
+  valueKey="value"
+/>
+`;

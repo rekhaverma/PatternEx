@@ -1,0 +1,18 @@
+@mixin draw($w, $h, $r) {
+  width: $w;
+  height: $h;
+  border-radius: $r;
+}
+
+@mixin rectangle($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin square($l) {
+  @include rectangle($l, $l);
+}
+
+@mixin circle($l) {
+  @include draw($l, $l, 50%);
+}

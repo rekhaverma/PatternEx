@@ -1,0 +1,929 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeatMapDropdown /> should match with snapshot 1`] = `
+<div
+  className="dashbboard-heatmap-dropdowns dhd"
+>
+  <div
+    className="dhd__labels"
+  >
+    <FormattedMessage
+      id="heatmap.title"
+      values={Object {}}
+    />
+    <FormattedMessage
+      id="heatmap.subtitle"
+      values={Object {}}
+    />
+  </div>
+  <div
+    className="dhd__items"
+  >
+    <div
+      className="dhd__dropdown dhd-dropdown"
+      key="0"
+    >
+      <div
+        className="dhd-dropdown__label"
+      >
+        <FormattedMessage
+          id="heatmap.tag.reconnaissance"
+          values={Object {}}
+        />
+      </div>
+      <div
+        className="dhd-dropdown__select +trivial"
+      >
+        <WithBoxHOC
+          activeOption="all"
+          allowClear={true}
+          defaultValue="all"
+          dropDownHeader="Filter"
+          onOptionUpdate={[Function]}
+          options={
+            Array [
+              Object {
+                "id": "all",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    All
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "useraccess",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    User Access
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "sipdip",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Connection
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "sip",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Source IP
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "dip",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Destination IP
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "domain",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Domain
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "sipdomain",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Session
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "hpa",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    HPA
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "request",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Request
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+            ]
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="dhd__dropdown dhd-dropdown"
+      key="1"
+    >
+      <div
+        className="dhd-dropdown__label"
+      >
+        <FormattedMessage
+          id="heatmap.tag.delivery"
+          values={Object {}}
+        />
+      </div>
+      <div
+        className="dhd-dropdown__select +low-risk"
+      >
+        <WithBoxHOC
+          activeOption="all"
+          allowClear={true}
+          defaultValue="all"
+          dropDownHeader="Filter"
+          onOptionUpdate={[Function]}
+          options={
+            Array [
+              Object {
+                "id": "all",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    All
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "useraccess",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    User Access
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "sipdip",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Connection
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "sip",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Source IP
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "dip",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Destination IP
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "domain",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Domain
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "sipdomain",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Session
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "hpa",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    HPA
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "request",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Request
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+            ]
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="dhd__dropdown dhd-dropdown"
+      key="2"
+    >
+      <div
+        className="dhd-dropdown__label"
+      >
+        <FormattedMessage
+          id="heatmap.tag.lateralMovement"
+          values={Object {}}
+        />
+      </div>
+      <div
+        className="dhd-dropdown__select +needs-attention"
+      >
+        <WithBoxHOC
+          activeOption="all"
+          allowClear={true}
+          defaultValue="all"
+          dropDownHeader="Filter"
+          onOptionUpdate={[Function]}
+          options={
+            Array [
+              Object {
+                "id": "all",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    All
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "useraccess",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    User Access
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "sipdip",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Connection
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "sip",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Source IP
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "dip",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Destination IP
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "domain",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Domain
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "sipdomain",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Session
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "hpa",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    HPA
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "request",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Request
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+            ]
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="dhd__dropdown dhd-dropdown"
+      key="3"
+    >
+      <div
+        className="dhd-dropdown__label"
+      >
+        <FormattedMessage
+          id="heatmap.tag.commandAndControl"
+          values={Object {}}
+        />
+      </div>
+      <div
+        className="dhd-dropdown__select +medium-risk"
+      >
+        <WithBoxHOC
+          activeOption="all"
+          allowClear={true}
+          defaultValue="all"
+          dropDownHeader="Filter"
+          onOptionUpdate={[Function]}
+          options={
+            Array [
+              Object {
+                "id": "all",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    All
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "useraccess",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    User Access
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "sipdip",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Connection
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "sip",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Source IP
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "dip",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Destination IP
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "domain",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Domain
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "sipdomain",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Session
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "hpa",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    HPA
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "request",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Request
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+            ]
+          }
+        />
+      </div>
+    </div>
+    <div
+      className="dhd__dropdown dhd-dropdown"
+      key="4"
+    >
+      <div
+        className="dhd-dropdown__label"
+      >
+        <FormattedMessage
+          id="heatmap.tag.actionsOnObjective"
+          values={Object {}}
+        />
+      </div>
+      <div
+        className="dhd-dropdown__select +high-risk"
+      >
+        <WithBoxHOC
+          activeOption="all"
+          allowClear={true}
+          defaultValue="all"
+          dropDownHeader="Filter"
+          onOptionUpdate={[Function]}
+          options={
+            Array [
+              Object {
+                "id": "all",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    All
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "useraccess",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    User Access
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "sipdip",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Connection
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "sip",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Source IP
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "dip",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Destination IP
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "domain",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Domain
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "sipdomain",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Session
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "hpa",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    HPA
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+              Object {
+                "id": "request",
+                "value": <span
+                  className="dhd-dropdown__option"
+                >
+                  <span
+                    className="dhd-dropdown__option--label"
+                  >
+                    Request
+                  </span>
+                  <span
+                    className="dhd-dropdown__option--value"
+                  >
+                    0
+                  </span>
+                </span>,
+              },
+            ]
+          }
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

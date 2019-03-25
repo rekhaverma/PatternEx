@@ -1,0 +1,63 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('entity') {
+    @include element('list') {
+        position: relative;
+        @include flex($direction: column);
+    }
+    @include element('item') {
+        cursor: pointer;
+        height: 50px;
+        margin-bottom: 6px;
+        @include flex($direction: row);
+        justify-content: space-between;
+        align-items: center;
+        background-color: setColor('cod-grey');
+        padding: setMultipliedSize(2) setMultipliedSize(4);
+
+        @include state('active') {
+            margin-bottom: 0;
+            border: solid 1px setColor('mid-grey');
+        }
+        span[class^="icon-"] {
+            padding: 0 setMultipliedSize(4);
+            color: setColor('orange');
+            font-size: setFontSizeNew('h4', 'big');
+        }
+        span[class^="icon-chevron"] {
+            font-size: setFontSizeNew('h4');
+            margin: 0;
+            height: auto;
+        }
+    }
+    @include element('group') {
+        @include flex($direction: row);
+        align-items: center;
+
+        .highlight {
+            color: setColor('white');
+        }
+    }
+    @include element('details') {
+        @include flex($direction: row);
+        span {
+            font-size: setFontSizeNew('h4');
+            padding: setMultipliedSize(1, -1) setMultipliedSize(1, -3);
+        }
+    }
+    @include element('table') {
+        z-index: 10;
+        background: setColor('black');
+        .tr-even, .tr-odd {
+            background: setColor('black');
+        }
+        @include state('active') {
+            padding: setMultipliedSize(4);
+            margin-top: 0;
+            width: 100%;
+            position: absolute;
+            border: solid 1px setColor('mid-grey');
+        }
+    }
+}

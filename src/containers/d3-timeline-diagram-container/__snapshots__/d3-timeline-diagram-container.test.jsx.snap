@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TimelineDiagramContainer /> should match with snapshot 1`] = `
+<TimelineDiagram
+  activeView="malicious"
+  config={
+    Object {
+      "marginBottom": 5,
+      "marginLeft": 20,
+      "marginTop": 20,
+      "svgHeight": 160,
+      "svgWidth": 910,
+    }
+  }
+  endDate={"2018-08-10T00:00:00.000Z"}
+  items={Object {}}
+  onDayClick={[Function]}
+  resetDayClick={[Function]}
+  setTimeRange={[Function]}
+  startDate={"2018-08-06T00:00:00.000Z"}
+  tab="malicious"
+  timeRangeEnd={
+    Object {
+      "format": [Function],
+    }
+  }
+  timeRangeEndPosition={870}
+  timeRangeStart={
+    Object {
+      "format": [Function],
+    }
+  }
+  timeRangeStartPosition={0}
+  updateRangePercent={[Function]}
+/>
+`;

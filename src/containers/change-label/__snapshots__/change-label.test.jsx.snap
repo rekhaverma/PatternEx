@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChangeLabel /> render:  should match with snapshot 1`] = `
+<ChangeModal
+  className="changeModal"
+  description=""
+  onCancel={[Function]}
+  onDescriptionChange={[Function]}
+  onItemClick={[Function]}
+  onSave={[Function]}
+  onWeightChange={[Function]}
+  selectedLabel=""
+  tags={Array []}
+  title={Object {}}
+  weight="1"
+/>
+`;

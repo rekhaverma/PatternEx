@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ClustersToolbar /> should match with snapshot 1`] = `
+<div
+  className="clusterToolbar"
+>
+  <div
+    className="clusterToolbar__header"
+  >
+    <div
+      className="clusterToolbar__header__el"
+    >
+      <SelectBox
+        activeOption="sort"
+        onClick={[Function]}
+        options={Array []}
+        singleSelect={true}
+      />
+    </div>
+    <div
+      className="clusterToolbar__header__el"
+    >
+      <Search
+        customClassName=""
+        onChange={[Function]}
+        placeholder="Cluster with central entity"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+        value=""
+      />
+    </div>
+  </div>
+  <ClusterTable
+    activeCluster="first"
+    clientHeight={500}
+    data={Array []}
+    options={
+      Object {
+        "onRowClick": [Function],
+      }
+    }
+  />
+</div>
+`;

@@ -1,0 +1,25 @@
+@import 'xbem';
+@import 'theme';
+
+/**
+check if we're using this
+ */
+@include block('clear-filters') {
+  @include flex($direction: row);
+  justify-content: center;
+  padding: setMultipliedSize(1, -1) 0;
+
+  @include element('button') {
+    padding: setMultipliedSize(1, -3) setMultipliedSize(2);
+    @include prefix(border-radius, setRadius('normal'));
+
+    background-color: setColor('blue');
+
+    color: setColor('white');
+    font-size: setFontSizeNew('h5','big');
+    font-weight: setFontWeight('bold');
+    letter-spacing: -0.3px;
+
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,43 @@
+@import 'xbem';
+@import 'theme';
+@import 'mixins/flex';
+
+$iconSize: 24px;
+
+@include block('threatTactics') {
+  @include flex(row);
+  align-items: center;
+  margin-left: auto;
+
+  @include element('list') {
+    @include flex(row);
+    margin-left: 10px;
+
+    [class^="icon-"], [class*=" icon-"] {
+      @include flex($direction: row);
+      @include prefix(transition, "all 300ms ease");
+
+      align-items: center;
+      justify-content: center;
+
+      width: $iconSize;
+      height: $iconSize;
+      margin: 0 $iconSize / 4;
+      border: 1px solid setColor('mid-grey');
+      border-radius: setRadius('circle');
+
+      color: setColor('mid-grey');
+      font-size: setFontSizeNew('h5','big');
+
+      cursor: pointer;
+    }
+
+    .active {
+      color: setColor('white');
+    }
+
+    .inactive {
+      opacity: 0.3;
+    }
+  }
+}

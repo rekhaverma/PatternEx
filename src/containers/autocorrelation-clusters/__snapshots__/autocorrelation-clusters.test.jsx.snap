@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AutocorrelationClusters /> render:  should match with snapshot 1`] = `
+<Connect(ClustersToolbar)
+  list={Array []}
+  onClusterClick={[Function]}
+  options={
+    Array [
+      Object {
+        "content": "Severity",
+        "id": "severity",
+      },
+      Object {
+        "content": "Newest",
+        "id": "newest",
+      },
+      Object {
+        "content": "Oldest",
+        "id": "oldest",
+      },
+    ]
+  }
+  sortClusterBy=""
+  updateClusterSortBy={[Function]}
+/>
+`;

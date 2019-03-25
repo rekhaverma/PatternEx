@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Reports /> page render:  should match with snapshot 1`] = `
+<section
+  className="reportsLayout"
+>
+  <div
+    className="reportsLayout__row +center"
+  >
+    <span
+      className="title"
+    >
+      <FormattedMessage
+        id="reports.title"
+        values={Object {}}
+      />
+    </span>
+  </div>
+  <div
+    className="reportsLayout__row +rightSide"
+  >
+    <Button
+      className="orangeButton"
+      onClick={[Function]}
+    >
+      <FormattedMessage
+        id="reports.reportModalButton"
+        values={Object {}}
+      />
+    </Button>
+    <Button
+      className="orangeButton"
+      onClick={[Function]}
+    >
+      <FormattedMessage
+        id="reports.addNewRule"
+        values={Object {}}
+      />
+    </Button>
+  </div>
+  <div
+    className="reportsLayout__row +rightSide"
+  >
+    <Search
+      className="reportSearch"
+      inputProps={
+        Object {
+          "onChange": [Function],
+          "placeholder": "Search..",
+          "value": "",
+        }
+      }
+      resetTags={[Function]}
+      style={Object {}}
+      tag={null}
+    />
+  </div>
+  <div
+    className="reportsLayout__row"
+  >
+    <Connect(Table)
+      className="reportsTable"
+      columns={
+        Array [
+          Object {
+            "columnTitle": true,
+            "field": "name",
+            "intl": "reports.table.name",
+            "isKey": true,
+            "label": "Name",
+          },
+          Object {
+            "columnTitle": true,
+            "field": "pipeline",
+            "intl": "reports.table.pipeline",
+            "isKey": false,
+            "label": "Module",
+          },
+          Object {
+            "columnTitle": true,
+            "dataFormat": [Function],
+            "field": "update_time",
+            "intl": "reports.table.update_time",
+            "isKey": false,
+            "label": "Last Updated",
+          },
+          Object {
+            "columnTitle": false,
+            "dataFormat": [Function],
+            "field": "id",
+            "intl": "reports.table.id",
+            "isKey": false,
+            "label": "Actions",
+            "width": "100px",
+          },
+        ]
+      }
+      data={Array []}
+      expandComponent={[Function]}
+      expandableRow={[Function]}
+      options={
+        Object {
+          "onRowClick": [Function],
+        }
+      }
+      pagination={true}
+    />
+  </div>
+</section>
+`;

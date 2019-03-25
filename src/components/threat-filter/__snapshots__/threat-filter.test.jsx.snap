@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ThreatFilter /> should render correctly 1`] = `
+<div
+  className="threatTactics"
+>
+  <p
+    className="threatTactics__label"
+  >
+    <FormattedMessage
+      id="filters.threatTactics"
+      values={Object {}}
+    />
+    :
+  </p>
+  <div
+    className="threatTactics__list"
+  >
+    <Tooltip
+      hideWhenHoveringTooltipContent={false}
+      key="TestThreat"
+      managerStyle={
+        Object {
+          "display": "flex",
+        }
+      }
+      position="bottom"
+      style={Object {}}
+      trigger={
+        <span
+          className=" active"
+          onClick={[Function]}
+        />
+      }
+    >
+      <FormattedHTMLMessage
+        id="tooltip.filterBy"
+        values={
+          Object {
+            "value": "TestThreat",
+          }
+        }
+      />
+    </Tooltip>
+  </div>
+</div>
+`;

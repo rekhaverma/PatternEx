@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReportModal /> page:  render:  should match with snapshot 1`] = `
+<Modal
+  className="ptrx-modal"
+  style={Object {}}
+  type=""
+>
+  <section
+    className="newReport"
+  >
+    <div
+      className="newReport__row +spaceBetween newReport__firstrow"
+    >
+      <span
+        className="newReport__title"
+      >
+        <FormattedMessage
+          id="reports.reportModal.title"
+          values={
+            Object {
+              "modalTitle": "",
+            }
+          }
+        />
+      </span>
+      <span
+        className="icon-close"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="newReport__row +spaceBetween undefined"
+    >
+      <Input
+        className="materialInput"
+        errorMessage=""
+        inputOptions={
+          Object {
+            "id": "reportName",
+            "onChange": [Function],
+            "type": "text",
+            "value": undefined,
+          }
+        }
+        label="*Name"
+      />
+      <div
+        className="newReport__mode"
+      >
+        <SelectBox
+          onClick={[Function]}
+          options={
+            Array [
+              Object {
+                "content": "Batch",
+                "id": "batch",
+              },
+              Object {
+                "content": "Realtime",
+                "id": "realtime",
+              },
+            ]
+          }
+          placeholder="Mode"
+          showLabel={true}
+          singleSelect={true}
+        />
+      </div>
+    </div>
+    <div
+      className="newReport__row +spaceBetween"
+    >
+      <div
+        className="newReport__pipeline"
+      >
+        <SelectBox
+          onClick={[Function]}
+          options={Array []}
+          placeholder="Select Pipeline"
+          showLabel={true}
+          singleSelect={true}
+        />
+      </div>
+    </div>
+    <div
+      className="newReport__row +spaceBetween undefined"
+    >
+      <div
+        className="newReport__rules"
+      >
+        <MultiSelect
+          handleSelectChange={[Function]}
+          onFooterClick={[Function]}
+          options={Array []}
+          placeholder="*Select Rules"
+          type="customReportSpecific"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="newReport__row +rightSide"
+    >
+      <Button
+        className="button--success +small"
+        disabled={true}
+        onClick={[Function]}
+      >
+        <FormattedMessage
+          id="reports.save"
+          values={Object {}}
+        />
+      </Button>
+      <Button
+        className="button--dark +small"
+        onClick={[Function]}
+      >
+        <FormattedMessage
+          id="reports.cancel"
+          values={Object {}}
+        />
+      </Button>
+    </div>
+  </section>
+</Modal>
+`;

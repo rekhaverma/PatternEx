@@ -1,0 +1,74 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('addEditRule') {
+  @include element('header') {
+    display: flex;
+    border-bottom: 1px solid;
+    .big-heading {
+      @include H1(setColor('mid-grey'));
+      flex-grow: 1;
+      margin-bottom: setMultipliedSize(2);
+    }
+  }
+  @include element('message') {
+    color: setColor('red');
+    margin-top: setMultipliedSize(2);
+    font-size: setFontSizeNew('h5','big');
+  }
+  @include element(row) {
+    display: flex;
+    justify-content: space-between;
+    .selectBox {
+      max-width: 100%;
+    }
+    @include modifier('pipelines') {
+      width: 49%;
+      margin-top: setMultipliedSize();
+      z-index: 10;
+    }
+    @include modifier('name') {
+      width: 49%;
+      margin-top: setMultipliedSize(1, -3);
+      input {
+        width: 100%;
+        border-color: setColor('mid-grey');
+        margin-top: setMultipliedSize(1, -3);
+      }
+    }
+    @include modifier('operator') {
+      width: 32%;
+      margin-right: setMultipliedSize(2);
+      margin-top: setMultipliedSize(1, -3);
+    }
+    @include modifier('feature') {
+      width: 32%;
+      margin-right: setMultipliedSize(2);
+      margin-top: setMultipliedSize(1, -3);
+    }
+    @include modifier('value') {
+      width: 32%;
+      .selectBox {
+        margin-top: setMultipliedSize(1, -3);
+      }
+      input {
+        width: 100%;
+      }
+    }
+    @include modifier('action') {
+      margin-top: setMultipliedSize(2);
+      cursor: pointer;
+    }
+  }
+  @include element('action') {
+    margin-top: setMultipliedSize();
+    width: 100%;
+    text-align: right;
+    display: flex;
+    @include modifier(add) {
+    }
+    @include modifier('save') {
+      flex-direction: row-reverse;
+    }
+  }
+}

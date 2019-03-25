@@ -1,0 +1,393 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ExplodedView /> Page render:  should match with snapshot 1`] = `
+<div
+  className="explodedView"
+>
+  <div
+    className="explodedView__header"
+  >
+    <span
+      className="explodedView__backBTNSection"
+    />
+    <span
+      className="explodedView__title"
+    >
+      <FormattedMessage
+        id="evp.title"
+        values={Object {}}
+      />
+    </span>
+    <WithBoxHOC
+      activeOptions={
+        Array [
+          "detailsCard",
+          "labelsHistoryTimeline",
+          "labelsHistoryCard",
+          "geolocation",
+          "top3FeaturesCard",
+          "domainInfoCard",
+          "externalEnrichmentCard",
+          "nxDomain",
+          "contributionPredictionScore",
+          "relatedUsers",
+          "relatedSourceIPs",
+          "vulnerabilityReport",
+          "DHCPCard",
+          "featurePlot",
+        ]
+      }
+      options={
+        Array [
+          Object {
+            "content": "Details",
+            "id": "detailsCard",
+          },
+          Object {
+            "content": "Label History Timeline",
+            "id": "labelsHistoryTimeline",
+          },
+          Object {
+            "content": "Label History",
+            "id": "labelsHistoryCard",
+          },
+          Object {
+            "content": "Autocorrelated Entities/Geolocation",
+            "id": "geolocation",
+          },
+          Object {
+            "content": "Top 3 Feature",
+            "id": "top3FeaturesCard",
+          },
+          Object {
+            "content": "Domain Information",
+            "id": "domainInfoCard",
+          },
+          Object {
+            "content": "External Enrichment",
+            "id": "externalEnrichmentCard",
+          },
+          Object {
+            "content": "NX Domain",
+            "id": "nxDomain",
+          },
+          Object {
+            "content": "Contribution Prediction Score",
+            "id": "contributionPredictionScore",
+          },
+          Object {
+            "content": "Related Users",
+            "id": "relatedUsers",
+          },
+          Object {
+            "content": "Related Source IPs",
+            "id": "relatedSourceIPs",
+          },
+          Object {
+            "content": "Vulnerability Report",
+            "id": "vulnerabilityReport",
+          },
+          Object {
+            "content": "DHCPCard",
+            "id": "DHCPCard",
+          },
+          Object {
+            "content": "FeaturePlot",
+            "id": "featurePlot",
+          },
+        ]
+      }
+      updateCardsOptions={[Function]}
+    />
+  </div>
+  <div
+    className="explodedView__grid"
+  >
+    <div
+      className="explodedView__grid--background"
+    />
+    <WidthProvider
+      breakpoints={
+        Object {
+          "lg": 1500,
+          "md": 1000,
+          "sm": 600,
+        }
+      }
+      className="layout"
+      cols={
+        Object {
+          "lg": 3,
+          "md": 2,
+          "sm": 1,
+        }
+      }
+      containerPadding={
+        Array [
+          0,
+          0,
+        ]
+      }
+      draggableHandle=".icon-drag"
+      layouts={
+        Object {
+          "lg": Array [
+            Object {
+              "h": 1,
+              "i": "detailsCard",
+              "w": 1,
+              "x": 0,
+              "y": 0,
+            },
+            Object {
+              "h": 1,
+              "i": "labelsHistoryTimeline",
+              "w": 2,
+              "x": 1,
+              "y": 0,
+            },
+            Object {
+              "h": 1,
+              "i": "labelsHistoryCard",
+              "w": 1,
+              "x": 0,
+              "y": 1,
+            },
+            Object {
+              "h": 1,
+              "i": "geolocation",
+              "w": 2,
+              "x": 1,
+              "y": 1,
+            },
+            Object {
+              "h": 1,
+              "i": "top3FeaturesCard",
+              "w": 1,
+              "x": 0,
+              "y": 2,
+            },
+            Object {
+              "h": 1,
+              "i": "domainInfoCard",
+              "w": 1,
+              "x": 1,
+              "y": 2,
+            },
+            Object {
+              "h": 1,
+              "i": "externalEnrichmentCard",
+              "w": 1,
+              "x": 2,
+              "y": 2,
+            },
+            Object {
+              "h": 1,
+              "i": "nxDomain",
+              "w": 1,
+              "x": 0,
+              "y": 3,
+            },
+            Object {
+              "h": 1,
+              "i": "contributionPredictionScore",
+              "w": 2,
+              "x": 1,
+              "y": 3,
+            },
+            Object {
+              "h": 1,
+              "i": "relatedUsers",
+              "w": 1,
+              "x": 0,
+              "y": 4,
+            },
+            Object {
+              "h": 1,
+              "i": "relatedSourceIPs",
+              "w": 1,
+              "x": 1,
+              "y": 4,
+            },
+            Object {
+              "h": 1,
+              "i": "vulnerabilityReport",
+              "w": 1,
+              "x": 2,
+              "y": 4,
+            },
+            Object {
+              "h": 1,
+              "i": "DHCPCard",
+              "w": 1,
+              "x": 0,
+              "y": 5,
+            },
+            Object {
+              "h": 1,
+              "i": "featurePlot",
+              "w": 1,
+              "x": 1,
+              "y": 5,
+            },
+          ],
+        }
+      }
+      measureBeforeMount={false}
+      onBreakpointChange={[Function]}
+      onDragStart={[Function]}
+      onDragStop={[Function]}
+      onLayoutChange={[Function]}
+      rowHeight={330}
+      verticalCompact={true}
+      width={0}
+    >
+      <div
+        key="detailsCard"
+      >
+        <Connect(Connect(DetailsCard)) />
+      </div>
+      <div
+        key="labelsHistoryTimeline"
+      >
+        <Connect(Connect(Connect(Connect(Connect(LabelsHistoryTimeline)))))
+          changeSetLabelDisplay={[Function]}
+          endDate={"2018-07-27T23:59:59.999Z"}
+          setLabelDisabled={false}
+          startDate={"2018-06-27T00:00:00.000Z"}
+        />
+      </div>
+      <div
+        key="labelsHistoryCard"
+      >
+        <Connect(Connect(Connect(Connect(LabelsHistoryCard))))
+          changeSetLabelDisplay={[Function]}
+          endDate={"2018-07-27T23:59:59.999Z"}
+          setLabelDisabled={false}
+          startDate={"2018-06-27T00:00:00.000Z"}
+        />
+      </div>
+      <div
+        key="geolocation"
+      >
+        <Connect(Geolocation)
+          onModalOpen={[Function]}
+        />
+      </div>
+      <div
+        key="top3FeaturesCard"
+      >
+        <Connect(Connect(Connect(Top3FeaturesCard))) />
+      </div>
+      <div
+        key="domainInfoCard"
+      >
+        <Connect(DomainInfoCard) />
+      </div>
+      <div
+        key="externalEnrichmentCard"
+      >
+        <Connect(ExternalEnrichmentCard) />
+      </div>
+      <div
+        key="nxDomain"
+      >
+        <Connect(NXDomainsCard)
+          onModalOpen={[Function]}
+        />
+      </div>
+      <div
+        key="contributionPredictionScore"
+      >
+        <Connect(ContributionPredictionScore) />
+      </div>
+      <div
+        key="relatedUsers"
+      >
+        <Connect(DetailsCard) />
+      </div>
+      <div
+        key="relatedSourceIPs"
+      >
+        <Connect(Connect(RelatedSourceIP)) />
+      </div>
+      <div
+        key="vulnerabilityReport"
+      >
+        <Section
+          className=""
+          dropDownOptions={Array []}
+          dropDownState={false}
+          dropdown={false}
+          expandable={false}
+          expandableView={null}
+          filterFeatureList={[Function]}
+          isDraggable={true}
+          loaded={true}
+          modalStyle={Object {}}
+          onDropDownClick={[Function]}
+          onDropDownSelection={[Function]}
+          onModalOpen={[Function]}
+          selectedDropDown={Array []}
+          size="small"
+          title="Vulnerability Report"
+        >
+          <List
+            behaviorType=""
+            columnFormat={Array []}
+            customClass={
+              Object {
+                "base": "details-card",
+              }
+            }
+            data={Object {}}
+            endDate={"2018-01-01T23:59:59.999Z"}
+            handlers={Object {}}
+            pipeline=""
+            startDate={"2018-01-01T00:00:00.000Z"}
+            tabData={Array []}
+            type="@@listComponent/vulnerability_report_card"
+          />
+          <div
+            className="explodedView__toListing"
+          >
+            <Link
+              onlyActiveOnIndex={false}
+              style={Object {}}
+              to="/vulnerability-report?end_time=07-27-2018&start_time=07-27-2018"
+            >
+              <span
+                className="icon-chevron-right"
+              />
+              <FormattedMessage
+                id="evp.toVulnerabilityReportPage"
+                values={Object {}}
+              />
+            </Link>
+          </div>
+        </Section>
+      </div>
+      <div
+        key="DHCPCard"
+      >
+        <Connect(DHCPCard) />
+      </div>
+      <div
+        key="featurePlot"
+      >
+        <Connect(FeaturePlot)
+          searchData={Array []}
+        />
+      </div>
+    </WidthProvider>
+  </div>
+  <div
+    className="explodedView__static-row"
+  >
+    <Connect(Connect(Connect(Connect(Connect(Connect(AnalyticsLogs)))))) />
+  </div>
+  <div
+    className="modal"
+  />
+</div>
+`;

@@ -1,0 +1,95 @@
+@import 'theme';
+@import 'xbem';
+
+@include block('view-data-source') {
+  font-size: setFontSize('h2');
+
+  @include element('header') {
+    @include flex($direction: row);
+
+    border-bottom: 1px solid setColor('light-grey');
+    color: setColor('white');
+
+    font-size: setFontSizeNew('h4', 'big');
+    padding-bottom: setMultipliedSize(2);
+
+    .icon-close {
+      cursor: pointer;
+      margin-left: auto;
+    }
+  }
+
+  @include element('content') {
+    @include flex($direction: row);
+  }
+
+  @include element('configuration') {
+    padding: setSize('normal');
+    width: 50%;
+  }
+
+  @include element('details') {
+    padding: setSize('normal');
+    width: 50%;
+  }
+
+  @include element('tab-no-data') {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 280px;
+  }
+
+  @include element('loader') {
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+
+    .loaderSmall {
+      max-width: 100%;
+    }
+  }
+
+  @include element('footer') {
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: setMultipliedSize(2);
+    @include flex($direction: row);
+  }
+
+  @include element('list') {
+    @include modifier('title') {
+      @include flex($direction: row);
+    }
+
+    @include modifier('title-item') {
+      font-size: setFontSize('h5');
+      text-transform: capitalize;
+      width: 65%;
+
+      &:first-child {
+        width: 35%;
+      }
+    }
+
+    @include modifier('list-content') {
+      @include flex($direction: row);
+      border-bottom: 1px solid setColor('silver');
+      margin-right: 5px;
+
+      &:last-child {
+        border-bottom: 0 none;
+      }
+    }
+
+    @include modifier('list-content-item') {
+      color: setColor('white');
+      font-size: setFontSize('h4');
+      width: 65%;
+
+      &:first-child {
+        width: 35%;
+      }
+    }
+  }
+}

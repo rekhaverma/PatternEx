@@ -1,0 +1,21 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('grid') {
+	path {
+		stroke: setColor('red');
+	}
+
+	text {
+		fill: transparent;
+	}
+}
+
+@include block('header') {
+	fill: setColor('white');
+	font-size: setMultipliedSize(3);
+}
+
+@include block('bartext') {
+	fill: setColor('white');
+}

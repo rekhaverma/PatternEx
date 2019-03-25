@@ -1,0 +1,189 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TimelineDiagram /> renders correctly 1`] = `
+<TimelineDiagram
+  activeView="malicious"
+  config={
+    Object {
+      "marginBottom": 5,
+      "marginLeft": 20,
+      "marginTop": 20,
+      "svgHeight": 160,
+      "svgWidth": 1700,
+    }
+  }
+  endDate={"2018-06-30T23:59:59.999Z"}
+  items={
+    Object {
+      "1527811200000": Object {
+        "malicious": 0,
+        "suspicious": 21,
+      },
+      "1528761600000": Object {
+        "malicious": 65,
+        "suspicious": 107,
+      },
+      "1529712000000": Object {
+        "malicious": 0,
+        "suspicious": 116,
+      },
+      "1529884800000": Object {
+        "malicious": 0,
+        "suspicious": 112,
+      },
+    }
+  }
+  onDayClick={[Function]}
+  resetDayClick={[Function]}
+  setTimeRange={[Function]}
+  startDate={"2018-06-01T00:00:00.000Z"}
+  tab="malicious"
+  timeRangeEnd={Object {}}
+  timeRangeEndPosition={0}
+  timeRangeStart={Object {}}
+  timeRangeStartPosition={0}
+  updateRangePercent={[Function]}
+>
+  <div
+    className="timeline_diagram_container"
+  >
+    <svg
+      height={160}
+      width={1680}
+    >
+      <defs>
+        <linearGradient
+          id="suspicious"
+          x1="0%"
+          x2="0%"
+          y1="0%"
+          y2="100%"
+        >
+          <stop
+            offset="40%"
+            style={
+              Object {
+                "stopColor": "#fffa00",
+                "stopOpacity": 1,
+              }
+            }
+          />
+          <stop
+            offset="100%"
+            style={
+              Object {
+                "stopColor": "#fffa00",
+                "stopOpacity": 0.3,
+              }
+            }
+          />
+        </linearGradient>
+        <linearGradient
+          id="malicious"
+          x1="0%"
+          x2="0%"
+          y1="0%"
+          y2="100%"
+        >
+          <stop
+            offset="40%"
+            style={
+              Object {
+                "stopColor": "#ff0000",
+                "stopOpacity": 1,
+              }
+            }
+          />
+          <stop
+            offset="100%"
+            style={
+              Object {
+                "stopColor": "#ff0000",
+                "stopOpacity": 0.3,
+              }
+            }
+          />
+        </linearGradient>
+        <linearGradient
+          id="clusters"
+          x1="0%"
+          x2="0%"
+          y1="0%"
+          y2="100%"
+        >
+          <stop
+            offset="40%"
+            style={
+              Object {
+                "stopColor": "#ff9d00",
+                "stopOpacity": 1,
+              }
+            }
+          />
+          <stop
+            offset="100%"
+            style={
+              Object {
+                "stopColor": "#ff9d00",
+                "stopOpacity": 0.3,
+              }
+            }
+          />
+        </linearGradient>
+        <linearGradient
+          id="precision"
+          x1="0%"
+          x2="0%"
+          y1="0%"
+          y2="100%"
+        >
+          <stop
+            offset="40%"
+            style={
+              Object {
+                "stopColor": "#c700ff",
+                "stopOpacity": 1,
+              }
+            }
+          />
+          <stop
+            offset="100%"
+            style={
+              Object {
+                "stopColor": "#c700ff",
+                "stopOpacity": 0.3,
+              }
+            }
+          />
+        </linearGradient>
+        <linearGradient
+          id="topLabel"
+          x1="0%"
+          x2="0%"
+          y1="0%"
+          y2="100%"
+        >
+          <stop
+            offset="40%"
+            style={
+              Object {
+                "stopColor": "#7ed321",
+                "stopOpacity": 1,
+              }
+            }
+          />
+          <stop
+            offset="100%"
+            style={
+              Object {
+                "stopColor": "#7ed321",
+                "stopOpacity": 0.3,
+              }
+            }
+          />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+</TimelineDiagram>
+`;

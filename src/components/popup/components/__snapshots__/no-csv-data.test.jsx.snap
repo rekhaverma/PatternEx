@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NoCSVData /> renders:  should match with snapshot 1`] = `
+<div
+  className="no-csv-data-popup"
+>
+  <div
+    className="no-csv-data-popup__content"
+  >
+    <div
+      className="no-csv-data-popup__text"
+    >
+      Text
+    </div>
+    <Button
+      className="button"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": 100,
+        }
+      }
+    >
+      Ok
+    </Button>
+  </div>
+</div>
+`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddNewRuleFooterComponent /> should match with snapshot 1`] = `
+<div
+  className="menuRendererCR__footer"
+  onClick={[Function]}
+>
+  <span>
+    <span
+      className="icon-close"
+    />
+    Add new Rule
+  </span>
+</div>
+`;

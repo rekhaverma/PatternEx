@@ -1,0 +1,91 @@
+@import 'xbem';
+@import 'theme';
+
+/**
+check if we're still using this
+ */
+
+@include block('comboBox') {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+
+  @include element('box') {
+    @include flex($direction: row);
+    flex-wrap: wrap;
+    min-height: 32px;
+
+    border: 1px solid setColor('light-grey');
+
+    background-color: #32353E; // todo: use function to set the color
+
+    @include state('open') {
+      border-color: #5897FB; // todo: use function to set the color
+    }
+  }
+
+  @include element('input') {
+    display: flex;
+    flex: 1;
+    outline: none;
+    padding: setMultipliedSize(1, -1) 0 setMultipliedSize(1, -1) setMultipliedSize(1, -1);
+    border: none;
+    background: transparent;
+    color: setColor('white', 0.6);
+    font-size: setFontSizeNew('h4');
+  }
+
+  @include element('labelList') {
+    @include flex($direction: row);
+    flex-wrap: wrap;
+    padding: setMultipliedSize(1, -1) 0 setMultipliedSize(1, -1) setMultipliedSize(1, -1);
+  }
+
+  @include element('label') {
+    @include flex($direction: row);
+    justify-content: center;
+    padding: setMultipliedSize(1, -1);
+    margin-right: setMultipliedSize(1, -1);
+    border-radius: 3px;
+
+    background: #AEAFAE; // todo: use function to set the color
+
+    color: #464646; // todo: use function to set the color
+    font-size: setFontSizeNew('h4');
+    font-weight: 400;
+    text-transform: uppercase;
+
+    .icon-close {
+      margin-left: setMultipliedSize(3);
+      cursor: pointer;
+    }
+  }
+
+  @include element('optionList') {
+    position: absolute;
+    top: 100%;
+
+    width: 100%;
+    color: #444; // todo: use function to set the color
+    padding: setMultipliedSize(2) 0;
+    margin: setMultipliedSize(2) 0 0 0;
+    background: #2E3742; // todo: use function to set the color
+    box-shadow: 0 4px 5px setColor('black', 0.15);
+  }
+
+  @include element('option') {
+    display: block;
+    @include prefix('transition', 'all 300ms ease');
+    width: 100%;
+    padding: setMultipliedSize() setMultipliedSize(2);
+
+    color: setColor('white');
+    font-size: setFontSizeNew('h4');
+    line-height: 1;
+
+    cursor: pointer;
+    &:hover {
+      background: #3C675D; // todo: use function to set the color
+    }
+  }
+}

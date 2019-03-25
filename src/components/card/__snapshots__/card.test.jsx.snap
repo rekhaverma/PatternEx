@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> should match with snapshot 1`] = `
+<div
+  className="card"
+>
+  <div
+    className="card__container"
+  >
+    <CardHeader
+      count="count"
+      countValue={1}
+      fullWidth={false}
+      hasHelp={false}
+      hasMore={false}
+      hasMoreValue={false}
+      onHelpClick={[Function]}
+      onMoreClick={[Function]}
+      title="Untitled"
+    >
+      <div />
+    </CardHeader>
+    <div
+      className="card__content"
+    >
+      <div />
+    </div>
+    <CardFooter
+      content={<div />}
+    />
+  </div>
+</div>
+`;

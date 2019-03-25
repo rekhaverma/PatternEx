@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Search /> should match with snapshot 1`] = `
+<div
+  className="test-class"
+  style={Object {}}
+>
+  <Tag
+    onClick={[Function]}
+    type="test-tag"
+  />
+  <Input
+    autoFocus={false}
+    className="test-class__input"
+    disabled={false}
+    id=""
+    name=""
+    onChange={[Function]}
+    onClick={[Function]}
+    onKeyPress={[Function]}
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+    onSubmit={[Function]}
+    placeholder=""
+    style={Object {}}
+    type="text"
+    value=""
+  />
+  <span
+    className="icon-search test-class__icon"
+  />
+</div>
+`;

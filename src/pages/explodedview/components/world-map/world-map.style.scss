@@ -1,0 +1,56 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('worldMap') {
+    position: relative;
+
+    @include flex($direction: row);
+    justify-content: center;
+
+    path {
+        fill: setColor('white');
+        stroke: setColor('tundora');
+        stroke-width: 0.3;
+        opacity: 0.8;
+      }
+      
+    circle {
+        fill: setColor('orange');
+    }
+    
+    .connection {
+        stroke: setColor('orange');
+        stroke-width: 1px;
+        fill: none;
+    }
+
+    @include element('tooltip') {
+        position: absolute;
+        padding: 0;
+        transform: translate(-50%, -20%);
+        
+        .popper__arrow {
+            z-index: 3;
+            opacity: 0.8;
+            border: 1px solid setColor('orange');
+        }
+    }
+
+    @include element('popper') {
+        padding: setMultipliedSize(1, -1);
+        min-width: 100px;
+        border: 1px solid setColor('orange');
+    
+        span {
+            font-size: setFontSizeNew('h5');
+            padding-right: setMultipliedSize(1, -1);
+        }
+    }
+
+    @include element('icon') {
+        font-size: setFontSizeNew('h4', 'big');
+        transform: rotate(-45deg);
+        @include flex($direction: row);
+        align-items: flex-end;
+    }
+}

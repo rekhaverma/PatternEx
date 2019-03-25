@@ -1,0 +1,67 @@
+@import 'xbem';
+@import 'theme';
+@import 'mixins/flex';
+
+@include block('search') {
+  @include flex(row);
+  align-items: center;
+  width: 200px;
+  height: 35px;
+  border-bottom: 1px solid setColor('mid-grey');
+
+  @include element('input') {
+    border: 0;
+    background-color: transparent;
+    outline: 0;
+
+    @include H4(setColor('mid-grey'));
+    letter-spacing: -0.2px;
+    line-height: 1;
+  }
+
+  @include element('icon') {
+    margin-left: auto;
+    color: setColor('orange');
+    font-size: setFontSizeNew('h4');
+  }
+}
+
+@include block('tag') {
+  @include flex(row);
+  align-items: center;
+  width: 35px;
+  padding: 5px;
+  border-radius: 3px;
+  margin-right: 10px;
+  background-color: black;
+
+  [class^="icon-"] {
+    font-size: setFontSizeNew('h5');
+  }
+
+  @include element('close') {
+    position: relative;
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: auto;
+    background-color: setColor('blue');
+    cursor: pointer;
+
+    &:before {
+      content: "x";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -1px;
+
+      color: setColor('black');
+      font-size: setFontSizeNew('h5');
+      font-weight: setFontWeight('bold');
+      line-height: 1;
+
+      @include prefix(transform, translate(-50%, -50%));
+    }
+  }
+}

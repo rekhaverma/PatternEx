@@ -1,0 +1,23 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('modalList') {
+  @include element('header') {
+    padding-bottom: setMultipliedSize(2);
+    border-bottom: 1px solid setColor('mid-grey');
+
+    color: setColor('white');
+    font-size: setFontSizeNew('h4', 'big');
+
+    @include flex(row);
+
+    .icon-close {
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+
+  @include element('content'){
+    padding-top: setMultipliedSize(2); 
+  }
+}

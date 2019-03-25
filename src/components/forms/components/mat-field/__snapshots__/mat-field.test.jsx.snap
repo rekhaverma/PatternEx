@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MatField /> should match with snapshot 1`] = `
+<div
+  className="mat-field "
+>
+  <input
+    autoComplete="new-"
+    id="login-"
+    name=""
+    onBlur={[Function]}
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <label
+    htmlFor="login-"
+  >
+    <FormattedMessage
+      id=""
+      values={Object {}}
+    />
+  </label>
+  <div
+    className="mat-field__error-message"
+  >
+    <FormattedMessage
+      id=""
+      values={Object {}}
+    />
+  </div>
+</div>
+`;

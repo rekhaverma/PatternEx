@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TopCard /> should render correctly 1`] = `
+<div
+  className="testClass +testIcon"
+>
+  <CardIcon
+    className="testClass"
+    state="stateTest"
+    type="icon-testIcon"
+  />
+  <div
+    className="testClass__meta"
+  >
+    <span
+      className="testClass__topText"
+    >
+      topTest
+    </span>
+    <span
+      className="testClass__mainText"
+    >
+      mainTest
+    </span>
+    <CardFooter
+      className="testClass__footer"
+      element="Footer Test"
+      nextUrl=""
+      type="details"
+    />
+  </div>
+</div>
+`;

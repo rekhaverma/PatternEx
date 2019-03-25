@@ -1,0 +1,52 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('selectedPrediction') {
+  margin: setMultipliedSize(2) 0;
+  height: 200px;
+  overflow: hidden;
+
+  transition: height 450ms cubic-bezier(0.0, 0.0, 0.2, 1);
+
+  @include state('hidden') {
+    height: 0;
+  }
+
+  @include element('title') {
+    padding: setMultipliedSize(3) 0;
+    border-bottom: 1px solid setColor('orange');
+    margin-bottom: setMultipliedSize(3);
+
+    font-size: setFontSizeNew('h4');
+    color: setColor('white');
+    font-weight: setFontWeight('book');
+  }
+
+  @include element('row') {
+    @include flex('row');
+  }
+
+  @include element('item') {
+    @include flex($grow: 1);
+
+    @include element('label') {
+      margin-bottom: setMultipliedSize();
+
+      color: setColor('mid-grey');
+      font-size: setFontSizeNew('h6');
+      font-weight: setFontWeight('bold');
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    @include element('content') {
+      align-items: center;
+      height: 100%;
+
+      color: setColor('white');
+      font-size: setFontSizeNew('h5','big');
+
+      @include flex(row);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<InspectModal /> should match with snapshot 1`] = `
+<div
+  className="inspect-modal +suspicious"
+>
+  <h3>
+    name
+  </h3>
+  <p>
+    description
+  </p>
+</div>
+`;

@@ -1,0 +1,398 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<List /> should match with snapshot - ANALYTICS 1`] = `
+<div
+  className="card undefined "
+>
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "predicted_prob_sum",
+        "name": "predicted_prob_sum",
+        "value": "1.00",
+      }
+    }
+    handlers={Object {}}
+    key="listitem-0"
+    type="@@listComponent/analytics"
+  />
+</div>
+`;
+
+exports[`<List /> should match with snapshot - DETAILS_CARD 1`] = `
+<div
+  className="card undefined "
+>
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "sip",
+        "name": "Source IP",
+        "value": undefined,
+      }
+    }
+    handlers={Object {}}
+    key="listitem-0"
+    type="@@listComponent/details_card"
+  />
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "behavior_type",
+        "name": "Alert type",
+        "value": "Malicious",
+      }
+    }
+    handlers={Object {}}
+    key="listitem-1"
+    type="@@listComponent/details_card"
+  />
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "predicted_tag.name",
+        "name": "Alert category",
+        "value": <FormattedMessage
+          id="evp.noDataLabel"
+          values={Object {}}
+        />,
+      }
+    }
+    handlers={Object {}}
+    key="listitem-2"
+    type="@@listComponent/details_card"
+  />
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "predicted_prob_sum",
+        "name": "Attack probability",
+        "value": "1.00",
+      }
+    }
+    handlers={Object {}}
+    key="listitem-3"
+    type="@@listComponent/details_card"
+  />
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "score",
+        "name": "Outlier score",
+        "value": 0,
+      }
+    }
+    handlers={Object {}}
+    key="listitem-4"
+    type="@@listComponent/details_card"
+  />
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "ts",
+        "name": "Timestamp",
+        "value": "01-01-2018 12:00 AM",
+      }
+    }
+    handlers={Object {}}
+    key="listitem-5"
+    type="@@listComponent/details_card"
+  />
+</div>
+`;
+
+exports[`<List /> should match with snapshot - DOMAIN_INFO 1`] = `
+<div
+  className="card undefined "
+>
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "",
+        "name": "CDN Information",
+        "value": <FormattedMessage
+          id="evp.noDataLabel"
+          values={Object {}}
+        />,
+      }
+    }
+    handlers={Object {}}
+    key="listitem-0"
+    type="@@listComponent/domain_info"
+  />
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "comunity_tag",
+        "name": "Comunity Tag",
+        "value": <FormattedMessage
+          id="evp.noDataLabel"
+          values={Object {}}
+        />,
+      }
+    }
+    handlers={Object {}}
+    key="listitem-1"
+    type="@@listComponent/domain_info"
+  />
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "domain_resolution",
+        "name": "Domain Resolution",
+        "value": <FormattedMessage
+          id="evp.noDataLabel"
+          values={Object {}}
+        />,
+      }
+    }
+    handlers={Object {}}
+    key="listitem-2"
+    type="@@listComponent/domain_info"
+  />
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "subdomains",
+        "name": "Subdomains",
+        "value": <FormattedMessage
+          id="evp.noDataLabel"
+          values={Object {}}
+        />,
+      }
+    }
+    handlers={Object {}}
+    key="listitem-3"
+    type="@@listComponent/domain_info"
+  />
+</div>
+`;
+
+exports[`<List /> should match with snapshot - DOMAIN_INFO_RESOLUTIONS 1`] = `
+<div
+  className="card undefined "
+>
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": undefined,
+        "name": undefined,
+        "value": undefined,
+      }
+    }
+    handlers={Object {}}
+    key="listitem-0"
+    type="@@listComponent/domain_info_resolution"
+  />
+</div>
+`;
+
+exports[`<List /> should match with snapshot - DOMAIN_INFO_SUBDOMAINS 1`] = `
+<div
+  className="card undefined "
+>
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": Object {
+          "create_time": "2018-01-02",
+          "predicted_prob_sum": 1,
+          "predicted_tag": "test",
+          "top_n_features": Array [
+            "demo",
+          ],
+          "ts": "2018-01-01",
+        },
+        "name": Object {
+          "create_time": "2018-01-02",
+          "predicted_prob_sum": 1,
+          "predicted_tag": "test",
+          "top_n_features": Array [
+            "demo",
+          ],
+          "ts": "2018-01-01",
+        },
+        "value": "",
+      }
+    }
+    handlers={Object {}}
+    key="listitem-0"
+    type="@@listComponent/domain_info_subdomains"
+  />
+</div>
+`;
+
+exports[`<List /> should match with snapshot - LABEL_HISTORY 1`] = `
+<div
+  className="card undefined "
+>
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "canBeDeleted": true,
+        "labelId": undefined,
+        "name": undefined,
+        "value": "01-02-2018",
+      }
+    }
+    handlers={Object {}}
+    key="listitem-0"
+    type="@@listComponent/label_history"
+  />
+</div>
+`;
+
+exports[`<List /> should match with snapshot - NX_DOMAINS 1`] = `
+<div
+  className="card undefined "
+>
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": Object {
+          "demo": "demo",
+        },
+        "name": Object {
+          "demo": "demo",
+        },
+        "value": "",
+      }
+    }
+    handlers={Object {}}
+    key="listitem-0"
+    type="@@listComponent/nxdomains"
+  />
+</div>
+`;
+
+exports[`<List /> should match with snapshot - RELATED_SOURCE_IPS 1`] = `
+<div
+  className="card undefined "
+>
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": undefined,
+        "name": undefined,
+        "value": "",
+      }
+    }
+    handlers={Object {}}
+    key="listitem-0"
+    type="@@listComponent/relatedSourceIPs_card"
+  />
+</div>
+`;
+
+exports[`<List /> should match with snapshot - RELATED_USERS 1`] = `
+<div
+  className="card undefined "
+>
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "0",
+        "name": "0",
+        "value": "",
+      }
+    }
+    handlers={Object {}}
+    key="listitem-0"
+    type="@@listComponent/relatedUsers_card"
+  />
+</div>
+`;
+
+exports[`<List /> should match with snapshot - TOP3ANALYTICS_CARD 1`] = `
+<div
+  className="card undefined "
+>
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "demo",
+        "name": "demo",
+        "value": "",
+      }
+    }
+    handlers={Object {}}
+    key="listitem-0"
+    type="@@listComponent/top3Analytics_card"
+  />
+</div>
+`;
+
+exports[`<List /> should match with snapshot - VULNERABILITY_REPORT 1`] = `
+<div
+  className="card undefined "
+>
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "entityTyoe",
+        "name": "Entity type",
+        "value": undefined,
+      }
+    }
+    handlers={Object {}}
+    key="listitem-0"
+    type="@@listComponent/vulnerability_report_card"
+  />
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "dnsName",
+        "name": "DNS Name",
+        "value": undefined,
+      }
+    }
+    handlers={Object {}}
+    key="listitem-1"
+    type="@@listComponent/vulnerability_report_card"
+  />
+  <ListItem
+    customClass="card__item"
+    data={
+      Object {
+        "key": "netbios",
+        "name": "Netbios Name",
+        "value": undefined,
+      }
+    }
+    handlers={Object {}}
+    key="listitem-2"
+    type="@@listComponent/vulnerability_report_card"
+  />
+</div>
+`;
+
+exports[`<List /> should match with snapshot - no-data 1`] = `
+<NoData
+  className="nodata"
+  intlDefault="No data to display"
+  intlId="global.nodata"
+  intlValues={Object {}}
+  message=""
+  withIcon={true}
+/>
+`;

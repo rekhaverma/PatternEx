@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<StatusItem /> should render correctly 1`] = `
+<div
+  className="statusItem__test"
+>
+  <p>
+    Status Item
+  </p>
+  <span
+    className="statusItem__test__bulb +active"
+  />
+</div>
+`;

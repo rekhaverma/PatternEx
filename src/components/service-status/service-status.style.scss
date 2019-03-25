@@ -1,0 +1,46 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('serviceStatus') {
+  margin: auto -146px auto -107px;
+  justify-content: center;
+  width: 100%;
+  padding-left: 94px;
+
+  .header-rf & {
+    margin-right: -324px;
+    padding-left: 150px;
+  }
+
+  @include flex(row);
+
+  @include element('item') {
+    justify-content: center;
+    align-items: center;
+    margin: 0 setMultipliedSize();
+
+    @include flex(row);
+
+    @include element('bulb') {
+      width: 28px;
+      height: 13px;
+      margin-left: setMultipliedSize();
+
+      background-color: setColor('red');
+
+      @include radius(setRadius('normal'), setRadius('normal'), setRadius('normal'), setRadius('normal'));
+
+      @include state('active') {
+        background-color: setColor('bright-green');
+      }
+
+      @include state('warning') {
+        background-color: setColor('yellow');
+      }
+
+      @include state('critical') {
+        background-color: setColor('red');
+      }
+    }
+  }
+}

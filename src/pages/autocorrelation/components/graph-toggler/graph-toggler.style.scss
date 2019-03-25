@@ -1,0 +1,50 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('graphToggler') {
+  @include flex(row);
+
+  @include element('item') {
+    align-items: center;
+    align-content: center;
+
+    width: 60px;
+    height: 32px;
+    padding: setMultipliedSize(2) 0;
+
+    background-color: setColor('orange');
+
+    color: setColor('white');
+    font-size: setFontSizeNew('h4');
+    font-weight: setFontWeight('bold') !important;
+
+    cursor: pointer;
+
+    @include flex();
+    @include prefix(transition, all 400ms ease);
+
+    &:hover {
+      background-color: darken(setColor('orange'), 5);
+    }
+
+    &:first-child {
+      @include prefix(border-top-left-radius, 6px);
+      @include prefix(border-bottom-left-radius, 6px);
+    }
+
+    &:last-child {
+      @include prefix(border-top-right-radius, 6px);
+      @include prefix(border-bottom-right-radius, 6px);
+    }
+
+    @include state('active') {
+      background-color: setColor('hover-orange');
+      box-shadow: inset 0 1px 3px 0 setColor('black', 0.5);
+    }
+
+    @include state('disabled') {
+      background-color: setColor('dark-grey');
+      cursor: default;
+    }
+  }
+}

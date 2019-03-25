@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> renders correctly 1`] = `
+<input
+  autoFocus={false}
+  className="input"
+  disabled={false}
+  id=""
+  name=""
+  onChange={[Function]}
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+  onSubmit={[Function]}
+  placeholder=""
+  style={Object {}}
+  type="text"
+  value=""
+/>
+`;

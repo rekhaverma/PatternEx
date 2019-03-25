@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardFooter /> should match with snapshot 1`] = `
+<div
+  className="card__footer"
+>
+  footer content
+</div>
+`;

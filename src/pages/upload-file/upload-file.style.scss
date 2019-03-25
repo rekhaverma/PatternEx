@@ -1,0 +1,73 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('upload-file') {
+
+    @include element('fileUploadWrapper') {
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+
+        input[type=file] {
+            height: setSize('largeV2') - 3;
+            width: setSize('normal') * 9;
+            position: absolute;
+            left: setSize('1px');
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+          }
+    }
+
+    @include element('message') {
+        color: setColor('red');
+        margin-top: setSize('normal');
+        font-size: setFontSize('h4');
+        position: relative;
+        top: -setSize('normal');
+        left: setSize('base');
+    }
+
+    @include element('fileName') {
+        margin-top: setSize('normal');
+        margin-left: setSize('normal');
+        color: setColor('white');
+    }
+
+    @include block('fileUpload') {
+        display: flex;
+    }
+
+    @include element(header) {
+      display: flex;
+      border-bottom: setSize('1px') solid setColor('mid-grey');
+    }
+
+    @include element('heading') {
+      @include H1($col: setColor('white'));
+      font-weight: setFontWeight('normal');
+      flex-grow: 1;
+      margin-bottom: setSize('base') * 2;
+    }
+
+    .close-upload-file-modal {
+      font-size: setFontSize('h3');
+      cursor: pointer;
+    }
+
+    @include element('actions') {
+        margin-top: setSize('base');
+        width: 100%;
+        text-align: right;
+    }
+
+    @include element('import') {
+        display: flex;
+        margin: setSize('normalV2') 0px;
+    }
+
+    @include element('logtype') {
+        width: 35%;
+    }
+
+  }

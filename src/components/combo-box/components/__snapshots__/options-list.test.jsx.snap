@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OptionList /> should match with snapshot 1`] = `
+<div
+  className="comboBox__optionList"
+>
+  <Scrollbars
+    autoHeight={true}
+    autoHeightMax={200}
+    autoHeightMin={0}
+    autoHide={false}
+    autoHideDuration={200}
+    autoHideTimeout={1000}
+    hideTracksWhenNotNeeded={false}
+    renderThumbHorizontal={[Function]}
+    renderThumbVertical={[Function]}
+    renderTrackHorizontal={[Function]}
+    renderTrackVertical={[Function]}
+    renderView={[Function]}
+    tagName="div"
+    thumbMinSize={30}
+    universal={false}
+  >
+    <Option
+      className="selectBox__option"
+      isActive={false}
+      key="0"
+      onClick={[Function]}
+      option="Test"
+    />
+    <Option
+      className="selectBox__option"
+      isActive={false}
+      key="1"
+      onClick={[Function]}
+      option="Another Test"
+    />
+  </Scrollbars>
+</div>
+`;

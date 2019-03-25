@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LabelsHistoryTimeline /> render:  should match with snapshot 1`] = `
+<Section
+  className="+no-margin +overflow-visible"
+  dropDownOptions={Array []}
+  dropDownState={false}
+  dropdown={false}
+  expandable={false}
+  expandableView={null}
+  filterFeatureList={[Function]}
+  isDraggable={true}
+  loaded={true}
+  modalStyle={Object {}}
+  onDropDownClick={[Function]}
+  onDropDownSelection={[Function]}
+  onModalOpen={[Function]}
+  selectedDropDown={Array []}
+  size="medium"
+  title={null}
+>
+  <div
+    className="labelTimelineTop"
+  >
+    <div
+      className="dateRange"
+    >
+      <div
+        className="dateRange__presentation"
+      >
+        <div
+          className="dateRange__presentation__column"
+        >
+          <span>
+            From: 
+            <span
+              className="dateRangeDate"
+            >
+              05 - 24 - 2018
+            </span>
+          </span>
+          <span>
+            Until: 
+            <span
+              className="dateRangeDate"
+            >
+              06 - 23 - 2018
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <span
+      className="icon-drag"
+    />
+    <div>
+      <Button
+        className="button--success +small"
+        disabled={false}
+        onClick={[Function]}
+      >
+        Set Label
+      </Button>
+      <Button
+        className="button--dark +small"
+        onClick={[Function]}
+      >
+        Virus Total
+      </Button>
+      <Button
+        className="button--dark +small"
+        onClick={[Function]}
+      >
+        Investigate
+      </Button>
+    </div>
+  </div>
+  <div>
+    <TimelineChart
+      data={
+        Array [
+          Object {
+            "create_time": "Sat, 23 Jun 2018 09:03:00 -0000",
+            "description": "Credit Card Fraud. Account created using compromised/stolen credit card details and personal identity information",
+            "id": "98ca552c-bff2-4969-9d18-bcc4da4759f1",
+            "name": "CC Fraud",
+            "severity": 4,
+            "type": "M",
+          },
+          Object {
+            "create_time": "Sat, 23 Jun 2018 09:03:00 -0000",
+            "description": "Credit Card Fraud. Account created using compromised/stolen credit card details and personal identity information",
+            "id": "d7f73c05-3187-41d1-93c8-2a72a44d892d",
+            "name": "CC Fraud",
+            "severity": 4,
+            "type": "M",
+          },
+          Object {
+            "create_time": "Mon, 04 Jun 2018 08:57:00 -0000",
+            "description": "Techniques and attributes that result or aid in the adversary removing files and information from a target network.",
+            "id": "679908c1-3b89-42b4-97bd-57d7e8655649",
+            "name": "Exfiltration",
+            "severity": 4,
+            "type": "M",
+          },
+        ]
+      }
+      endDate={"2018-06-23T23:59:59.999Z"}
+      startDate={"2018-05-24T00:00:00.000Z"}
+    />
+  </div>
+</Section>
+`;

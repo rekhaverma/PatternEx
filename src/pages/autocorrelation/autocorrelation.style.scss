@@ -1,0 +1,53 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('autocorrelate') {
+  min-height: 605px;
+  padding: setMultipliedSize(2);
+  z-index: 2;
+
+  @include element('row') {
+    @include flex($direction: row);
+
+    @include state('spaceBetween') {
+      justify-content: space-between;
+    }
+
+    @include state('column') {
+      flex-direction: column;
+    }
+
+    @include state('alignCenter') {
+      align-items: center;
+    }
+
+    p {
+      margin: setSize('normal');
+    }
+  }
+
+  @include element('header') {
+    font-size: setFontSize(h1);
+    font-weight: setFontWeight('book');
+  }
+
+  @include element('subHeader') {
+    font-size: setFontSize(h2);
+    font-weight: setFontWeight('book');
+  }
+
+  @include element('backLink') {
+    display: flex;
+    align-items: center;
+    padding-left: setSize('normal');
+    font-size: setFontSize('h4');
+    cursor: pointer;
+
+    .icon-chevron-left {
+      color: setColor('hover-orange');
+      padding-right: setSize('4px');
+      position: relative;
+      top: setSize('1px');
+    }
+  }
+}

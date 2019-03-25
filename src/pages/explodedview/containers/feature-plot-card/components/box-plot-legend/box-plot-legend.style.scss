@@ -1,0 +1,47 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('box-plot-legend') {
+    display: flex;
+    font-size: setFontSizeNew('h5', 'big');
+    margin-bottom: setMultipliedSize(3);
+    .percentile {
+        flex-grow: 1;
+        .icon-rectangle {
+            display: inline-block;
+            width: setMultipliedSize(7);
+            height: setMultipliedSize(3);
+            background: setColor('rose-bud');
+            margin-right: setSize('base');
+            border: setSize('1px') dashed setColor('orange');
+            vertical-align: middle;
+        }
+        .rectangle-label {
+            vertical-align: middle;
+        }
+    }
+    .actual {
+        flex-grow: 1;
+        .icon-actual {
+            font-size: setFontSizeNew('h2', 'big');
+            color: setColor('white');
+            margin-right: setSize('base');
+            vertical-align: middle;
+        }
+        .ractual-label {
+            vertical-align: middle;
+        }
+    }
+    .mean {
+        flex-grow: 1;
+        .icon-mean {
+            font-size: setFontSizeNew('h2', 'big');
+            color: setColor('yellow');
+            margin-right: setSize('base');
+            vertical-align: middle;
+        }
+        .mean-label {
+            vertical-align: middle;
+        }
+    }
+}

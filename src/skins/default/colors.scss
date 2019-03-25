@@ -1,0 +1,60 @@
+$colors: (
+  'white': #ffffff,
+  'silver': #CCCCCC,
+
+  'light-grey': #A1A8A9,
+  'mid-grey': #727272,
+  'dark-grey': rgba(255, 255, 255, 0.3),
+  'tundora': #404040,
+
+  'default-dark': #242a33,
+  'cod-grey': #141414,
+  'black': #000000,
+  'black-odd': #181818,
+
+  'red': #F81C1C,
+  'yellow': #F8E71C,
+  
+  'blue': #328cc3,
+  'aqua': #00eaff,
+  'viking': #54E0C1,
+
+  'bright-green': #6aff00,
+  'green-cyan': #4aba79,
+  'olive': #6d9a3d,
+
+  'highlighted-purple': #c700ff,
+  'seance': #791c98,
+  'purple': #a40cb4,
+
+  'severity-high-risk': #9A0000,
+  'severity-medium-risk': #B88115,
+  'severity-needs-attention': #8A6216,
+  'severity-low-risk': #593E0C,
+  'severity-trivial': #574A3C,
+
+  'orange': #ff5d3a,
+  'vivid-orange': #ff9d00,
+  'hover-orange': #ff4600,
+  'orange-rose': #C44563,
+  'rose-bud': #FFAE9D,
+
+  'notification-info': rgba(75, 157, 188, 0.5),
+  'notification-success': rgba(75, 188, 149, 0.5),
+  'notification-error': rgba(204, 54, 54, 0.5),
+
+  'background-gradient-from': #2b2b2b,
+  'login-footer': #a6aaad,
+  'login-border': #979797,
+);
+
+
+@function setColor($key, $opacity: 1) {
+  @if not map-has-key($colors, $key) {
+    @warn "Key `#{$key}` not found in $colors map.";
+  }
+  @return transparentize(map-get($colors, $key), 1 - $opacity);
+}
+
+$gradient-angle: 127deg;
+$background-gradient: linear-gradient($gradient-angle, setColor('background-gradient-from'), setColor('cod-grey'));

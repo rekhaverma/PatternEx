@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TimelineChart /> should match with snapshot 1`] = `
+<TimelineChart
+  data={
+    Array [
+      Object {
+        "color": "#ff0000",
+        "create_time": "Sat, 23 Jun 2018 09:03:00 -0000",
+        "description": "Credit Card Fraud. Account created using compromised/stolen credit card details and personal identity information",
+        "id": "98ca552c-bff2-4969-9d18-bcc4da4759f1",
+        "name": Array [
+          "CC",
+          "Fraud",
+        ],
+        "severity": 4,
+        "type": "M",
+      },
+    ]
+  }
+  endDate={"2018-01-30T23:59:59.999Z"}
+  startDate={"2017-12-31T00:00:00.000Z"}
+>
+  <div
+    className="svgContainer"
+  >
+    <svg
+      className="timeline__chart"
+      height={NaN}
+      width={NaN}
+    >
+      <g
+        className="rectangle"
+      />
+      <g
+        className="circles"
+      />
+      <g
+        className="labels"
+      />
+      <g
+        className="timestamps"
+      />
+      <defs
+        className="gradient"
+      />
+    </svg>
+  </div>
+</TimelineChart>
+`;

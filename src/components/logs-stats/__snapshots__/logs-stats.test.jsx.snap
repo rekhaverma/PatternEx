@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LogsStats /> should match with snapshot 1`] = `
+<div
+  className="logs_stats"
+>
+  <LogStat
+    count={1}
+    key="0"
+    label="testing logs"
+  />
+</div>
+`;

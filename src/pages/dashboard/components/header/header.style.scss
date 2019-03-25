@@ -1,0 +1,115 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('header') {
+  position: relative;
+  top: 0;
+  align-items: center;
+
+  width: 100%;
+  height: $headerHeight;
+  padding: $headerPadding 2 * $headerPadding;
+
+  background-color: setColor('black');
+  z-index: 12;
+
+  @include flex(row);
+
+  @include element('welcome') {
+    margin: auto;
+    font-size: setFontSizeNew('h4', 'big');
+    font-weight: setFontWeight('book');
+    color: setColor('white');
+  }
+
+  @include block('icon-reload') {
+    font-size: setMultipliedSize(5);
+    margin: 0 setMultipliedSize(4);
+    color: setColor('orange');
+    cursor: pointer;
+  }
+
+  @include block('rt-container') {
+    text-align: center;
+    position: relative;
+    @include block('rt-controller') {
+      display: flex;
+      margin-top: setMultipliedSize();
+
+      input[type='radio'] {
+        opacity: 0;
+        width: 1px;
+        flex-grow: 1;
+        &+label {
+          margin: 0 setMultipliedSize(3);
+          clear: none;
+          padding: .5em;
+          cursor: pointer;
+          color: setColor('mid-grey');
+          font-weight: setFontWeight('bold');
+          text-transform: uppercase;
+          flex-grow: 1;
+        }
+      }
+
+      #rtSwitchOn[type='radio']:checked + label {
+        color: setColor('bright-green');
+        font-weight: setFontWeight('strong');
+      }
+
+      #rtSwitchOff[type='radio']:checked + label {
+        color: setColor('red');
+        font-weight: setFontWeight('strong');
+      }
+
+      @include block('refresh-section') {
+        flex-grow: 1;
+        display: flex;
+
+        @include block('line') {
+          flex-grow: 1;
+          margin-right: setMultipliedSize(2);
+          height: 20px;
+          border-right: 2px solid setColor('mid-grey');
+        }
+
+        @include block('line2') {
+          height: 20px;
+          border-right: 2px solid setColor('mid-grey');
+          flex-grow: 1;
+          margin-left: setMultipliedSize(2);
+        }
+
+        @include block('icon-refresh') {
+          font-size: setMultipliedSize(4);
+          position: relative;
+          color: setColor('orange');
+          cursor: pointer;
+          flex-grow: 1;
+        }
+      }
+    }
+  }
+}
+
+@include block('userProfile') {
+  float: right;
+  margin-right: setMultipliedSize(2);
+
+  .icon-gear {
+    color: setColor('orange');
+    font-size: setFontSizeNew('h1');
+  }
+
+  .icon-chevron-down {
+    color: setColor('white');
+    padding-right: setMultipliedSize(2);
+  }
+
+  @include element('iconGroup') {
+    .icon-profile {
+      color: setColor('orange');
+      font-size: setFontSizeNew('h1');
+    }
+  }
+}

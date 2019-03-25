@@ -1,0 +1,89 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('reportDetail') {
+  @include flex();
+  padding: setMultipliedSize(4) setMultipliedSize(4) 0;
+  justify-content: space-between;
+
+  @include element('row') {
+    @include flex($direction: row);
+    align-items: flex-start;
+    margin-bottom: setMultipliedSize(3);
+
+    .selectBox {
+      width: 100px;
+      margin-top: setMultipliedSize(1, -4);
+      margin-right: setMultipliedSize(4);
+    }
+
+    .downloadUrl {
+      text-decoration: none;
+      padding-top: setMultipliedSize(1, 1);
+    }
+    
+    @include state ('spaceBetween') {
+      justify-content: space-between;
+    }
+
+    @include state('rightSide') {
+      margin-left: auto;
+    }
+
+    @include state('center') {
+      justify-content: center;
+    }
+
+    .barChart, .pieChart, .groupedChart, .detailListing {
+      width: 100%;
+    }
+  }
+
+  @include element('loading') {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+  }
+
+  @include element('downloadLoader') {
+    .loaderSmall {
+      width: 30px;
+    }
+  }
+
+  @include element('backButton') {
+    cursor: pointer;
+    .icon-chevron-left {
+      margin-right: setMultipliedSize();
+      color: setColor('orange');
+      font-size: setFontSizeNew('h6', 'big');
+    }
+  }
+
+  @include element('heading') {
+    font-size: setFontSizeNew('h4');
+  }
+
+  @include element('subheading') {
+    color: setColor('white');
+    font-size: setFontSizeNew('h5');
+    font-weight: setFontWeight('bold');
+  }
+
+  .dateRange {
+    margin-right: setMultipliedSize(4);
+  }
+
+  .icon-download {
+    padding-right: setMultipliedSize(1, -1);
+  }
+
+  .icon-retrain {
+    color: setColor('orange');
+    margin: 0 0 0 setSize('normal');
+    line-height: 1.4;
+    font-size: setFontSize('h3V2');
+    cursor: pointer;
+  }
+}

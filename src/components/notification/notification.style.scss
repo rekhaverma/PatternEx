@@ -1,0 +1,62 @@
+@import 'xbem';
+@import 'theme';
+
+$width: 326px;
+$height: 60px;
+$shadow: 11px 8px 8px 0 setColor('black', 0.5);
+$margin-top: 15px;
+$padding: 12px 25px 12px 12px;;
+$icon-size: 16px;
+
+@include block('notification') {
+  @include H4(setColor('white'));
+  @include flex($direction: row);
+  align-items: center;
+
+  position: relative;
+
+  width: $width;
+  min-height: $height;
+  margin-top: $margin-top;
+  padding: $padding;
+
+  box-shadow: $shadow;
+  border-radius: setRadius('medium');
+
+  p {
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  @include modifier('success') {
+    background-color: setColor('notification-success');
+  }
+
+  @include modifier('info') {
+    background-color: setColor('notification-info');
+  }
+
+  @include modifier('error') {
+    background-color: setColor('notification-error');
+  }
+
+  @include element('icon') {
+    width: $icon-size;
+    height: $icon-size;
+    margin-right: 10px;
+
+    color: setColor('white');
+    font-size: setFontSizeNew('h4', 'big');
+  }
+
+  @include element('close') {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    color: setColor('white');
+    font-size: setFontSizeNew('h5','big');
+
+    cursor: pointer;
+  }
+}

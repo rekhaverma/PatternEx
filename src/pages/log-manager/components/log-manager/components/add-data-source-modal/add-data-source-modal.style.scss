@@ -1,0 +1,125 @@
+@import 'theme';
+@import 'xbem';
+
+@include block('log-manager-modal') {
+  font-size: setFontSize('h2');
+
+  @include element('header') {
+    @include flex($direction: row);
+
+    border-bottom: 1px solid setColor('light-grey');
+    color: setColor('white');
+
+    font-size: setFontSizeNew('h4', 'big');
+    padding-bottom: setMultipliedSize(2);
+
+    .icon-close {
+      cursor: pointer;
+      margin-left: auto;
+    }
+  }
+
+  @include element('content') {
+    padding-bottom: setSize('mediumV2') * 2;
+    padding-top: setSize('normal');
+
+    @include modifier('header') {
+      @include flex($direction: row);
+      justify-content: center;
+    }
+  }
+
+  @include element('loader') {
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+
+    .loaderSmall {
+      max-width: 100%;
+    }
+  }
+
+  @include element('form-item') {
+    padding: setMultipliedSize(1);
+
+    .advance-select {
+      border-bottom: 1px solid setColor('silver');
+      margin: 5px 0;
+      max-width: 600px;
+      padding: 0 5px 8px 0;
+      text-align: left;
+      width: 100%;
+
+      &__selected-value {
+        justify-content: space-between;
+      }
+
+      &__option {
+        &--active {
+          background-color: setColor('white');
+          color: setColor('orange')
+        }
+
+        &--disabled {
+          background-color: transparent;
+          color: setColor('white')
+        }
+      }
+
+      &__option-state {
+        display: none;
+      }
+    }
+
+    .mat-field {
+      padding: 7px 0 12px;
+
+      label {
+        top: 12px;
+      }
+
+      input {
+        height: 27px;
+      }
+
+      input,
+      label {
+        font-size: setFontSizeNew('h4');
+      }
+    }
+  }
+
+  @include element('add-field') {
+    @include flex($direction: row);
+    align-items: center;
+
+    @include modifier('label') {
+      color: setColor('white');
+      font-size: setFontSize('h4');
+      font-weight: setFontWeight('bold');
+      padding: setSize('4px') * 2;
+
+      &:hover {
+        color: setColor('orange');
+        cursor: pointer;
+      }
+    }
+
+    .icon-add {
+      cursor: pointer;
+      font-weight: setFontWeight('bold');
+    }
+  }
+
+  @include element('information') {
+    @include flex($direction: column);
+    justify-content: center;
+  }
+
+  @include element('footer') {
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: setMultipliedSize(2);
+    @include flex($direction: row);
+  }
+}

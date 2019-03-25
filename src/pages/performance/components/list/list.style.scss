@@ -1,0 +1,65 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('list') {
+  margin: 0 20px;
+  padding: 0;
+  list-style: none;
+
+  @include element('item') {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+    width: 100%;
+    padding: setMultipliedSize(2);
+    padding-left: setMultipliedSize(4);
+    padding-right: setMultipliedSize(4);
+    margin: setMultipliedSize(1, -1);
+
+    background-color: setColor('cod-grey');
+
+    p {
+      font-size: setFontSizeNew('h4');
+    }
+
+    .name {
+      padding-left: setMultipliedSize(8, -2);
+    }
+
+    .accuracy {
+      color: setColor('purple');
+      font-weight: setFontWeight('bold');
+    }
+
+    @include element('icon') {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+
+      color: setColor('orange');
+      font-size: setFontSizeNew('h3', 'big');
+    }
+
+    @include modifier('header') {
+      background-color: transparent;
+    }
+  }
+}
+
+@include block('small') {
+  width: 10%;
+}
+
+@include block('medium') {
+  width: 20%;
+}
+
+@include block('large') {
+  width: 35%;
+}
+
+@include block('highlight') {
+  color: setColor('white');
+}

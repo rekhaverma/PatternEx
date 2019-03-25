@@ -1,0 +1,312 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('dashboard') {
+  position: relative;
+  flex-grow: 1;
+  @include flex($direction: column);
+
+  @include element(row) {
+    z-index: 8;
+    width: 100%;
+    justify-content: center;
+
+    background-color: setColor('cod-grey');
+
+    @include flex($direction: row);
+    @include respond-to(map-get($viewports, 'small')) {
+      flex-direction: column
+    }
+    @include prefix(box-shadow, 0 5px 4px 0 setColor('black', 0.5));
+  }
+
+  @include element('d3_diagram') {
+    padding-top: 10px;
+  }
+
+  @include element('bar') {
+    z-index: 9;
+    width: 100%;
+    min-height: 90px;
+
+    align-items: center;
+
+    padding: 0 setMultipliedSize(6);
+
+    background-color: setColor('cod-grey');
+
+    @include flex($direction: row);
+    justify-content: space-between;
+    @include prefix(box-shadow, 0 5px 4px 0 setColor('black', 0.5));
+  }
+
+  @include element('toolbar') {
+    order: 1;
+    z-index: 8;
+    width: 100%;
+
+    height: $toolbarHeight;
+    @include prefix(box-shadow, 0 5px 4px 0 setColor('black', 0.5));
+  }
+
+  @include element('content') {
+    position: relative;
+    order: 2;
+    z-index: 7;
+    @include flex($direction: row, $grow: 1);
+
+    @include respond-to(map-get($viewports, 'medium')) {
+      flex-direction: column;
+    }
+
+    @include state('withGradient') {
+      background: linear-gradient(113deg, #1d1d1d, setColor('cod-grey')); // todo: use function to set the color
+    }
+
+    @include state('column') {
+      flex-direction: column;
+    }
+
+    @include state('noData') {
+      width: 100%;
+      padding: setMultipliedSize(8, -2) 0;
+
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        color: setColor('white');
+      }
+    }
+  }
+
+  @include element('malicious-heatmap') {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .heatMap__legend {
+      padding: 0;
+    }
+  }
+
+  @include element('column') {
+    width: 50%;
+    padding: 20px;
+
+    @include flex($grow: 1);
+
+    @include respond-to(map-get($viewports, 'medium')) {
+      width: 100%;
+    }
+
+    @include block('reset') {
+      @include flex($direction: row);
+      padding-top: setMultipliedSize(2);
+
+      @include element('close') {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 20px;
+        height: 20px;
+        background-color: setColor('orange');
+        border-radius: 50%;
+
+        .icon-close {
+            color: #262728; // todo: use function to set the color
+            cursor: pointer;
+        }
+      }
+
+      @include element('filters') {
+        padding: setMultipliedSize(1, -3) setMultipliedSize(1, -1);
+        color: setColor('white');
+        font-size: setFontSizeNew('h4');
+      }
+    }
+
+    @include state('noData') {
+      padding: setMultipliedSize(8, -2) 0;
+
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        color: setColor('white');
+      }
+    }
+  }
+
+  @include element('topColumn') {
+    @include flex($direction: row);
+    justify-content: flex-end;
+  }
+
+  @include element('title') {
+    @include flex($direction: row);
+    font-size: setFontSizeNew('h4', 'big');
+    font-weight: setFontWeight('book');
+    margin: setMultipliedSize(4) setMultipliedSize(3);
+    color: setColor('white');
+  }
+
+  @include element('footer') {
+    @include flex($direction: row);
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include element('toListing') {
+    color: setColor('white');
+    padding: setMultipliedSize(4);
+    font-size: setFontSizeNew('h4');
+    text-decoration: none;
+    cursor: pointer;
+
+    .icon-chevron-right {
+      padding: setMultipliedSize(2);
+      color: setColor('orange');
+    }
+
+    a {
+      text-decoration: none;
+      color: setColor('white');
+    }
+  }
+
+  @include block('refresh-block') {
+    @include flex($direction: row);
+    justify-content: flex-end;
+    margin: setMultipliedSize(2) 0;
+
+    @include element('option') {
+      margin: 0 setMultipliedSize(1, -1);
+    }
+  }
+}
+
+@include block('dhd') {
+  align-items: center;
+  background-color: setColor('black-odd');
+  display: flex;
+  margin: 20px;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+
+  @include element('labels') {
+    color: setColor('white');
+    font-size: setFontSizeNew('h5');
+    line-height: 1.5;
+
+    span {
+      display: inline-block;
+      margin-bottom: 5px;
+      width: 100%;
+    }
+  }
+
+  @include element('items') {
+    display: flex;
+    width: 100%;
+  }
+}
+
+@include block('dhd-dropdown') {
+  border-right: 1px solid setColor('mid-grey');
+  padding: 0 5px;
+  text-align: center;
+  width: 20%;
+
+  &:last-child {
+    border-right: 0 none;
+  }
+
+  @include element('label') {
+    color: setColor('white');
+    font-size: setFontSizeNew('h5','big');
+    margin-bottom: 10px;
+  }
+
+  @include element('select') {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .advance-select__selected-value {
+      .dhd-dropdown__option--label {
+        display: none;
+      }
+
+      &:before {
+        border-radius: 50%;
+        content: '';
+        height: 14px;
+        margin-right: 15px;
+        width: 14px;
+      }
+    }
+
+    .advance-select__option:hover {
+      .dhd-dropdown__option--value {
+        color: white;
+      }
+    }
+
+    @include state('high-risk') {
+      .advance-select__selected-value:before {
+        background-color: setColor('severity-high-risk');
+      }
+    }
+    @include state('medium-risk') {
+      .advance-select__selected-value:before {
+        background-color: setColor('severity-medium-risk');
+      }
+    }
+    @include state('needs-attention') {
+      .advance-select__selected-value:before {
+        background-color: setColor('severity-needs-attention');
+      }
+    }
+    @include state('low-risk') {
+      .advance-select__selected-value:before {
+        background-color: setColor('severity-low-risk');
+      }
+    }
+    @include state('trivial') {
+      .advance-select__selected-value:before {
+        background-color: setColor('severity-trivial');
+      }
+    }
+  }
+
+  @include element('option') {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    @include modifier('value') {
+      color: setColor('hover-orange');
+      transition: .3s;
+    }
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.no-padding {
+  padding: 0 20px;
+}

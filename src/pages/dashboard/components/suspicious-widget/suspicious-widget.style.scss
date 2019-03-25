@@ -1,0 +1,37 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('suspicious-widget') {
+  width: 100%;
+
+  @include element('no-data') {
+    color: rgba(128, 128, 128, 0.5);
+    text-align: center;
+
+    @include prefix(user-select, none);
+  }
+
+  @include element('item') {
+    min-height: 42px;
+    padding: 5px 20px;
+    align-items: center;
+
+    color: setColor('white', 0.6);
+    font-size: setFontSizeNew('h4');
+    font-weight: 700;
+
+    @include flex($direction: row);
+
+    &:nth-child(even) {
+      background-color: #2A2D36; // todo: use function to set the color
+    }
+
+    span {
+      &:last-child {
+        margin-left: auto;
+
+        color: #03ABDF; // todo: use function to set the color
+      }
+    }
+  }
+}

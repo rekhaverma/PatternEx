@@ -1,0 +1,46 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('logout') {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: setColor('black') url('/public/images/login-bg.png') no-repeat center center/cover;
+
+  @include element('container') {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+
+    @include prefix(transform, translate(-50%, -50%));
+  }
+
+  @include element('logo') {
+    text-align: center;
+
+    img {
+      height: 41px;
+      width: auto;
+      display: block;
+      margin: auto;
+    }
+  }
+
+  @include element('loader') {
+    margin: setMultipliedSize(2) 0;
+
+    .loaderV2 {
+      position: static;
+      height: 100px;
+    }
+  }
+
+  @include element('message') {
+    text-align: center;
+    margin-top: setMultipliedSize(2);
+    font-size: setFontSizeNew('h3', 'big');
+    color: setColor('white');
+    max-width: 300px;
+  }
+}

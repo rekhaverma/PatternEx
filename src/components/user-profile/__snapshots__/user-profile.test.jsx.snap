@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserProfile /> should render correctly 1`] = `
+<div
+  className="testClass"
+>
+  <div
+    className="userProfile__iconGroup"
+    onClick={[Function]}
+  >
+    <span
+      className="testIcon"
+    />
+    <span
+      className="icon-chevron-down"
+    />
+  </div>
+  <div
+    className="profileBox"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    <ProfileGroup
+      items={
+        Array [
+          Object {
+            "icon": "icon-group",
+            "id": "usersDashboardLink",
+            "label": "Users",
+          },
+          Object {
+            "icon": "icon-cogs",
+            "id": "rolesDashboardLink",
+            "label": "Roles",
+          },
+          Object {
+            "icon": "icon-server",
+            "id": "resourcesDashboardLink",
+            "label": "Resources",
+            "url": "/resources",
+          },
+        ]
+      }
+      key="protected"
+      onClick={[Function]}
+      onClose={[Function]}
+      privileges={Object {}}
+      type="protected"
+    />
+    <ProfileGroup
+      items={
+        Array [
+          Object {
+            "icon": "",
+            "id": "settings",
+            "label": "Settings",
+          },
+        ]
+      }
+      key="settings"
+      onClick={[Function]}
+      onClose={[Function]}
+      privileges={Object {}}
+      type="settings"
+    />
+    <ProfileGroup
+      items={
+        Array [
+          Object {
+            "icon": "",
+            "id": "changePwd",
+            "label": "Change Password",
+          },
+          Object {
+            "icon": "",
+            "id": "logOut",
+            "label": "Log Out",
+          },
+        ]
+      }
+      key="user"
+      onClick={[Function]}
+      onClose={[Function]}
+      privileges={Object {}}
+      type="user"
+    />
+  </div>
+</div>
+`;

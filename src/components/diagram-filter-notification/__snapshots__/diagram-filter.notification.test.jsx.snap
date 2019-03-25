@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FilterNotification /> should match with snapshot 1`] = `
+<div
+  className="filter_notification"
+>
+  <div
+    className="filter_notification__close"
+  >
+    <span
+      className="icon-close"
+      onClick={[Function]}
+    />
+  </div>
+  <span
+    className="filter_notification__info"
+  >
+    Showing Results for 
+    01 · 01 · 2018
+  </span>
+</div>
+`;

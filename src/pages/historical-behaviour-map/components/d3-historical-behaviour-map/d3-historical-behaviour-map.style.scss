@@ -1,0 +1,91 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('d3-historical-behaviour-map') {
+
+    height: 310px;
+
+    @include modifier('noData') {
+        @include flex($direction: row);
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        font-size: setFontSizeNew('h4');
+        font-weight: setFontWeight('bold');
+    }
+
+    @include flex($direction: row);
+    justify-content: center;
+
+    @include element('svg') {
+        height: 100%;
+    }
+
+    @include element('connections') {
+
+        @include block('connection') {
+            fill: none;
+            cursor: pointer;
+            stroke-width: 2px;
+
+            @include state('selected') {
+                stroke-width: 5px;
+                filter: url(#blur-filter);
+            }
+
+            @include state('hovered') {
+                stroke-width: 4px;
+            }
+        }
+    }
+
+    @include element('dimensions') {
+        .coord-title {
+            font-size: 10px;
+            letter-spacing: 0.3px;
+            line-height: 1;
+            padding-right: 3px;
+            fill: setColor('white');
+
+            div {
+                display: inline-block;
+            }
+        }
+
+        .tick text {
+            fill: setColor('white');
+        }
+        .tick line {
+            display: none;
+        }
+        .axis line,
+        .axis .domain {
+            fill: none;
+            stroke: #6c6c6c; // todo: use function to set the color
+            stroke-dasharray: 3, 3;
+        }
+    }
+
+    @include element('tooltip') {
+        position: absolute;
+        padding: 0;
+
+        .popper__arrow {
+            z-index: 3;
+            opacity: 0.8;
+            border: 1px solid setColor('orange');
+        }
+    }
+
+    @include element('popper') {
+        padding: setMultipliedSize(1, -1);
+        min-width: 160px;
+        border: 1px solid setColor('orange');
+        color: setColor('white');
+    
+        span {
+            font-size: setFontSizeNew('h5');
+            padding-right: setMultipliedSize(1, -1);
+        }
+    }
+}

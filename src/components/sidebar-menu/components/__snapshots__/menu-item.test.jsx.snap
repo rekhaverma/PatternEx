@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuItem /> should render correctly 1`] = `
+<div
+  className="sidebarMenu__test"
+  onClick={[Function]}
+>
+  <span
+    className="test-icon"
+  />
+  <span>
+    Test
+  </span>
+</div>
+`;

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ClusterTable /> should match with snapshot 1`] = `
+<ConfigurableTable
+  className="table"
+  classname=""
+  data={
+    Array [
+      Object {
+        "central_entity": "central_entity",
+        "counts": 10,
+        "ts": 1531140517,
+      },
+    ]
+  }
+  maxPageSize="100"
+  onRowClick={[Function]}
+  pageSize="10"
+  rowHeight={30}
+  tableConfig={
+    Array [
+      Object {
+        "className": "table__headerColumn",
+        "field": "ts_formatted",
+        "hidden": false,
+        "isKey": false,
+        "label": "Timestamp",
+        "resizable": true,
+        "tooltip": "investigateCluster",
+      },
+      Object {
+        "className": "table__headerColumn--entity",
+        "field": "central_entity",
+        "hidden": false,
+        "isKey": true,
+        "label": "Central Entity",
+        "resizable": true,
+        "tooltip": "investigateCluster",
+      },
+      Object {
+        "className": "table__headerColumn",
+        "field": "counts",
+        "hidden": false,
+        "isKey": false,
+        "label": "Details",
+        "resizable": true,
+        "tooltip": "investigateCluster",
+      },
+    ]
+  }
+/>
+`;

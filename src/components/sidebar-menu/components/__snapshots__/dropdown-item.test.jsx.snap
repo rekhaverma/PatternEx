@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DropdownItem /> should render correctly 1`] = `
+<div
+  className="dropdownItem__test--dropdown +active"
+  onClick={[Function]}
+>
+  <div
+    className="dropdownItem__test__dropdown-item +active"
+  >
+    <span
+      className="dropdownItem__test__icon test-icon"
+    />
+    <div
+      className="dropdownItem__test__dropdown-title"
+    >
+      <p
+        className="dropdownItem__test__label"
+      >
+        Test Label
+      </p>
+      <span
+        className="icon-chevron-down dropdownItem__test__arrow-icon +rotate"
+      />
+    </div>
+  </div>
+  <div
+    className="dropdownItem__test__dropdown-list +no-items-2"
+  >
+    <Item
+      active={false}
+      activeDropdown={false}
+      className="sidebarMenu__item"
+      disabled={false}
+      icon="icon-test1"
+      id="test1"
+      items={Array []}
+      key="test1"
+      label="Test1"
+      location="/test"
+      onClick={[Function]}
+      onDropdownClick={[Function]}
+      params={
+        Array [
+          "start_time",
+          "end_time",
+        ]
+      }
+      query={Object {}}
+      style={Object {}}
+      type="link"
+    />
+    <Item
+      active={false}
+      activeDropdown={false}
+      className="sidebarMenu__item"
+      disabled={false}
+      icon="icon-test2"
+      id="test2"
+      items={Array []}
+      key="test2"
+      label="Test2"
+      location="/test"
+      onClick={[Function]}
+      onDropdownClick={[Function]}
+      params={
+        Array [
+          "start_time",
+          "end_time",
+        ]
+      }
+      query={Object {}}
+      style={Object {}}
+      type="link"
+    />
+  </div>
+</div>
+`;

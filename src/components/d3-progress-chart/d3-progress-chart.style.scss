@@ -1,0 +1,25 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('d3-progress-chart') {
+  position: relative;
+
+  @include element('text') {
+    > div {
+      align-items: center;
+      color: setColor('white');
+      display: flex;
+      flex-direction: column;
+      font-size: setFontSizeNew('h3','big');
+      font-weight: setFontWeight('lighter');
+      height: 100%;
+      justify-content: center;
+    }
+
+    user-select: none;
+  }
+  .popper-wrap {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RangeBox /> should match with snapshot 1`] = `
+<div
+  className="range-box__flex"
+>
+  <div>
+    <div
+      className="range-box__inputs"
+    >
+      <div
+        className="range-box__group"
+      >
+        <span>
+          Start Date
+        </span>
+        <Input
+          autoFocus={false}
+          className="range-box__input"
+          disabled={false}
+          id=""
+          name=""
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onSubmit={[Function]}
+          placeholder=""
+          style={Object {}}
+          type="text"
+          value="01-01-2018"
+        />
+      </div>
+      <div
+        className="icon-arrow-right"
+      />
+      <div
+        className="range-box__group +right"
+      >
+        <span>
+          End Date
+        </span>
+        <Input
+          autoFocus={false}
+          className="range-box__input +right"
+          disabled={false}
+          id=""
+          name=""
+          onBlur={[Function]}
+          onChange={[Function]}
+          onClick={[Function]}
+          onKeyPress={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onSubmit={[Function]}
+          placeholder=""
+          style={Object {}}
+          type="text"
+          value="01-01-2018"
+        />
+      </div>
+    </div>
+    <DayPickerRangeController
+      daySize={39}
+      enableOutsideDays={false}
+      endDate={"2018-01-01T00:00:00.000Z"}
+      firstDayOfWeek={null}
+      focusedInput="startDate"
+      hideKeyboardShortcutsPanel={true}
+      initialVisibleMonth={null}
+      isDayBlocked={[Function]}
+      isDayHighlighted={[Function]}
+      isFocused={false}
+      isOutsideRange={[Function]}
+      isRTL={false}
+      keepOpenOnDateSelect={false}
+      minimumNights={0}
+      monthFormat="MMMM YYYY"
+      navNext={
+        <span
+          className="icon-chevron-right"
+        />
+      }
+      navPrev={
+        <span
+          className="icon-chevron-left"
+        />
+      }
+      numberOfMonths={1}
+      onBlur={[Function]}
+      onClose={[Function]}
+      onDatesChange={[Function]}
+      onFocusChange={[Function]}
+      onNextMonthClick={[Function]}
+      onOutsideClick={[Function]}
+      onPrevMonthClick={[Function]}
+      orientation="horizontal"
+      phrases={
+        Object {
+          "calendarLabel": "Calendar",
+          "chooseAvailableDate": [Function],
+          "chooseAvailableEndDate": [Function],
+          "chooseAvailableStartDate": [Function],
+          "dateIsUnavailable": [Function],
+          "enterKey": "Enter key",
+          "escape": "Escape key",
+          "hideKeyboardShortcutsPanel": "Close the shortcuts panel",
+          "homeEnd": "Home and end keys",
+          "jumpToNextMonth": "Move forward to switch to the next month",
+          "jumpToPrevMonth": "Move backward to switch to the previous month",
+          "keyboardShortcuts": "Keyboard Shortcuts",
+          "leftArrowRightArrow": "Right and left arrow keys",
+          "moveFocusByOneDay": "Move backward (left) and forward (right) by one day",
+          "moveFocusByOneMonth": "Switch months",
+          "moveFocusByOneWeek": "Move backward (up) and forward (down) by one week",
+          "moveFocustoStartAndEndOfWeek": "Go to the first or last day of a week",
+          "openThisPanel": "Open this panel",
+          "pageUpPageDown": "page up and page down keys",
+          "questionMark": "Question mark",
+          "returnFocusToInput": "Return to the date input field",
+          "selectFocusedDate": "Select the date in focus",
+          "showKeyboardShortcutsPanel": "Open the keyboard shortcuts panel",
+          "upArrowDownArrow": "up and down arrow keys",
+        }
+      }
+      renderCalendarInfo={null}
+      renderDay={null}
+      renderMonth={null}
+      showKeyboardShortcuts={false}
+      startDate={"2018-01-01T00:00:00.000Z"}
+      verticalHeight={null}
+      weekDayFormat="dd"
+      withPortal={false}
+    />
+  </div>
+</div>
+`;

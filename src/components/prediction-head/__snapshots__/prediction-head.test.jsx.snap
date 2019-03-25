@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PredictionHead /> should match with snapshot 1`] = `
+<div>
+  <div
+    className="prediction__head"
+  >
+    <span
+      key="0"
+    >
+      Test
+    </span>
+    <span
+      key="1"
+    >
+      Another Test
+    </span>
+  </div>
+</div>
+`;

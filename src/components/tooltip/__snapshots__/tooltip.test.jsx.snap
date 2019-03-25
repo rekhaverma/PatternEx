@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tooltip /> should render correctly 1`] = `
+<div
+  className="tooltip"
+>
+  <Manager
+    style={Object {}}
+    tag="div"
+  >
+    <Target
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div />
+    </Target>
+  </Manager>
+</div>
+`;

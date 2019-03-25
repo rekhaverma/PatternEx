@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Option /> should match with snapshot 1`] = `
+<div
+  className="select-box__option"
+  onClick={[Function]}
+>
+  <span
+    className="select-box__option-state"
+  />
+  <span
+    className="select-box__option-label"
+  >
+    string
+  </span>
+</div>
+`;

@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SingleSelect /> should match with snapshot - with options list 1`] = `
+<div
+  className="advance-select advance-select--single-select advance-select--open advance-select--clear-displayed"
+>
+  <div
+    className="advance-select__selected-value"
+    onClick={[Function]}
+  >
+    <span>
+      string
+    </span>
+    <div
+      className="advance-select__clear-button"
+    >
+      <Tooltip
+        hideWhenHoveringTooltipContent={false}
+        managerStyle={
+          Object {
+            "display": "flex",
+          }
+        }
+        position="top"
+        style={Object {}}
+        trigger={
+          <span
+            className="icon-Trash-icon"
+            onClick={[Function]}
+          />
+        }
+      >
+        <FormattedMessage
+          id="dashboard.reset"
+          values={Object {}}
+        />
+      </Tooltip>
+    </div>
+  </div>
+  <OptionList
+    allowSearch={false}
+    className="advance-select"
+    dropDownHeader={null}
+    onOptionClick={[Function]}
+    options={
+      Array [
+        Object {
+          "id": "string",
+          "isSelected": true,
+          "value": "string",
+        },
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`<SingleSelect /> should match with snapshot 1`] = `
+<div
+  className="advance-select advance-select--single-select advance-select--clear-displayed"
+>
+  <div
+    className="advance-select__selected-value"
+    onClick={[Function]}
+  >
+    <span>
+      string
+    </span>
+    <div
+      className="advance-select__clear-button"
+    >
+      <Tooltip
+        hideWhenHoveringTooltipContent={false}
+        managerStyle={
+          Object {
+            "display": "flex",
+          }
+        }
+        position="top"
+        style={Object {}}
+        trigger={
+          <span
+            className="icon-Trash-icon"
+            onClick={[Function]}
+          />
+        }
+      >
+        <FormattedMessage
+          id="dashboard.reset"
+          values={Object {}}
+        />
+      </Tooltip>
+    </div>
+  </div>
+</div>
+`;

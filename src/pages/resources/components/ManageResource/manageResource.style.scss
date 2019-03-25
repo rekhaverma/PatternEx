@@ -1,0 +1,37 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('addDeactivateResource') {
+  @include flex();
+  justify-content: space-between;
+  @include element('row') {
+    @include flex($direction: row);
+    align-items: center;
+    margin-bottom: setSize('mediumV2');
+    @include state ('spaceBetween') {
+      justify-content: space-between;
+    }
+    @include state('center') {
+      justify-content: center;
+    }
+    @include state('right') {
+      justify-content: flex-end;
+    }
+    @include state('borderBottom') {
+      border-bottom: setSize('1px') solid setColor('mid-grey');
+    }
+    @include state('header') {
+      font-size: setFontSize('h1');
+      padding-bottom: setSize('normal');
+      color: setColor('white');
+    }
+  }
+
+  @include element('mainBody') {
+    font-size: setFontSize('h3');
+  }
+
+  .icon-close2 {
+    cursor: pointer;
+  }
+}

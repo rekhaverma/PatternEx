@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderAlert /> should match with snapshot 1`] = `
+<div
+  className="header1__alert"
+  onClick={[Function]}
+>
+  <span
+    className="icon-malicious"
+  />
+  <p />
+</div>
+`;

@@ -1,0 +1,21 @@
+@import 'theme';
+@import 'xbem';
+
+@include block('table-top-section') {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    .icon-gear{
+      font-size: setFontSizeNew('h3','big');
+      padding-left: setMultipliedSize(2);
+      padding-right: setMultipliedSize(2);
+      cursor: pointer;
+    }
+  }
+
+  @include block('table-section'){
+    width: 100%;
+  }

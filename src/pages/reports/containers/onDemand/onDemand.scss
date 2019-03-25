@@ -1,0 +1,47 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('onDemand') {
+  @include flex();
+  justify-content: space-between;
+
+  @include element('row') {
+    @include flex($direction: row);
+    align-items: flex-start;
+    margin-bottom: setMultipliedSize(4);
+    div {
+      flex: 1;
+    }
+
+    @include state ('header') {
+      font-size: setFontSize('h3V2');
+      border-bottom: setSize('tiny') solid setColor('light-grey');
+      padding-bottom: setSize('normal');
+      margin-bottom: setMultipliedSize(6);
+    }
+
+    @include state ('rightSide') {
+      justify-content: flex-end;
+    }
+
+    @include state ('spaceBetween') {
+      justify-content: space-between;
+    }
+  }
+
+  .dateRange,
+  .dateRange__presentation__row {
+    width: 100%;
+    margin-right: 0 !important;
+  }
+
+  .icon-close2 {
+    font-size: setFontSize('h5V2');
+    cursor: pointer;
+    line-height: 1.5;
+  }
+
+  .ptrx-modal__content {
+    top: 40%;
+  }
+}

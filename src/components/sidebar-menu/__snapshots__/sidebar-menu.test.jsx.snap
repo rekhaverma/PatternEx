@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SidebarMenu /> should render correctly 1`] = `
+<section
+  className="sidebarMenu__test"
+>
+  <Item
+    active={false}
+    activeDropdown={false}
+    className="sidebarMenu__item"
+    disabled={false}
+    icon="icon-test1"
+    id="test1"
+    items={Array []}
+    key="test1"
+    label="Test1"
+    location="/test"
+    onClick={[Function]}
+    onDropdownClick={[Function]}
+    params={
+      Array [
+        "start_time",
+        "end_time",
+      ]
+    }
+    query={
+      Object {
+        "end_time": "08-02-2018",
+        "start_time": "07-26-2018",
+      }
+    }
+    style={Object {}}
+    type="link"
+  />
+  <Item
+    active={false}
+    activeDropdown={false}
+    className="sidebarMenu__item"
+    disabled={false}
+    icon="icon-test2"
+    id="test2"
+    items={Array []}
+    key="test2"
+    label="Test2"
+    location="/test"
+    onClick={[Function]}
+    onDropdownClick={[Function]}
+    params={
+      Array [
+        "start_time",
+        "end_time",
+      ]
+    }
+    query={
+      Object {
+        "end_time": "08-02-2018",
+        "start_time": "07-26-2018",
+      }
+    }
+    style={Object {}}
+    type="link"
+  />
+  <div
+    className="sidebarMenu__test__slider-icon"
+  >
+    <span
+      className="icon-group-3"
+    />
+  </div>
+</section>
+`;

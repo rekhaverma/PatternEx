@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Login /> Component  should match with snapshot w loaded 1`] = `
+<div
+  className="login"
+  style={
+    Object {
+      "backgroundImage": "url(test-file-stub)",
+    }
+  }
+>
+  <Loader
+    small={false}
+  />
+  <div
+    className="login__container"
+  >
+    <div
+      className="login__logo"
+    >
+      <img
+        alt="patternex logo"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="login__form-container"
+    >
+      <div
+        className="login__title"
+      >
+        <FormattedMessage
+          id="login.title"
+          values={Object {}}
+        />
+      </div>
+      <Form
+        onSubmitForm={[Function]}
+      />
+    </div>
+  </div>
+  <div
+    className="login__footer"
+  >
+    <FormattedMessage
+      id="footer.email"
+      values={Object {}}
+    />
+  </div>
+</div>
+`;
+
+exports[`<Login /> Component  should match with snapshot w/o loaded 1`] = `
+<div
+  className="login"
+  style={
+    Object {
+      "backgroundImage": "url(test-file-stub)",
+    }
+  }
+>
+  <Loader
+    small={false}
+  />
+  <div
+    className="login__container"
+  >
+    <div
+      className="login__logo"
+    >
+      <img
+        alt="patternex logo"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="login__form-container"
+    >
+      <div
+        className="login__title"
+      >
+        <FormattedMessage
+          id="login.title"
+          values={Object {}}
+        />
+      </div>
+      <Form
+        onSubmitForm={[Function]}
+      />
+    </div>
+  </div>
+  <div
+    className="login__footer"
+  >
+    <FormattedMessage
+      id="footer.email"
+      values={Object {}}
+    />
+  </div>
+</div>
+`;

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NXCircle /> should match with snapshot 1`] = `
+<div
+  className="nxcircle"
+>
+  <span>
+    <span
+      className="nxcircle__number"
+    >
+      1
+    </span>
+    <span>
+      NX Domains
+    </span>
+  </span>
+</div>
+`;

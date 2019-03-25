@@ -1,0 +1,70 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('arcSlice') {
+    cursor: pointer;
+    fill: setColor('tundora');
+
+    @include state('suspiciousArc') {
+        stroke: setColor('yellow');
+        stroke-width: 2px;
+    }
+
+    @include state('maliciousArc') {
+        stroke: setColor('red');
+        stroke-width: 2px;
+    }
+
+    @include state('unknownArc') {
+        stroke: setColor('light-grey');
+        stroke-width: 2px;
+    }
+}
+
+@include block('flow') {
+    fill: none;
+    cursor: pointer;
+
+    @include state('suspicious') {
+        stroke: setColor('yellow');
+    }
+
+    @include state('malicious') {
+        stroke: setColor('red');
+    }
+
+    @include state('unknown') {
+        stroke: setColor('tundora');
+    }
+}
+
+@include block('icon') {
+
+    @include element('close') {
+        cursor: pointer;
+    }
+}
+
+@include block('popper') {
+    opacity: 0.8;
+
+    @include element('info') {
+        margin: 0px 4px;
+
+        @include block('highlight') {
+            text-transform: none;
+        }
+
+        @include state('suspicious') {
+            color: setColor('yellow');
+        }
+
+        @include state('malicious') {
+            color: setColor('red');
+        }
+
+        @include state('unknown') {
+            color: setColor('light-grey');
+        }
+    }
+}

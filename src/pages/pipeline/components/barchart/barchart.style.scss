@@ -1,0 +1,64 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('axis') {
+    @include element('grid') {
+        path {
+            stroke: transparent;
+        }
+    }
+
+    @include element('xaxis') {
+        path {
+            stroke: setColor('orange');
+        }
+        .tick {
+            line {
+                stroke: transparent;
+            }
+        }
+    }
+
+    @include element('yaxis') {
+        path {
+            stroke: setColor('orange');
+        }
+        .tick > line {
+            stroke: transparent;
+        }
+    }
+}
+
+@include block('barchart') {
+    position: relative;
+    padding: setMultipliedSize(4) 0;
+
+    @include element('tooltip') {
+        position: absolute;
+        padding: 0;
+        transform: translate(0, -50%);
+
+        .popper__arrow {
+            z-index: 3;
+            opacity: 0.8;
+            border: 1px solid setColor('orange');
+        }
+    }
+
+    @include element('popper') {
+        padding: setMultipliedSize(1, -1);
+        min-width: 160px;
+        border: 1px solid setColor('orange');
+        color: setColor('white');
+    
+        span {
+            font-size: setFontSizeNew('h5');
+            padding-right: setMultipliedSize(1, -1);
+        }
+    }
+}
+
+@include block('bar-chart-svg') {
+    max-width: $toolbarWidthExpanded;
+    overflow-x: auto;
+}

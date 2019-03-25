@@ -1,0 +1,170 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('pipeline') {
+    position: relative;
+    padding-top: setMultipliedSize(4);
+
+    @include element(row) {
+        width: 100%;
+        margin: setMultipliedSize(4) 0;
+        padding: 0 setMultipliedSize(8, -2);
+
+        @include state('center') {
+            justify-content: center;
+        }
+
+        @include flex($direction: row);
+        align-items: flex-end;
+    }
+
+    @include element('title') {
+        @include flex($direction: row);
+        font-size: setFontSizeNew('h2', 'big');
+        font-weight: setFontWeight('book');
+        color: setColor('silver');
+      }
+
+    @include element('filter') {
+        width: 15%;
+        margin: 0 setMultipliedSize(4);
+
+        @include modifier('realtime') {
+            width:auto;
+        }
+
+        @include modifier('first') {
+            margin-left: 0;
+        }
+    }
+
+    @include element('chartTitle') {
+        color: setColor('white');
+        font-size: setFontSizeNew('h4');
+        font-weight: setFontWeight('bold');
+        padding: setMultipliedSize(4) setMultipliedSize(8, -2) setMultipliedSize(4) 0;
+    }
+
+    @include element('charts') {
+        width: 100%;
+
+        @include flex($direction: row);
+        @include respond-to(map-get($viewports, 'small')) {
+            flex-direction: column
+          }
+    }
+
+    @include element('charts') {
+        @include flex($direction: row);
+    }
+
+    @include element('charts') {
+        @include flex($direction: row);
+        @include respond-to(map-get($viewports, 'small')) {
+            flex-direction: column
+          }
+    }
+
+    @include element('chart') {
+        position: relative;
+
+        text {
+            fill: setColor('silver');
+        }
+
+        @include modifier('noData') {
+            width: 50%;
+        }
+    }
+
+    @include element('datepicker') {
+        @include flex($direction: row);
+
+        .dateRange {
+            z-index:10;
+            width: 100%;
+            border-bottom: 1px solid setColor('login-footer');
+            @include flex($direction: row);
+        }
+
+        .dateRange > .dateRange__range{
+            margin-top: 35px;
+        }
+
+        .dateRange__select {
+            width: 100%;
+        }
+
+        .DateInput {
+            width: 100%;
+            background: none;
+        }
+
+        input {
+            background-color: transparent;
+            font-size: setFontSizeNew('h5','big');
+            color: setColor('white');
+            padding: setMultipliedSize(2) 0;
+        }
+
+        .DateInput_input__focused {
+            border-bottom: 2px solid transparent;
+        }
+
+        .icon-Calendar-icon {
+            color: setColor('white');
+            font-size: setFontSizeNew('h4');
+
+            @include flex($direction: row);
+            align-items: center;
+        }
+
+        .SingleDatePicker_picker {
+            background-color: setColor('black-odd');
+            border: 1px solid setColor('login-footer');
+        }
+
+        .SingleDatePicker_picker__openDown {
+            position: absolute;
+            z-index: 100;
+        }
+    }
+
+  @include element('tableRow') {
+    font-size: setFontSizeNew('h5','big');
+
+    .loaderSmall {
+        width: 15px;
+    }
+  }
+
+  @include element('featureHeader') {
+    align-items: center;
+    justify-content: space-between;
+
+    @include flex($direction: row, $grow: 1);
+  }
+
+  @include element('feature') {
+    width: 100%;
+    padding: 0 setMultipliedSize(2);
+
+    @include ellipsis(145px);
+
+  }
+}
+.table__cell > div:last-child{
+    border:none;
+}
+
+.table__cell > div {
+    border-right: 1px dashed setColor('orange');
+}
+
+.react-bs-table table th{ 
+    font-weight: setFontWeight('strong');
+}
+
+@include block('tr-odd') {
+    background-color: setColor('cod-grey');
+}

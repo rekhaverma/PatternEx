@@ -1,0 +1,7 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('contribution-prediction-score') {
+    @include flex($direction: row);
+    height: 100%;
+}

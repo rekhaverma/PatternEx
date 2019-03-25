@@ -1,0 +1,19 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('options-list') {
+  @include element('autocomplete') {
+    padding: 0 15px 10px;
+    width: 100%;
+
+    input {
+      background-color: transparent;
+      border: 0 none;
+      border-bottom: 1px solid setColor('login-border');
+      color: setColor('white');
+      outline: none;
+      padding: 5px;
+      width: 100%;
+    }
+  }
+}

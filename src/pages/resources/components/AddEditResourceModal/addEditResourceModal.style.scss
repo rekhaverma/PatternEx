@@ -1,0 +1,59 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('addEditResource') {
+  @include element('header') {
+    display: flex;
+    border-bottom: 1px solid;
+    .big-heading {
+      @include H1(setColor('mid-grey'));
+      flex-grow: 1;
+      margin-bottom: setSize('normal');
+    }
+  }
+  @include element('message') {
+    color: setColor('red');
+    margin-top: setSize('normal');
+    font-size: setFontSize('h4');
+  }
+  @include element(row) {
+    display: flex;
+    @include modifier('name') {
+      margin-top: setSize('normal');
+      width: 49%;
+    }
+
+    @include state('spaceBetween') {
+      justify-content: space-between;
+    }
+
+    @include modifier('url') {
+      margin-top: setSize('normal');
+      width: 49%;
+    }
+
+    @include modifier('description') {
+      margin-top: setSize('mediumV2') + 5;
+      width: 100%;
+    }
+
+    @include modifier('status') {
+      margin-top: setSize('normal');
+    }
+  }
+  @include element('action') {
+    margin-top: setSize('base');
+    width: 100%;
+    text-align: right;
+    display: flex;
+    @include modifier(add) {
+    }
+    @include modifier('save') {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .input--v2 {
+    width: 100%;
+  }
+}

@@ -1,0 +1,72 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('userProfileV2') {
+  .icon-chevron-down {
+    color: setColor('white');
+    font-size: x-small;
+    padding: setMultipliedSize(2);
+  }
+
+  @include block('profileBox') {
+    background: setColor('cod-grey');
+    min-width: 170px;
+    border: solid 1px setColor('mid-grey');
+    border-radius: setRadius('medium');
+    margin-right: 20px;
+
+    @include element('item') {
+      cursor: pointer;
+
+      @include setFontFamily('roboto');
+    }
+
+    @include element('group') {
+      &:first-child {
+        a {
+          color: setColor('silver');
+          &:hover {
+            color: setColor('orange');
+          }
+        }
+      }
+      &:not(:first-child):before {
+        border-top: solid 1px setColor('mid-grey');
+      }
+      &:not(:first-child) {
+        a {
+          color: setColor('orange');
+          &:hover {
+            color: setColor('silver');
+          }
+        }
+      }
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      right: 20px;
+      top: -10px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 10px 10px 10px;
+      border-color: transparent transparent setColor('cod-grey') transparent;
+      z-index: 2;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 18px;
+      top: -12px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 12px 12px 12px;
+      border-color: transparent transparent setColor('mid-grey') transparent;
+      z-index: 1;
+    }
+  }
+}

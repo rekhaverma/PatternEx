@@ -1,0 +1,53 @@
+{
+  "extends": "airbnb",
+  "root": true,
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
+  "globals": {
+    "intl": true,
+    "shallow": true,
+    "render": true,
+    "mount": true,
+    "shallowWithIntl": true,
+    "mountWithIntl": true
+  },
+  "rules": {
+    "quote-props": 0,
+    "no-return-assign": 0,
+    "func-names": 0,
+    "object-curly-newline": 0,
+    "no-case-declarations": 0,
+    "prefer-destructuring": 0,
+    "function-paren-newline": 1,
+    "no-restricted-globals": 0,
+    "no-underscore-dangle": ["error", { "allow": ["_groups"] }],
+
+    "import/no-extraneous-dependencies": 0,
+    "import/extensions": 0,
+    "import/no-unresolved": 0,
+    "import/prefer-default-export": 0,
+
+    "jsx-a11y/href-no-hash": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "jsx-a11y/click-events-have-key-events": 0,
+    "jsx-a11y/label-has-for": [ 2, {
+      "required": {
+          "every": [ "id" ]
+      }
+    }],
+    "jsx-a11y/anchor-is-valid": [2, {
+      "components": ["a"]
+    }],
+
+    "react/no-typos": 0,
+    "react/forbid-prop-types": 0,
+    "react/no-find-dom-node": 0,
+    "react/no-array-index-key": 0,
+    "react/no-did-mount-set-state": 0,
+    "react/default-props-match-prop-types": 0
+  }
+}

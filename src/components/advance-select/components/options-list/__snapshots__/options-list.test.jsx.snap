@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OptionList /> should match with snapshot - autocomplete 1`] = `
+<div
+  className="advance-select__option-list"
+>
+  <div
+    className="advance-select__option-list-header"
+  >
+    Filter
+  </div>
+  <div
+    className="advance-select__option-list-auto-complete"
+  >
+    <MatField
+      errorMessage="default.search.string"
+      hasError={false}
+      label="default.search.string"
+      name="autocomplete"
+      onChange={[Function]}
+      onErrorFound={[Function]}
+      prefix="autocomplete"
+      type="text"
+      value=""
+    />
+  </div>
+  <Scrollbars
+    autoHeight={true}
+    autoHeightMax={200}
+    autoHeightMin={25}
+    autoHide={false}
+    autoHideDuration={200}
+    autoHideTimeout={1000}
+    hideTracksWhenNotNeeded={true}
+    renderThumbHorizontal={[Function]}
+    renderThumbVertical={[Function]}
+    renderTrackHorizontal={[Function]}
+    renderTrackVertical={[Function]}
+    renderView={[Function]}
+    tagName="div"
+    thumbMinSize={30}
+    universal={false}
+  >
+    <Option
+      className="advance-select"
+      id="string"
+      isDisabled={false}
+      isSelected={true}
+      key="string"
+      onOptionClick={[Function]}
+      value="string"
+    />
+  </Scrollbars>
+</div>
+`;
+
+exports[`<OptionList /> should match with snapshot 1`] = `
+<div
+  className="advance-select__option-list"
+>
+  <div
+    className="advance-select__option-list-header"
+  >
+    Filter
+  </div>
+  <Scrollbars
+    autoHeight={true}
+    autoHeightMax={200}
+    autoHeightMin={25}
+    autoHide={false}
+    autoHideDuration={200}
+    autoHideTimeout={1000}
+    hideTracksWhenNotNeeded={true}
+    renderThumbHorizontal={[Function]}
+    renderThumbVertical={[Function]}
+    renderTrackHorizontal={[Function]}
+    renderTrackVertical={[Function]}
+    renderView={[Function]}
+    tagName="div"
+    thumbMinSize={30}
+    universal={false}
+  >
+    <Option
+      className="advance-select"
+      id="string"
+      isDisabled={false}
+      isSelected={true}
+      key="string"
+      onOptionClick={[Function]}
+      value="string"
+    />
+  </Scrollbars>
+</div>
+`;

@@ -1,0 +1,43 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('entityCard') {
+  align-items: center;
+  justify-content: center;
+
+  padding: setMultipliedSize(3) setMultipliedSize(4);
+  margin: setMultipliedSize();
+  background-color: setColor('cod-grey');
+
+  color: setColor('mid-grey');
+  font-size: setFontSizeNew('h4');
+
+  cursor: pointer;
+
+  @include flex(row);
+
+  @include element('icon') {
+    width: 20px;
+    margin-right: setMultipliedSize(3);
+
+    color: setColor('orange');
+    text-align: center;
+  }
+
+  @include element('radio') {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin-left: auto;
+    border: 1px solid setColor('white');
+    border-radius: 50%;
+
+    background-color: transparent;
+
+    @include state('active') {
+      background-color: setColor('white');
+
+      @include prefix(box-shadow, inset 0px 0px 0px 2px setColor('cod-grey'));
+    }
+  }
+}

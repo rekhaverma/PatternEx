@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RangeBox /> should match with snapshot 1`] = `
+<div
+  className="rangeBox"
+>
+  <span>
+    Show: 
+  </span>
+  <div
+    className="rangeBox__input"
+    onClick={[Function]}
+  >
+    <span>
+      01-01-2018
+    </span>
+    <span>
+      01-07-2018
+    </span>
+    <span
+      className="icon-Calendar-icon"
+      style={
+        Object {
+          "marginLeft": "auto",
+        }
+      }
+    />
+    <span>
+      Show: 
+    </span>
+    <div
+      className="rangeBox__input"
+      onClick={[Function]}
+    >
+      <span>
+        01-01-2018
+      </span>
+       -
+      <span>
+         
+        01-07-2018
+      </span>
+    </div>
+    <div
+      className="rangeBox__comboBox"
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      <PredefinedOptions
+        activeOption="7days"
+        className="rangeBox__predefinedList"
+        hasButtons={true}
+        onApply={[Function]}
+        onCancel={[Function]}
+        onClick={[Function]}
+        options={Array []}
+      />
+    </div>
+  </div>
+</div>
+`;

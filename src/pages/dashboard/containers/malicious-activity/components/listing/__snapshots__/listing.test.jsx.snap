@@ -1,0 +1,214 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Listing /> should match with snapshot - w/o data 1`] = `
+<div
+  className="dashboard__column full-width no-padding"
+>
+  <div
+    className="dashboard__topColumn"
+    style={
+      Object {
+        "display": "flex",
+      }
+    }
+  >
+    <MultiSearch
+      className="multi-search"
+      onChange={[Function]}
+      placeholder="Search for entity or threat tactic"
+      style={Object {}}
+      tags={Array []}
+    />
+  </div>
+  <ConfigurableTable
+    classname="table"
+    data={Array []}
+    maxPageSize="100"
+    onRowClick={[Function]}
+    pageSize="10"
+    rowHeight={30}
+    tableConfig={
+      Array [
+        Object {
+          "className": "table__headerColumn",
+          "field": "hash",
+          "hidden": true,
+          "intl": "malicious.table.hash",
+          "isKey": true,
+          "label": "Hash",
+          "resizable": false,
+        },
+        Object {
+          "className": "table__headerColumn",
+          "field": "start_time_formatted",
+          "hidden": false,
+          "intl": "malicious.table.start_time_formatted",
+          "isKey": false,
+          "label": "Log Date",
+          "resizable": true,
+          "width": 100,
+        },
+        Object {
+          "className": "table__headerColumn--entity",
+          "field": "entity_name",
+          "hidden": false,
+          "intl": "malicious.table.entity_name",
+          "isKey": false,
+          "label": "Entity",
+          "resizable": true,
+          "tooltip": "investigate",
+        },
+        Object {
+          "className": "table__headerColumn",
+          "field": "score",
+          "hidden": false,
+          "intl": "malicious.table.score",
+          "isKey": false,
+          "label": "Score",
+          "resizable": true,
+          "width": 150,
+        },
+        Object {
+          "className": "table__headerColumn--highlighted",
+          "field": "threat",
+          "hidden": false,
+          "intl": "malicious.table.threat",
+          "isKey": false,
+          "label": "Threat Tactic",
+          "resizable": true,
+          "width": 220,
+        },
+        Object {
+          "className": "table__headerColumn--actions",
+          "field": "actions",
+          "hidden": false,
+          "intl": "malicious.table.actions",
+          "isKey": false,
+          "label": "Actions",
+          "resizable": true,
+          "sort": false,
+          "width": 250,
+        },
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`<Listing /> should match with snapshot - with data 1`] = `
+<div
+  className="dashboard__column full-width no-padding"
+>
+  <div
+    className="dashboard__topColumn"
+    style={
+      Object {
+        "display": "flex",
+      }
+    }
+  >
+    <MultiSearch
+      className="multi-search"
+      onChange={[Function]}
+      placeholder="Search for entity or threat tactic"
+      style={Object {}}
+      tags={Array []}
+    />
+  </div>
+  <ConfigurableTable
+    classname="table"
+    data={
+      Array [
+        Object {
+          "handlers": Object {
+            "deleteLabel": [Function],
+            "getNewTabUrl": [Function],
+            "onConfirm": [Function],
+            "onDeny": [Function],
+            "onInspect": [Function],
+            "onRowClick": [Function],
+          },
+        },
+      ]
+    }
+    maxPageSize="100"
+    onRowClick={[Function]}
+    pageSize="10"
+    rowHeight={30}
+    tableConfig={
+      Array [
+        Object {
+          "className": "table__headerColumn",
+          "field": "hash",
+          "hidden": true,
+          "intl": "malicious.table.hash",
+          "isKey": true,
+          "label": "Hash",
+          "resizable": false,
+        },
+        Object {
+          "className": "table__headerColumn",
+          "field": "start_time_formatted",
+          "hidden": false,
+          "intl": "malicious.table.start_time_formatted",
+          "isKey": false,
+          "label": "Log Date",
+          "resizable": true,
+          "width": 100,
+        },
+        Object {
+          "className": "table__headerColumn--entity",
+          "field": "entity_name",
+          "hidden": false,
+          "intl": "malicious.table.entity_name",
+          "isKey": false,
+          "label": "Entity",
+          "resizable": true,
+          "tooltip": "investigate",
+        },
+        Object {
+          "className": "table__headerColumn",
+          "field": "score",
+          "hidden": false,
+          "intl": "malicious.table.score",
+          "isKey": false,
+          "label": "Score",
+          "resizable": true,
+          "width": 150,
+        },
+        Object {
+          "className": "table__headerColumn--highlighted",
+          "field": "threat",
+          "hidden": false,
+          "intl": "malicious.table.threat",
+          "isKey": false,
+          "label": "Threat Tactic",
+          "resizable": true,
+          "width": 220,
+        },
+        Object {
+          "className": "table__headerColumn--actions",
+          "field": "actions",
+          "hidden": false,
+          "intl": "malicious.table.actions",
+          "isKey": false,
+          "label": "Actions",
+          "resizable": true,
+          "sort": false,
+          "width": 250,
+        },
+      ]
+    }
+  />
+</div>
+`;
+
+exports[`<Listing /> should match with snapshot - with loading 1`] = `
+<div
+  className="dashboard__column"
+>
+  <Loader
+    small={true}
+  />
+</div>
+`;

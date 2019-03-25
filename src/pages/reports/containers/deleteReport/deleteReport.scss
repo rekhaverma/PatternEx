@@ -1,0 +1,35 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('deleteReport') {
+	@include flex();
+  justify-content: space-between;
+  
+  @include element('row') {
+	  @include flex($direction: row);
+	  align-items: center;
+    margin-bottom: setMultipliedSize(3);
+    
+    @include state ('spaceBetween') {
+      justify-content: space-between;
+    }
+
+    @include state('rightSide') {
+      margin-left: auto;
+    }
+  }
+
+  @include element('title') {
+    @include H2(setColor('white'));
+  }
+
+  .icon-close {
+    font-size: setFontSizeNew('h4', 'big');
+    cursor: pointer;
+  }
+
+  @include block('firstrow') {
+    padding-bottom: setMultipliedSize(3);
+    border-bottom: 2px solid setColor('silver');
+  }
+}

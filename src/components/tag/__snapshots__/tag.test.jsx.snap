@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> should match with snapshot - default props 1`] = `
+<div
+  className="advanced-tag"
+>
+  <span>
+    Unit Testing
+  </span>
+</div>
+`;
+
+exports[`<Tag /> should match with snapshot - with remove button 1`] = `
+<div
+  className="advanced-tag"
+>
+  <span>
+    Unit Testing
+  </span>
+  <span
+    className="advanced-tag__remove icon-Trash-icon"
+    onClick={[Function]}
+  />
+</div>
+`;

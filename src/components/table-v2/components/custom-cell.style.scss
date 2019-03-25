@@ -1,0 +1,10 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('custom-cell') {
+  font-size: setFontSizeNew('h5', 'big');
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

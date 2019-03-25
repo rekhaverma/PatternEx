@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toggle /> should match with snapshot - disabled 1`] = `
+<div
+  className="toggle toggle--disabled"
+>
+  <input
+    checked={false}
+    id="h0xjn"
+    onChange={[Function]}
+    type="checkbox"
+    value={false}
+  />
+  <label
+    htmlFor="h0xjn"
+  >
+    <span>
+      Off
+    </span>
+  </label>
+</div>
+`;
+
+exports[`<Toggle /> should match with snapshot - off state 1`] = `
+<div
+  className="toggle"
+>
+  <input
+    checked={false}
+    id="h0xjn"
+    onChange={[Function]}
+    type="checkbox"
+    value={false}
+  />
+  <label
+    htmlFor="h0xjn"
+  >
+    <span>
+      Off
+    </span>
+  </label>
+</div>
+`;
+
+exports[`<Toggle /> should match with snapshot - on state 1`] = `
+<div
+  className="toggle toggle--checked"
+>
+  <input
+    checked={true}
+    id="h0xjn"
+    onChange={[Function]}
+    type="checkbox"
+    value={true}
+  />
+  <label
+    htmlFor="h0xjn"
+  >
+    <span>
+      On
+    </span>
+  </label>
+</div>
+`;

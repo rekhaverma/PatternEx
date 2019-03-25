@@ -1,0 +1,22 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('settings') {
+  @include element(header) {
+    display: flex;
+    border-bottom: 1px solid setColor('mid-grey');
+  }
+  @include element('heading') {
+    @include H1($col: setColor('white'));
+    font-weight: setFontWeight('normal');
+    flex-grow: 1;
+    margin-bottom: setMultipliedSize(2);
+  }
+  .close-setting-modal {
+    font-size: setFontSizeNew('h5','big');
+    cursor: pointer;
+  }
+  .tabsV2 {
+    font-size: setFontSizeNew('h5','big');
+  }
+}

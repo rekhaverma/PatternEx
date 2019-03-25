@@ -1,0 +1,6 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('performance') {
+    position: relative;
+}

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> should match with snapshot 1`] = `
+<div
+  className="tag"
+>
+  <span
+    className="icon-suspicious"
+  />
+  <span
+    className="tag__close"
+    onClick={[Function]}
+  />
+</div>
+`;

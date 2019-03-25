@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LogStat /> should match with snapshot 1`] = `
+<div
+  className="logs_stats__item"
+>
+  <span
+    className="highlighted"
+  >
+    1
+  </span>
+  testing logs
+</div>
+`;

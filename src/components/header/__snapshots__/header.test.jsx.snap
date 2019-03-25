@@ -1,0 +1,436 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should match with snapshot with alerts 1`] = `
+<header
+  className="header1"
+  style={
+    Object {
+      "left": 0,
+      "right": 0,
+    }
+  }
+>
+  <SidebarMenu
+    active=""
+    className="sidebarMenu"
+    hasLogo={true}
+    isOld={true}
+    items={
+      Array [
+        Object {
+          "icon": "icon-dashboard",
+          "id": "dashboard",
+          "items": Array [],
+          "title": "Dashboard",
+        },
+        Object {
+          "icon": "icon-chain",
+          "id": "autocorrelateLink",
+          "items": Array [],
+          "title": "Autocorrelate",
+        },
+        Object {
+          "icon": "icon-warning",
+          "id": "maliciousLink",
+          "items": Array [],
+          "title": "Malicious",
+        },
+        Object {
+          "icon": "icon-binoculars",
+          "id": "suspiciousLink",
+          "items": Array [],
+          "title": "Suspicious",
+        },
+        Object {
+          "icon": "icon-area-chart",
+          "id": "reports",
+          "items": Array [
+            Object {
+              "icon": "icon-shield",
+              "id": "resultsDashboardLink",
+              "title": "Pipeline",
+            },
+            Object {
+              "icon": "icon-line-chart",
+              "id": "customReportsDashboardLink",
+              "label": "CustomReports",
+              "title": "Custom Reports",
+            },
+            Object {
+              "icon": "icon-tag",
+              "id": "labelsDashboardLink",
+              "label": "Labels",
+              "title": "Labels",
+            },
+            Object {
+              "icon": "icon-bar-chart",
+              "id": "performance",
+              "title": "Performance",
+            },
+          ],
+          "title": "Reports",
+        },
+        Object {
+          "icon": "icon-pie-chart",
+          "id": "analyticsDashboardLink",
+          "items": Array [],
+          "title": "Analytics",
+        },
+        Object {
+          "icon": "icon-file-text-o",
+          "id": "apidocSwagger",
+          "items": Array [],
+          "title": "API-DOC",
+        },
+        Object {
+          "icon": "icon-heartbeat",
+          "id": "healthContainer",
+          "items": Array [],
+          "title": "System Health",
+        },
+      ]
+    }
+    privileges={Object {}}
+    query={Object {}}
+  />
+  <img
+    alt="PatternEx"
+    onClick={[Function]}
+    src="test-file-stub"
+    style={
+      Object {
+        "height": 35,
+        "width": 150,
+      }
+    }
+  />
+  <div
+    className="header1__alert-list"
+  />
+  <span
+    className="header1__version"
+  >
+    Version: 
+    v1.1.1
+  </span>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "space-between",
+        "marginLeft": 0,
+        "width": 140,
+      }
+    }
+  >
+    <Connect( UserProfile)
+      icon="icon-gear"
+      privileges={Object {}}
+      setPopup={[Function]}
+      type="configuration"
+    />
+    <Connect( UserProfile)
+      privileges={Object {}}
+      setPopup={[Function]}
+    />
+  </div>
+</header>
+`;
+
+exports[`<Header /> should match with snapshot with alerts and search 1`] = `
+<header
+  className="header1"
+  style={
+    Object {
+      "left": 0,
+      "right": 0,
+    }
+  }
+>
+  <SidebarMenu
+    active=""
+    className="sidebarMenu"
+    hasLogo={true}
+    isOld={true}
+    items={
+      Array [
+        Object {
+          "icon": "icon-dashboard",
+          "id": "dashboard",
+          "items": Array [],
+          "title": "Dashboard",
+        },
+        Object {
+          "icon": "icon-chain",
+          "id": "autocorrelateLink",
+          "items": Array [],
+          "title": "Autocorrelate",
+        },
+        Object {
+          "icon": "icon-warning",
+          "id": "maliciousLink",
+          "items": Array [],
+          "title": "Malicious",
+        },
+        Object {
+          "icon": "icon-binoculars",
+          "id": "suspiciousLink",
+          "items": Array [],
+          "title": "Suspicious",
+        },
+        Object {
+          "icon": "icon-area-chart",
+          "id": "reports",
+          "items": Array [
+            Object {
+              "icon": "icon-shield",
+              "id": "resultsDashboardLink",
+              "title": "Pipeline",
+            },
+            Object {
+              "icon": "icon-line-chart",
+              "id": "customReportsDashboardLink",
+              "label": "CustomReports",
+              "title": "Custom Reports",
+            },
+            Object {
+              "icon": "icon-tag",
+              "id": "labelsDashboardLink",
+              "label": "Labels",
+              "title": "Labels",
+            },
+            Object {
+              "icon": "icon-bar-chart",
+              "id": "performance",
+              "title": "Performance",
+            },
+          ],
+          "title": "Reports",
+        },
+        Object {
+          "icon": "icon-pie-chart",
+          "id": "analyticsDashboardLink",
+          "items": Array [],
+          "title": "Analytics",
+        },
+        Object {
+          "icon": "icon-file-text-o",
+          "id": "apidocSwagger",
+          "items": Array [],
+          "title": "API-DOC",
+        },
+        Object {
+          "icon": "icon-heartbeat",
+          "id": "healthContainer",
+          "items": Array [],
+          "title": "System Health",
+        },
+      ]
+    }
+    privileges={Object {}}
+    query={Object {}}
+  />
+  <img
+    alt="PatternEx"
+    onClick={[Function]}
+    src="test-file-stub"
+    style={
+      Object {
+        "height": 35,
+        "width": 150,
+      }
+    }
+  />
+  <div
+    className="header1__alert-list"
+  />
+  <span
+    className="header1__version"
+  >
+    Version: 
+    v1.1.1
+  </span>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "space-between",
+        "marginLeft": 0,
+        "width": 440,
+      }
+    }
+  >
+    <Search
+      className="search"
+      inputProps={
+        Object {
+          "onChange": [Function],
+          "value": "",
+        }
+      }
+      resetTags={[Function]}
+      style={Object {}}
+      tag="Header"
+    />
+    <Connect( UserProfile)
+      icon="icon-gear"
+      privileges={Object {}}
+      setPopup={[Function]}
+      type="configuration"
+    />
+    <Connect( UserProfile)
+      privileges={Object {}}
+      setPopup={[Function]}
+    />
+  </div>
+</header>
+`;
+
+exports[`<Header /> should match with snapshot with search 1`] = `
+<header
+  className="header1"
+  style={
+    Object {
+      "left": 0,
+      "right": 0,
+    }
+  }
+>
+  <SidebarMenu
+    active=""
+    className="sidebarMenu"
+    hasLogo={true}
+    isOld={true}
+    items={
+      Array [
+        Object {
+          "icon": "icon-dashboard",
+          "id": "dashboard",
+          "items": Array [],
+          "title": "Dashboard",
+        },
+        Object {
+          "icon": "icon-chain",
+          "id": "autocorrelateLink",
+          "items": Array [],
+          "title": "Autocorrelate",
+        },
+        Object {
+          "icon": "icon-warning",
+          "id": "maliciousLink",
+          "items": Array [],
+          "title": "Malicious",
+        },
+        Object {
+          "icon": "icon-binoculars",
+          "id": "suspiciousLink",
+          "items": Array [],
+          "title": "Suspicious",
+        },
+        Object {
+          "icon": "icon-area-chart",
+          "id": "reports",
+          "items": Array [
+            Object {
+              "icon": "icon-shield",
+              "id": "resultsDashboardLink",
+              "title": "Pipeline",
+            },
+            Object {
+              "icon": "icon-line-chart",
+              "id": "customReportsDashboardLink",
+              "label": "CustomReports",
+              "title": "Custom Reports",
+            },
+            Object {
+              "icon": "icon-tag",
+              "id": "labelsDashboardLink",
+              "label": "Labels",
+              "title": "Labels",
+            },
+            Object {
+              "icon": "icon-bar-chart",
+              "id": "performance",
+              "title": "Performance",
+            },
+          ],
+          "title": "Reports",
+        },
+        Object {
+          "icon": "icon-pie-chart",
+          "id": "analyticsDashboardLink",
+          "items": Array [],
+          "title": "Analytics",
+        },
+        Object {
+          "icon": "icon-file-text-o",
+          "id": "apidocSwagger",
+          "items": Array [],
+          "title": "API-DOC",
+        },
+        Object {
+          "icon": "icon-heartbeat",
+          "id": "healthContainer",
+          "items": Array [],
+          "title": "System Health",
+        },
+      ]
+    }
+    privileges={Object {}}
+    query={Object {}}
+  />
+  <img
+    alt="PatternEx"
+    onClick={[Function]}
+    src="test-file-stub"
+    style={
+      Object {
+        "height": 35,
+        "width": 150,
+      }
+    }
+  />
+  <span
+    className="header1__version"
+  >
+    Version: 
+    v1.1.1
+  </span>
+  <div
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "justifyContent": "space-between",
+        "marginLeft": "auto",
+        "width": 440,
+      }
+    }
+  >
+    <Search
+      className="search"
+      inputProps={
+        Object {
+          "onChange": [Function],
+          "value": "",
+        }
+      }
+      resetTags={[Function]}
+      style={Object {}}
+      tag="Header"
+    />
+    <Connect( UserProfile)
+      icon="icon-gear"
+      privileges={Object {}}
+      setPopup={[Function]}
+      type="configuration"
+    />
+    <Connect( UserProfile)
+      privileges={Object {}}
+      setPopup={[Function]}
+    />
+  </div>
+</header>
+`;

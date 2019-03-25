@@ -1,0 +1,31 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('clusterMeta') {
+  @include element('centralEntity') {
+    color: setColor('white');
+    font-weight: setFontWeight('bold');
+  }
+
+  @include element('list') {
+    margin: setMultipliedSize(2) 0;
+  }
+
+  @include element('item') {
+    padding: 0 setMultipliedSize();
+    border-right: 1px solid setColor('mid-grey');
+
+    @include typography(
+      $color: setColor('mid-grey'),
+      $weight: 'bold'
+    );
+
+    &:first-child {
+      margin-left: - setMultipliedSize();
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('malicious') {
+    color: setColor('red');
+    stroke: setColor('red');
+    fill: setColor('red');
+    background: setColor('red');
+}
+@include block('suspicious') {
+    color: setColor('yellow');
+    stroke: setColor('yellow');
+    fill: setColor('yellow');
+    background: setColor('yellow');
+}
+@include block('clusters') {
+    color: setColor('vivid-orange');
+    stroke: setColor('vivid-orange');
+    fill: setColor('vivid-orange');
+    background: setColor('vivid-orange');
+}
+@include block('topLabel') {
+    stroke: setColor('bright-green');
+    fill: setColor('bright-green');
+    background: setColor('bright-green');
+}
+@include block('precision') {
+    color: setColor('highlighted-purple');
+    stroke: setColor('highlighted-purple');
+    fill: setColor('highlighted-purple');
+    background: setColor('highlighted-purple');
+}
+
+@include block('fade') {
+    opacity: 0.3;
+}
+
+@include block('timeline_diagram_container') {
+    position: relative;
+}
+
+@include block('xAxis') {
+    path {
+        stroke: transparent;
+    }
+    text {
+        fill: setColor('dark-grey');
+    }
+    .tick {
+        line {
+            stroke: transparent;
+        }
+    }
+}
+
+@include block('yAxis') {
+    text {
+        fill: setColor('light-grey');
+        font-weight: setFontWeight('normal');
+
+        &.precision {
+            fill: setColor('highlighted-purple');
+        }
+
+        &.topLabel {
+            fill: setColor('bright-green');
+        }
+    }
+
+    path {
+        stroke-dasharray: 3, 3;
+        stroke: setColor('light-grey');
+    }
+}
+
+g {
+    .line {
+        fill: none;
+    }
+    .area {
+        fill-opacity: 0.2;
+    }
+}
+
+@include block('popper-wrap') {
+    pointer-events: none;
+}
+
+@include block('popper') {
+    @include element('point_info') {
+        .highlighted {
+            margin: 0px 4px 0px 4px;
+            color: setColor('white');
+            font-weight: setFontWeight('bold');
+        }
+    }
+}
+
+@include block('overlaid_dark_rects') {
+    rect {
+        opacity: 0.6;
+    }
+}
+
+@include block('selectedPoint') {
+    stroke: setColor('white');
+    stroke-width: 2px;
+}
+
+@include block('timeRange') {
+    line {
+        stroke: setColor('orange');
+    }
+    path {
+        stroke-width: 1px;
+        stroke: setColor('orange');
+    }
+
+    @include element('triangle') {
+        fill: setColor('orange');
+        cursor: pointer;
+    }
+}

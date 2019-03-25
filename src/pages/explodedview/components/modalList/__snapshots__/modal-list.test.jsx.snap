@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModalList /> should match with snapshot 1`] = `
+<div
+  className="modalList"
+>
+  <div
+    className="modalList__header"
+  >
+    <span />
+    <span
+      className="icon-close"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="modalList__content"
+  >
+    <span />
+  </div>
+</div>
+`;

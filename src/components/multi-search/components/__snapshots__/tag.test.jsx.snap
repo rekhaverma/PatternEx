@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> should renders correctly 1`] = `
+<div
+  className="tag"
+>
+  <span>
+    tag
+  </span>
+  <span
+    className="icon-remove"
+    onClick={[Function]}
+  />
+</div>
+`;

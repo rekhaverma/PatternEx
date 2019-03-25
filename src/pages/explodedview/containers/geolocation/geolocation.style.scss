@@ -1,0 +1,25 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('geolocation') {
+  @include element('header') {
+    @include flex($direction: row);
+    flex: 1 0 59px;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: setMultipliedSize(2);
+  }
+  @include element('content') {
+    height: 100%;
+  }
+}
+
+@include block('related_entities') {
+  @include flex($direction: row);
+}
+
+@include block('spiderGraph') {
+  @include element('component') {
+    position: relative;
+  }
+} 

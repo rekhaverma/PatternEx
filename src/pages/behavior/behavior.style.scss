@@ -1,0 +1,16 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('title') {
+  font-size: setFontSizeNew('h3', 'big');
+  font-weight: setFontWeight('book');
+}
+
+@include block('text') {
+  font-size: setFontSizeNew('h4');
+  font-weight: setFontWeight('book');
+}
+
+@include block('file-download') {
+  padding: 0 setMultipliedSize(1, -1);
+}

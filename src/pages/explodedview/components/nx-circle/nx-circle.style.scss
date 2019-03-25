@@ -1,0 +1,26 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('nxcircle'){
+  width: 165px;
+  height: 165px;
+  box-shadow: 1px 1px 8px 0 setColor('white', 0.37);
+  border: solid 2px setColor('orange');
+  border-radius: setRadius('circle');
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  font-size: setFontSizeNew('h5','big');
+  font-weight: setFontWeight('book');
+  text-align: center;
+  color: setColor('white');
+  margin-right: setMultipliedSize(3);
+
+  @include element('number'){
+    display:block;
+    text-align:center;
+    font-size: setFontSizeNew('h1');
+    color: setColor('orange');
+  }
+}

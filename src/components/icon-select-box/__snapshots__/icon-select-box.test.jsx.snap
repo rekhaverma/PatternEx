@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IconSelectBox /> should match with snapshot 1`] = `
+<div>
+  <IconSelectBox
+    activeOptions={
+      Array [
+        "test1",
+        "test2",
+      ]
+    }
+    autocomplete={false}
+    boxIsOpen={false}
+    closeBox={[Function]}
+    icon="icon-test"
+    intlid="intl.test"
+    openBox={[Function]}
+    options={
+      Array [
+        Object {
+          "content": "Test1",
+          "disabled": false,
+          "id": "test1",
+        },
+        Object {
+          "content": "Test2",
+          "disabled": true,
+          "id": "test2",
+        },
+      ]
+    }
+    tooltipIntl="tooltip.test"
+    updateOptionsHandler={[Function]}
+  />
+</div>
+`;

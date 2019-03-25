@@ -1,0 +1,23 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('pagination') {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @include block('selectBox') {
+    max-width: 100%;
+    width: 140px;
+  }
+
+  li {
+    cursor: pointer;
+    a {
+      user-select: none;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}

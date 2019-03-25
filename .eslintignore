@@ -1,0 +1,9 @@
+devtools/**/*
+**/__tests__
+**/*.test.jsx
+**/*.spec.jsx
+**/*.test.js
+**/*.spec.js
+**/*.png
+**/*.html
+**/*.scss

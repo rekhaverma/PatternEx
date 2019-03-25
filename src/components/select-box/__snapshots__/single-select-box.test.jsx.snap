@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SingleSelectBox /> should render correctly 1`] = `
+<div>
+  <SingleSelectBox
+    activeOption="all"
+    allowSearch={false}
+    boxIsOpen={false}
+    className="singleSelectBox__tests"
+    closeBox={[Function]}
+    customClassName=""
+    onClick={[Function]}
+    openBox={[Function]}
+    options={
+      Array [
+        Object {
+          "content": "All values",
+          "id": "all",
+        },
+        Object {
+          "content": "Value1",
+          "id": "value1",
+        },
+        Object {
+          "content": "Value2",
+          "id": "value2",
+        },
+      ]
+    }
+    placeholder="SingleSelectBox"
+    scrollbar={true}
+    showLabel={false}
+    singleSelect={true}
+    style={
+      Object {
+        "marginRight": 20,
+      }
+    }
+  />
+</div>
+`;

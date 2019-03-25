@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardFooter /> should render correctly 1`] = `
+<Link
+  className="testClass"
+  onlyActiveOnIndex={false}
+  style={Object {}}
+  to="/dashboard"
+>
+  <span
+    className="icon-chevron-right"
+  />
+  <span>
+    Test
+  </span>
+</Link>
+`;

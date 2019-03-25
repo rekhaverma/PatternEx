@@ -1,0 +1,24 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('cardsSelectBox') {
+  position: relative;
+  width: 200px;
+  cursor: pointer;
+
+  @include element('box') {
+    @include flex(row);
+    justify-content: flex-end;
+  }
+
+  span {
+    font-size: setFontSize('h3');
+    color: setColor('white');
+    padding: setSize('4px');
+  }
+
+  .icon-cog {
+    font-size: setFontSize('h2');
+    color: setColor('orange');
+  }
+}

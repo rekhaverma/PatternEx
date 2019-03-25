@@ -1,0 +1,26 @@
+@import './box-sizing.scss';
+@import './ellipsis.scss';
+@import './flex.scss';
+@import './prefix.scss';
+@import './responsive.scss';
+@import './draw.scss';
+
+@mixin radius(
+  $top: 0,
+  $right: 0,
+  $bottom: 0,
+  $left: 0
+) {
+  -webkit-border-top-left-radius: $top;
+  -webkit-border-top-right-radius: $right;
+  -webkit-border-bottom-right-radius: $bottom;
+  -webkit-border-bottom-left-radius: $left;
+  -moz-border-radius-topleft: $top;
+  -moz-border-radius-topright: $right;
+  -moz-border-radius-bottomright: $bottom;
+  -moz-border-radius-bottomleft: $left;
+  border-top-left-radius: $top;
+  border-top-right-radius: $right;
+  border-bottom-right-radius: $bottom;
+  border-bottom-left-radius: $left;
+}

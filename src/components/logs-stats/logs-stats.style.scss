@@ -1,0 +1,31 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('logs_stats') {
+  float: right;
+  width: 150px;
+  font-size: setFontSizeNew('h4');
+  font-weight: 300;
+  text-align: right;
+  
+  &:first-child {
+    font-size: setFontSizeNew('h4');
+  }
+
+  &:nth-child(2) {
+    font-size: setFontSizeNew('h5','big');
+  }
+
+  @include element('item') {
+    text-align: right;
+
+    span {
+      margin: 3px 3px;
+      color: setColor('login-footer');
+    }
+  }
+
+  .highlighted {
+    color: setColor('white');
+  }
+}

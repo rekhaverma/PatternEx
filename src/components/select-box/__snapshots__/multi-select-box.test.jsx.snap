@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MultiSelectBox /> should render correctly 1`] = `
+<div>
+  <MultiSelectBox
+    activeOption={
+      Array [
+        "all",
+        "value1",
+      ]
+    }
+    autocomplete={false}
+    boxIsOpen={false}
+    className="MultiSelectBox__test"
+    closeBox={[Function]}
+    customClassName=""
+    hasScrollbar={true}
+    onClick={[Function]}
+    openBox={[Function]}
+    options={
+      Array [
+        Object {
+          "content": "All values",
+          "id": "all",
+        },
+        Object {
+          "content": "Value1",
+          "id": "value1",
+        },
+        Object {
+          "content": "Value2",
+          "id": "value2",
+        },
+      ]
+    }
+    placeHolder="Test placeholder"
+    placeholder="Placeholder"
+    singleSelect={false}
+    style={
+      Object {
+        "marginRight": 20,
+      }
+    }
+  />
+</div>
+`;

@@ -1,0 +1,26 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('ptrx-modal') {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparentize(#232323, .35); // todo: use function to set color
+  z-index: 99;
+
+  @include element('content') {
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+
+    padding: setMultipliedSize(4, 4);
+    background-color: setColor('black');
+    box-shadow: 6px 8px 11px 0 setColor('black', 0.5);
+
+    @include flex();
+    @include prefix(border-radius, setRadius('medium'));
+    @include prefix(transform, translateY(-50%));
+  }
+}

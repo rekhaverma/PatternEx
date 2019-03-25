@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PredictionTabs /> should match with snapshot 1`] = `
+<div
+  className="test-class"
+>
+  <div
+    className="test-class__el--active"
+    key="1"
+    onClick={[Function]}
+  >
+    <span>
+      2
+    </span>
+    <p>
+      tab 1 title
+    </p>
+  </div>
+  <div
+    className="test-class__el"
+    key="2"
+    onClick={[Function]}
+  >
+    <span>
+      2
+    </span>
+    <p>
+      tab 2 title
+    </p>
+  </div>
+</div>
+`;

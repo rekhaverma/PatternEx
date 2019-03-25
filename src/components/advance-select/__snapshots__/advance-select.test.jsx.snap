@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AdvanceSelect /> should match with snapshot 1`] = `
+<SingleSelect
+  activeOption=""
+  allowClear={true}
+  allowSearch={false}
+  boxIsOpen={false}
+  className="advance-select"
+  closeBox={[Function]}
+  defaultValue="all"
+  dropDownHeader="filter"
+  errorMessage=""
+  hasError={false}
+  onOptionUpdate={[Function]}
+  openBox={[Function]}
+  options={Array []}
+/>
+`;

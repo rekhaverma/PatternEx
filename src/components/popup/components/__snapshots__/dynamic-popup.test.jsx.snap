@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DynamicPopup /> should match with snapshot 1`] = `
+<div
+  className="dynamic-popup"
+>
+  <div
+    className="dynamic-popup__content"
+  >
+    <div
+      className="dynamic-popup__text"
+    >
+      Text
+    </div>
+    <Button
+      className="button"
+      onClick={[Function]}
+      style={
+        Object {
+          "width": 100,
+        }
+      }
+    >
+      Ok
+    </Button>
+  </div>
+</div>
+`;

@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PredictionRow /> should match with snapshot 1`] = `
+<div
+  className="test-class__row"
+>
+  <div
+    className="test-class__type"
+  >
+    <div
+      key="tag-1_entity_name"
+    >
+      <Tooltip
+        hideWhenHoveringTooltipContent={false}
+        managerStyle={
+          Object {
+            "display": "flex",
+          }
+        }
+        position="bottom"
+        style={Object {}}
+        trigger={
+          <span
+            className=""
+          />
+        }
+      >
+        <FormattedMessage
+          id="predictions.type.tag-1"
+          values={Object {}}
+        />
+      </Tooltip>
+    </div>
+    <div
+      key="tag-2_entity_name"
+    >
+      <Tooltip
+        hideWhenHoveringTooltipContent={false}
+        managerStyle={
+          Object {
+            "display": "flex",
+          }
+        }
+        position="bottom"
+        style={Object {}}
+        trigger={
+          <span
+            className=""
+          />
+        }
+      >
+        <FormattedMessage
+          id="predictions.type.tag-2"
+          values={Object {}}
+        />
+      </Tooltip>
+    </div>
+  </div>
+  <div
+    className="test-class__content"
+  >
+    <span
+      className="test-class__entity"
+      onClick={[Function]}
+    >
+      entity_name
+    </span>
+    <span
+      className="test-class__timestamp"
+    >
+      timestamp
+    </span>
+    <div
+      className="test-class__list"
+    >
+      <div
+        className="test-class__item"
+        key="predictions#0"
+      >
+        <p
+          className="test-class__name"
+        >
+          predictions
+        </p>
+        <div
+          className="test-class__actions +history"
+        >
+          <span>
+            Change Label
+          </span>
+          <span
+            className="icon-deny"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

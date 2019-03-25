@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConfirmationModal /> should match with snapshot 1`] = `
+<Modal
+  className="ptrx-modal"
+  style={
+    Object {
+      "width": "100px",
+    }
+  }
+  type=""
+>
+  <div
+    className="confirmation-modal"
+  >
+    <div
+      className="confirmation-modal__content"
+    >
+      <FormattedMessage
+        id="message"
+        values={Object {}}
+      />
+    </div>
+    <div
+      className="confirmation-modal__footer"
+    >
+      <Button
+        className="button +small"
+        onClick={[Function]}
+      >
+        <FormattedMessage
+          id="global.yes"
+          values={Object {}}
+        />
+      </Button>
+      <Button
+        className="button--success +small"
+        onClick={[Function]}
+      >
+        <FormattedMessage
+          id="global.no"
+          values={Object {}}
+        />
+      </Button>
+    </div>
+  </div>
+</Modal>
+`;

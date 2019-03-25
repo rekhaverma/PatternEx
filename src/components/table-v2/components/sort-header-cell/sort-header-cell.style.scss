@@ -1,0 +1,31 @@
+@import 'xbem';
+@import 'theme';
+
+// $icon-dimension: 14px;
+
+@include block('public_fixedDataTableCell_cellContent') {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: setFontSizeNew('h5','big');
+  color: setColor('white');
+  cursor: pointer;
+
+  // span {
+  //   width: $icon-dimension;
+  //   height: $icon-dimension;
+  // }
+}
+
+.table-v2-header .public_fixedDataTableCell_cellContent,
+.public_fixedDataTable_header .public_fixedDataTableCell_main {
+  font-size: setFontSizeNew('h5','big');
+  color: setColor('white');
+  font-weight: setFontWeight('medium');
+}
+
+
+.public_fixedDataTable_header .public_fixedDataTableCell_main {
+  padding-left: 10px;
+}

@@ -1,0 +1,628 @@
+@import "variables";
+
+@font-face {
+  font-family: 'patternex';
+  src:  url('#{$icomoon-font-path}/patternex.eot?qbovsz');
+  src:  url('#{$icomoon-font-path}/patternex.eot?qbovsz#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/patternex.ttf?qbovsz') format('truetype'),
+    url('#{$icomoon-font-path}/patternex.woff?qbovsz') format('woff'),
+    url('#{$icomoon-font-path}/patternex.svg?qbovsz#patternex') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'patternex' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@function unicode($str) {
+  @return unquote("\"") + $str + unquote("\"");
+}
+
+.icon-mute {
+  &:before {
+    content: $icon-mute;
+    color: #fff;
+  }
+}
+.icon-speaker {
+  &:before {
+    content: $icon-speaker;
+    color: #fff;
+  }
+}
+.icon-information {
+  &:before {
+    content: unicode($icon-information);     
+    color: #a6aaad;
+  }
+}
+.icon-group-3 {
+  &:before {
+    content: $icon-group-3;     
+    color: #CCC;
+  }
+}
+.icon-trash-outline {
+  &:before {
+    content: $icon-trash-outline; 
+  }
+}
+.icon-tab {
+  &:before {
+    content: unicode($icon-tab);     
+    color: #ff6f39;
+  }
+}
+
+.icon-expand-square {
+  &:before {
+    content: unicode($icon-expand-square);     
+    color: #ff6f39;
+  }
+}
+.icon-full-size {
+  &:before {
+    content: unicode($icon-full-size);     
+    color: #CCC;
+  }
+}
+.icon-restart {
+  &:before {
+    content: unicode($icon-restart); 
+  }
+}
+.icon-ip {
+  &:before {
+    content: unicode($icon-ip);
+  }
+}
+.icon-edit {
+  &:before {
+    content: unicode($icon-edit); 
+  }
+}
+.icon-retrain {
+  &:before {
+    content: unicode($icon-retrain); 
+  }
+}
+.icon-refresh {
+  &:before {
+    content: unicode($icon-refresh); 
+  }
+}
+.icon-add {
+  &:before {
+    content: unicode($icon-add);     
+    color: #ff6f39;
+  }
+}
+.icon-remove {
+  &:before {
+    content: unicode($icon-remove);     
+    color: #fff;
+  }
+}
+.icon-close2 {
+  &:before {
+    content: unicode($icon-close2);     
+    color: #fff;
+  }
+}
+.icon-download {
+  &:before {
+    content: unicode($icon-download); 
+  }
+}
+.icon-export {
+  &:before {
+    content: unicode($icon-export); 
+  }
+}
+.icon-M-icon {
+  &:before {
+    content: unicode($icon-M-icon); 
+  }
+}
+.icon-Arrow-up-icon {
+  &:before {
+    content: unicode($icon-Arrow-up-icon); 
+  }
+}
+.icon-Down-arrow-icon {
+  &:before {
+    content: unicode($icon-Down-arrow-icon); 
+  }
+}
+.icon-Inactive-deploy-icon {
+  &:before {
+    content: unicode($icon-Inactive-deploy-icon); 
+  }
+}
+.icon-Calendar-icon {
+  &:before {
+    content: unicode($icon-Calendar-icon); 
+  }
+}
+.icon-Trash-icon {
+  &:before {
+    content: unicode($icon-Trash-icon); 
+  }
+}
+.icon-Info-icon {
+  &:before {
+    content: unicode($icon-Info-icon); 
+  }
+}
+.icon-Deploy-icon {
+  &:before {
+    content: unicode($icon-Deploy-icon); 
+  }
+}
+.icon-Cancel-icon {
+  &:before {
+    content: unicode($icon-Cancel-icon); 
+  }
+}
+.icon-request {
+  &:before {
+    content: unicode($icon-request); 
+  }
+}
+.icon-hpa {
+  &:before {
+    content: unicode($icon-hpa); 
+  }
+}
+.icon-file-o {
+  &:before {
+    content: unicode($icon-file-o); 
+  }
+}
+.icon-frown-o {
+  &:before {
+    content: unicode($icon-frown-o); 
+  }
+}
+.icon-chord {
+  &:before {
+    content: unicode($icon-chord); 
+  }
+}
+.icon-success {
+  &:before {
+    content: unicode($icon-success); 
+  }
+}
+.icon-info {
+  &:before {
+    content: unicode($icon-info); 
+  }
+}
+.icon-error {
+  &:before {
+    content: unicode($icon-error); 
+  }
+}
+.icon-question {
+  &:before {
+    content: unicode($icon-question); 
+  }
+}
+.icon-close {
+  &:before {
+    content: unicode($icon-close); 
+  }
+}
+.icon-remove2 {
+  &:before {
+    content: unicode($icon-remove2); 
+  }
+}
+.icon-times {
+  &:before {
+    content: unicode($icon-times); 
+  }
+}
+.icon-cog2 {
+  &:before {
+    content: unicode($icon-cog2);     
+    color: #ff5d3a;
+  }
+}
+.icon-gear {
+  &:before {
+    content: unicode($icon-gear);     
+    color: #ff5d3a;
+  }
+}
+.icon-tag {
+  &:before {
+    content: unicode($icon-tag); 
+  }
+}
+.icon-tags {
+  &:before {
+    content: unicode($icon-tags); 
+  }
+}
+.icon-chevron-left {
+  &:before {
+    content: unicode($icon-chevron-left); 
+  }
+}
+.icon-chevron-right {
+  &:before {
+    content: unicode($icon-chevron-right); 
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: unicode($icon-arrow-right); 
+  }
+}
+.icon-exclamation-triangle {
+  &:before {
+    content: unicode($icon-exclamation-triangle); 
+  }
+}
+.icon-warning {
+  &:before {
+    content: unicode($icon-warning); 
+  }
+}
+.icon-calendar {
+  &:before {
+    content: unicode($icon-calendar); 
+  }
+}
+.icon-chevron-up {
+  &:before {
+    content: unicode($icon-chevron-up); 
+  }
+}
+.icon-chevron-down {
+  &:before {
+    content: unicode($icon-chevron-down); 
+  }
+}
+.icon-bar-chart {
+  &:before {
+    content: unicode($icon-bar-chart); 
+  }
+}
+.icon-bar-chart-o {
+  &:before {
+    content: unicode($icon-bar-chart-o); 
+  }
+}
+.icon-cogs {
+  &:before {
+    content: unicode($icon-cogs); 
+  }
+}
+.icon-gears {
+  &:before {
+    content: unicode($icon-gears); 
+  }
+}
+.icon-group {
+  &:before {
+    content: unicode($icon-group); 
+  }
+}
+.icon-users {
+  &:before {
+    content: unicode($icon-users); 
+  }
+}
+.icon-chain {
+  &:before {
+    content: unicode($icon-chain); 
+  }
+}
+.icon-link {
+  &:before {
+    content: unicode($icon-link); 
+  }
+}
+.icon-list-ul {
+  &:before {
+    content: unicode($icon-list-ul); 
+  }
+}
+.icon-sort {
+  &:before {
+    content: unicode($icon-sort); 
+  }
+}
+.icon-unsorted {
+  &:before {
+    content: unicode($icon-unsorted); 
+  }
+}
+.icon-sort-desc {
+  &:before {
+    content: unicode($icon-sort-desc); 
+  }
+}
+.icon-sort-down {
+  &:before {
+    content: unicode($icon-sort-down); 
+  }
+}
+.icon-sort-asc {
+  &:before {
+    content: unicode($icon-sort-asc); 
+  }
+}
+.icon-sort-up {
+  &:before {
+    content: unicode($icon-sort-up); 
+  }
+}
+.icon-dashboard {
+  &:before {
+    content: unicode($icon-dashboard); 
+  }
+}
+.icon-tachometer {
+  &:before {
+    content: unicode($icon-tachometer); 
+  }
+}
+.icon-file-text-o {
+  &:before {
+    content: unicode($icon-file-text-o); 
+  }
+}
+.icon-angle-down {
+  &:before {
+    content: unicode($icon-angle-down); 
+  }
+}
+.icon-code {
+  &:before {
+    content: unicode($icon-code); 
+  }
+}
+.icon-shield {
+  &:before {
+    content: unicode($icon-shield); 
+  }
+}
+.icon-minus-square-o {
+  &:before {
+    content: unicode($icon-minus-square-o); 
+  }
+}
+.icon-plus-square-o {
+  &:before {
+    content: unicode($icon-plus-square-o); 
+  }
+}
+.icon-binoculars {
+  &:before {
+    content: unicode($icon-binoculars); 
+  }
+}
+.icon-area-chart {
+  &:before {
+    content: unicode($icon-area-chart); 
+  }
+}
+.icon-pie-chart {
+  &:before {
+    content: unicode($icon-pie-chart); 
+  }
+}
+.icon-line-chart {
+  &:before {
+    content: unicode($icon-line-chart); 
+  }
+}
+.icon-connectdevelop {
+  &:before {
+    content: unicode($icon-connectdevelop); 
+  }
+}
+.icon-heartbeat {
+  &:before {
+    content: unicode($icon-heartbeat); 
+  }
+}
+.icon-server {
+  &:before {
+    content: unicode($icon-server); 
+  }
+}
+.icon-spider {
+  &:before {
+    content: unicode($icon-spider); 
+  }
+}
+.icon-share-1 {
+  &:before {
+    content: unicode($icon-share-1); 
+  }
+}
+.icon-precision {
+  &:before {
+    content: unicode($icon-precision); 
+  }
+}
+.icon-price-tag {
+  &:before {
+    content: unicode($icon-price-tag); 
+  }
+}
+.icon-atoms {
+  &:before {
+    content: unicode($icon-atoms); 
+  }
+}
+.icon-dashboard2 {
+  &:before {
+    content: unicode($icon-dashboard2); 
+  }
+}
+.icon-ipo {
+  &:before {
+    content: unicode($icon-ipo); 
+  }
+}
+.icon-link-symbol {
+  &:before {
+    content: unicode($icon-link-symbol); 
+  }
+}
+.icon-folder {
+  &:before {
+    content: unicode($icon-folder); 
+  }
+}
+.icon-pie-chart2 {
+  &:before {
+    content: unicode($icon-pie-chart2); 
+  }
+}
+.icon-presentation {
+  &:before {
+    content: unicode($icon-presentation); 
+  }
+}
+.icon-top-view {
+  &:before {
+    content: unicode($icon-top-view); 
+  }
+}
+.icon-bottom-view {
+  &:before {
+    content: unicode($icon-bottom-view); 
+  }
+}
+.icon-unknown {
+  &:before {
+    content: unicode($icon-unknown); 
+  }
+}
+.icon-profile {
+  &:before {
+    content: unicode($icon-profile); 
+  }
+}
+.icon-empty {
+  &:before {
+    content: unicode($icon-empty); 
+  }
+}
+.icon-cog {
+  &:before {
+    content: unicode($icon-cog); 
+  }
+}
+.icon-confirm {
+  &:before {
+    content: unicode($icon-confirm); 
+  }
+}
+.icon-suspicious {
+  &:before {
+    content: unicode($icon-suspicious); 
+  }
+}
+.icon-hosting {
+  &:before {
+    content: unicode($icon-hosting); 
+  }
+}
+.icon-deny {
+  &:before {
+    content: unicode($icon-deny); 
+  }
+}
+.icon-laptop {
+  &:before {
+    content: unicode($icon-laptop); 
+  }
+}
+.icon-user {
+  &:before {
+    content: unicode($icon-user); 
+  }
+}
+.icon-search {
+  &:before {
+    content: unicode($icon-search); 
+  }
+}
+.icon-inspect {
+  &:before {
+    content: unicode($icon-inspect); 
+  }
+}
+.icon-malicious {
+  &:before {
+    content: unicode($icon-malicious); 
+  }
+}
+.icon-world {
+  &:before {
+    content: unicode($icon-world); 
+  }
+}
+
+.icon-lock {
+  &:before {
+    content: unicode($icon-lock); 
+  }
+}
+
+.icon-user-login {
+  &:before {
+    content: unicode($icon-user-login); 
+  }
+}
+
+.icon-eyeglasses {
+  &:before {
+    content: unicode($icon-eyeglasses); 
+  }
+}
+
+.icon-drag {
+  &:before {
+    content: $icon-drag;     
+    color: #fff;
+  }
+}
+
+.icon-mean {
+  &:before {
+    content: unicode($icon-mean); 
+  }
+}
+
+.icon-actual {
+  &:before {
+    content: unicode($icon-actual); 
+  }
+}
+
+.icon-log-manager{
+  &:before {
+    content: unicode($icon-log-manager);
+  }
+};

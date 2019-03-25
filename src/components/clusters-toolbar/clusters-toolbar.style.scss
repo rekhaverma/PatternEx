@@ -1,0 +1,16 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('clusterToolbar') {
+  @include flex($grow: 1);
+
+  @include element('header') {
+    @include flex(row);
+    justify-content: space-between;
+
+    @include element('el') {
+      width: 50%;
+      padding: setMultipliedSize(1, -1);
+    }
+  }
+}

@@ -1,0 +1,6 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('suspiciousFilterList') {
+  margin: 0 setMultipliedSize(3);
+}

@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DateRange /> should match with snapshot default 1`] = `
+<div>
+  <DateRange
+    activeOption="7days"
+    allowEnableDatesHours={false}
+    boxIsOpen={false}
+    className="dateRange"
+    closeBox={[Function]}
+    currentSingleDate={"2018-01-01T00:00:00.000Z"}
+    dateFormat="YYYY-MM-DD"
+    disableDays={false}
+    enableDates={Array []}
+    enableHours={Array []}
+    endDate={"2018-01-07T00:00:00.000Z"}
+    label="Date range"
+    onDateChange={[Function]}
+    onMonthChange={[Function]}
+    onUpdateDailyDate={[Function]}
+    openBox={[Function]}
+    options={
+      Array [
+        Object {
+          "id": "yesterday",
+          "label": "Yesterday",
+        },
+        Object {
+          "id": "7days",
+          "label": "7 Days",
+        },
+        Object {
+          "id": "30days",
+          "label": "30 Days",
+        },
+        Object {
+          "id": "thismonth",
+          "label": "This Month",
+        },
+        Object {
+          "id": "lastmonth",
+          "label": "Last Month",
+        },
+        Object {
+          "id": "customRange",
+          "label": "Custom Range",
+        },
+      ]
+    }
+    showHoursList={true}
+    startDate={"2018-01-01T00:00:00.000Z"}
+    theme="column"
+    type=""
+    updateDateRange={[Function]}
+  />
+</div>
+`;
+
+exports[`<DateRange /> should match with snapshot for daily type 1`] = `
+<div>
+  <DateRange
+    activeOption="7days"
+    allowEnableDatesHours={false}
+    boxIsOpen={false}
+    className="dateRange"
+    closeBox={[Function]}
+    currentSingleDate={"2018-01-01T00:00:00.000Z"}
+    dateFormat="YYYY-MM-DD"
+    disableDays={false}
+    enableDates={Array []}
+    enableHours={Array []}
+    endDate={"2018-01-07T00:00:00.000Z"}
+    label="Date range"
+    onDateChange={[Function]}
+    onMonthChange={[Function]}
+    onUpdateDailyDate={[Function]}
+    openBox={[Function]}
+    options={
+      Array [
+        Object {
+          "id": "yesterday",
+          "label": "Yesterday",
+        },
+        Object {
+          "id": "7days",
+          "label": "7 Days",
+        },
+        Object {
+          "id": "30days",
+          "label": "30 Days",
+        },
+        Object {
+          "id": "thismonth",
+          "label": "This Month",
+        },
+        Object {
+          "id": "lastmonth",
+          "label": "Last Month",
+        },
+        Object {
+          "id": "customRange",
+          "label": "Custom Range",
+        },
+      ]
+    }
+    showHoursList={true}
+    startDate={"2018-01-01T00:00:00.000Z"}
+    theme="column"
+    type="daily"
+    updateDateRange={[Function]}
+  />
+</div>
+`;
+
+exports[`<DateRange /> should match with snapshot for single type 1`] = `
+<div>
+  <DateRange
+    activeOption="7days"
+    allowEnableDatesHours={false}
+    boxIsOpen={false}
+    className="dateRange"
+    closeBox={[Function]}
+    currentSingleDate={"2018-01-01T00:00:00.000Z"}
+    dateFormat="YYYY-MM-DD"
+    disableDays={false}
+    enableDates={Array []}
+    enableHours={Array []}
+    endDate={"2018-01-07T00:00:00.000Z"}
+    label="Date range"
+    onDateChange={[Function]}
+    onMonthChange={[Function]}
+    onUpdateDailyDate={[Function]}
+    openBox={[Function]}
+    options={
+      Array [
+        Object {
+          "id": "yesterday",
+          "label": "Yesterday",
+        },
+        Object {
+          "id": "7days",
+          "label": "7 Days",
+        },
+        Object {
+          "id": "30days",
+          "label": "30 Days",
+        },
+        Object {
+          "id": "thismonth",
+          "label": "This Month",
+        },
+        Object {
+          "id": "lastmonth",
+          "label": "Last Month",
+        },
+        Object {
+          "id": "customRange",
+          "label": "Custom Range",
+        },
+      ]
+    }
+    showHoursList={true}
+    startDate={"2018-01-01T00:00:00.000Z"}
+    theme="column"
+    type="single"
+    updateDateRange={[Function]}
+  />
+</div>
+`;

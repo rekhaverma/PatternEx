@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ViewDetails /> should match with snapshot 1`] = `
+<span
+  className="test-selector-on-click"
+  onClick={[Function]}
+>
+  <div
+    className="test-selector"
+  >
+    Test View Details
+  </div>
+</span>
+`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProfileGroup /> should render correctly 1`] = `
+<div
+  className="profileBox__group"
+>
+  <span
+    className="profileBox__item"
+    key="test"
+    onClick={[Function]}
+  >
+    TestLabel
+  </span>
+</div>
+`;

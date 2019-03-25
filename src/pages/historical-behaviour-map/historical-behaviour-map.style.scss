@@ -1,0 +1,89 @@
+@import 'xbem';
+@import 'theme';
+
+$scrollbar-height: 6px;
+
+@include block('historical-behaviour') {
+    position: relative;
+    padding: setMultipliedSize(4);
+  
+    @include flex($direction: column);
+    @include respond-to(map-get($viewports, 'small')) {
+      flex-direction: column
+    }
+
+    @include element('header') {
+      width: 100%;
+      @include flex($direction: column, $wrap: wrap);
+      justify-content: center;
+    }
+  
+    @include element('row') {
+      width: 100%;
+      height: auto;
+      @include flex($direction: row, $wrap: wrap);
+      justify-content: space-between;
+
+      @include modifier('chart') {
+        overflow: hidden;
+        overflow-x: auto;
+      }
+
+      &::-webkit-scrollbar {
+        width: 7px;
+        height: $scrollbar-height;
+      }
+  
+      &::-webkit-scrollbar-thumb {
+        background-color: setColor('dark-grey');
+        border-radius: setRadius('medium');
+        height: 4px;
+      }
+    }
+
+    @include element('title') {
+      @include flex($direction: row);
+      justify-content: center;
+      font-size: setFontSizeNew('h3', 'big');
+      font-weight: setFontWeight('book');
+      color: setColor('white');
+    
+      @include modifier('entity'){
+        font-size:setFontSizeNew('h4');
+      }
+    }
+
+    @include element('filters') {
+      width: 80%;
+      @include flex($direction: row);
+
+      .selectBox {
+        margin: 0 setMultipliedSize(4);
+      }
+    }
+
+  }
+  
+  @include block('backButton') {
+    justify-content: flex-start;
+    align-items: center;
+  
+    width: 35px;
+    height: 35px;
+    padding: 12px;
+    margin-right: 15px;
+  
+    cursor: pointer;
+  
+    @include flex($direction: row);
+    @include prefix(border-radius, 26px);
+  
+    @include element('icon'){
+      margin-right: 11px;
+  
+      font-size: setFontSizeNew('h4');
+      font-weight: setFontWeight('book');
+      color: setColor('orange');
+    }
+  }
+  

@@ -1,0 +1,165 @@
+@import 'xbem';
+@import 'theme';
+
+$opacities: (
+  '80': 0.8,
+  '60': 0.6,
+  '40': 0.4,
+  '20': 0.2
+);
+
+@mixin severityColor($color) {
+  background-color: $color;
+
+  @include state('highlight') {
+    border: dashed 3px setColor('white');
+  }
+
+  @include state('active') {
+    border: solid 3px setColor('white');
+  }
+
+  @each $name, $value in $opacities {
+    @include state($name) {
+      background-color: rgba($color, $value);
+    }
+  }
+}
+
+@include block('heatMap') {
+  @include element('header') {
+    border: 0 !important;
+    font-size: setFontSizeNew('h5');
+    font-weight: setFontWeight('bold');
+    color: setColor('white');
+  }
+
+  @include element('td') {
+    padding: setMultipliedSize(2) setMultipliedSize(4);
+
+    @include modifier('icon') {
+      color: setColor('white');
+      font-size: setFontSizeNew('h5','big');
+      font-weight: setFontWeight('bold') !important; // it's !important because Table will override it
+
+      cursor: pointer;
+    }
+  }
+
+  @include element('cell') {
+    justify-content: center;
+    align-items: center;
+
+    max-width: 80px;
+    min-width: 62px;
+    height: 32px;
+    padding: setMultipliedSize(2);
+    border: solid 1px setColor('mid-grey');
+    margin: 0 auto;
+
+    background-color: setColor('cod-grey');
+
+    color: setColor('white');
+    font-size: setFontSizeNew('h5','big');
+    font-weight: setFontWeight('bold');
+
+    cursor: pointer;
+
+    @include flex();
+    @include prefix(user-select, none);
+    @include prefix(border-radius, setRadius('heatMap'));
+    @include prefix(transition, opacity 350ms linear);
+
+    @include modifier('highRisk') {
+      border: 0;
+
+      @include severityColor(setColor('severity-high-risk'));
+    }
+
+    @include modifier('mediumRisk') {
+      border: 0;
+
+      @include severityColor(setColor('severity-medium-risk'));
+    }
+
+    @include modifier('needsAttention') {
+      border: 0;
+
+      @include severityColor(setColor('severity-needs-attention'));
+    }
+
+    @include modifier('lowRisk') {
+      border: 0;
+
+      @include severityColor(setColor('severity-low-risk'));
+    }
+
+    @include modifier('trivial') {
+      border: 0;
+
+      @include severityColor(setColor('severity-trivial'));
+    }
+
+    @include state('opacity') {
+      opacity: 0.5;
+    }
+  }
+}
+
+@include block('heatmapFilters') {
+  @include flex($direction: row);
+  width: 100%;
+
+  @include element('component') {
+    width: 50%;
+
+    padding: setMultipliedSize(4);
+    font-size: setFontSizeNew('h5','big');
+
+    @include flex($direction: column);
+  }
+
+  @include element('filtersList') {
+    padding: setMultipliedSize(4) setMultipliedSize(1, -3);
+
+    @include flex($direction: row, $wrap: wrap);
+  }
+
+  @include element('item') {
+    justify-content: center;
+    align-items: center;
+
+    width: 37px;
+    height: 17px;
+    margin: 10px 4px;
+
+    background: setColor('cod-grey');
+
+    font-size: setFontSizeNew('h5','big');
+
+    cursor: pointer;
+
+    @include flex();
+    @include prefix(border-radius, 6px);
+
+    @include modifier('trivial') {
+      @include severityColor(setColor('severity-trivial'));
+    }
+
+    @include modifier('lowRisk') {
+      @include severityColor(setColor('severity-low-risk'));
+    }
+
+    @include modifier('needsAttention') {
+      @include severityColor(setColor('severity-needs-attention'));
+    }
+
+    @include modifier('mediumRisk') {
+      @include severityColor(setColor('severity-medium-risk'));
+    }
+
+    @include modifier('highRisk') {
+      @include severityColor(setColor('severity-high-risk'));
+    }
+  }
+}

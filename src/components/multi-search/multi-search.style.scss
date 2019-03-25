@@ -1,0 +1,67 @@
+@import 'xbem';
+@import 'theme';
+// todo: update after merging with new sass function
+
+@include block('multi-search ') {
+  border-bottom: 1px solid setColor('mid-grey');
+
+  @include element('container') {
+    align-items: center;
+    display: flex;
+    height: 35px;
+    justify-content: flex-end;
+  }
+
+  @include element('tags') {
+    align-items: center;
+    display: flex;
+  }
+
+  @include element('tag') {
+    align-items: center;
+    background-color: setColor('silver');
+    border-radius: 7px;
+    color: setColor('black');
+    display: flex;
+    font-size: 1.2rem;
+    line-height: 1;
+    margin-right: 5px;
+    overflow: hidden;
+    padding: 4px;
+
+    .icon-remove {
+      cursor: pointer;
+      margin-left: 5px;
+
+      &:before {
+        color: setColor('black');
+      }
+    }
+
+    @include modifier('before-delete') {
+      background-color: setColor('mid-grey');
+    }
+  }
+
+  @include element('input') {
+    align-items: center;
+    display: flex;
+
+    input {
+      background-color: transparent;
+      border: 0;
+      color: setColor('mid-grey');
+      font-size: 1.2rem;
+      letter-spacing: -0.2px;
+      line-height: 1;
+      outline: 0;
+      padding: 0 5px;
+      width: 180px;
+    }
+
+    .icon-search {
+      color: setColor('orange');
+      font-size: 1.4rem;
+    }
+  }
+}

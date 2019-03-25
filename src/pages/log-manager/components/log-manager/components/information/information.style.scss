@@ -1,0 +1,18 @@
+@import 'theme';
+@import 'xbem';
+
+@include block('information') {
+  @include flex(column);
+  justify-content: center;
+
+  .icon-information {
+      @include flex;
+      justify-content: center;
+  }
+
+  @include element('message') {
+    @include flex;
+    font-size: setFontSize('h4');
+    justify-content: center;
+  }
+}

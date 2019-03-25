@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Logout /> Component  should match with snapshot 1`] = `
+<div
+  className="logout"
+>
+  <div
+    className="logout__container"
+  >
+    <div
+      className="logout__logo"
+    >
+      <img
+        alt="patternex logo"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="logout__loader"
+    >
+      <Loader
+        small={false}
+      />
+    </div>
+    <div
+      className="logout__message"
+    >
+      <FormattedMessage
+        id="logout.message"
+        values={Object {}}
+      />
+    </div>
+  </div>
+</div>
+`;

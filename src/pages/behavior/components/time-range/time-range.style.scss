@@ -1,0 +1,23 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('timeRange') {
+  position: relative;
+
+  @include element('input') {
+    width: 110px;
+    height: 35px;
+    padding: 0 10px;
+    border: 1px solid #999; // todo: use function to set the color
+    background-color: transparent;
+
+    color: #999; // todo: use function to set the color
+    font-size: setFontSizeNew('h4');
+
+    @include prefix(border-radius, 4px);
+  }
+
+  @include element('box') {
+    position: absolute;
+  }
+}

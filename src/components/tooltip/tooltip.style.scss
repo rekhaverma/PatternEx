@@ -1,0 +1,112 @@
+@import 'xbem';
+@import 'theme';
+
+$arrowHeight: 10px;
+$arrowWidth: 10px;
+$arrowPosition: 15px;
+@include block('popper') {
+  @include H4(setColor('mid-grey'));
+  @include prefix(border-radius, 5px);
+  min-height: 40px;
+  padding: setMultipliedSize(2);
+  border: 1px solid setColor('mid-grey');
+  background-color: setColor('black');
+  box-shadow: 1px 1px 15px 0 setColor('black', 0.5);
+  opacity: .8;
+  color: setColor('white');
+
+  @include element('arrow') {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+  }
+
+  .highlight {
+    color: setColor('white');
+    font-weight: setFontWeight('bold');
+    text-transform: capitalize;
+    float: right;
+  }
+
+  .cluster_info, .entity_info {
+    span {
+      margin-left: 12px;
+      margin-right: 5px;
+    }
+  }
+
+  .pipeline_type {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
+@include block('popper-wrap') {
+  z-index: 99;
+
+  .popper__arrow {
+    width: $arrowWidth;
+    height: $arrowHeight;
+    transform: rotate(45deg);
+    border: 1px solid setColor('mid-grey');
+    background-color: setColor('black');
+  }
+
+  &[data-placement^="top"] {
+    padding-bottom: $arrowHeight + $arrowWidth;
+
+    .popper__arrow {
+      bottom: $arrowPosition;
+      left: calc(30%);
+      border-top: 0;
+      border-left: 0;
+    }
+  }
+
+  &[data-placement^="bottom"] {
+    padding-top: $arrowHeight + $arrowWidth;
+
+    .popper__arrow {
+      top: $arrowPosition;
+      left: calc(50% - 7px);
+      border-bottom: 0;
+      border-right: 0;
+    }
+  }
+
+  &[data-placement^="right"] {
+    padding-left: $arrowHeight + $arrowWidth;
+
+    .popper__arrow {
+      left: $arrowPosition;
+      top: calc(50% - 7px);
+      border-top: 0;
+      border-right: 0;
+    }
+  }
+
+  &[data-placement^="left"] {
+    padding-right: $arrowHeight + $arrowWidth;
+
+    .popper__arrow {
+      right: $arrowPosition;
+      top: calc(50% - 7px);
+    }
+  }
+}
+
+.highlightTooltip {
+  margin-left: 3px;
+  color: setColor('white');
+  font-weight: setFontWeight('bold');
+  text-transform: capitalize;
+}
+
+@include block('tooltip') {
+  max-width: 100%;
+  
+  > div {
+    display: initial !important;
+  }
+}

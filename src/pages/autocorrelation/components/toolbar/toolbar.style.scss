@@ -1,0 +1,77 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('toolbar') {
+  position: absolute;
+  left: 0;
+
+  width: $toolbarWidthExpanded;
+  background-color: setColor('cod-grey');
+  overflow: hidden;
+
+  z-index: 8;
+
+  @include flex(column);
+  @include prefix(transition, height 500ms ease);
+  @include prefix(box-shadow, 4px 4px 2px 0.5px setColor('black', 0.5));
+
+  @include state('open') {
+    // 60px = footerHeight
+    height: calc(100% - 60px);
+    width: $toolbarWidthExpanded;
+  }
+
+  @include element('content') {
+    height: 0%;
+
+    @include state('open') {
+      height: 100%;
+      padding: setMultipliedSize();
+    }
+  }
+
+  @include element('opener') {
+    width: $toolbarWidthExpanded;
+    height: $toolbarHeight;
+
+    padding: setMultipliedSize(3);
+    margin-bottom: setMultipliedSize(1, -1);
+    @include flex($direction: row);
+    @include prefix(box-shadow, 0 4px 2px -4px setColor('black', 0.5));
+    }
+
+  @include element('text') {
+    cursor: pointer;
+    font-weight: bold;
+
+    padding-top: setMultipliedSize(1, -1);
+    color: setColor('white');
+  }
+
+  @include element('bar') {
+    cursor: pointer;
+    height: $toolbarHeight;
+    margin: 0 setMultipliedSize(2);
+  }
+
+  @include element('icon') {
+
+    color: setColor('orange');
+
+    [class^="icon-"], [class*=" icon-"] {
+      align-items: center;
+      justify-content: center;
+
+      width: 24px;
+      height: 24px;
+      padding: 4px;
+
+      border: 1px solid setColor('orange');
+
+      font-size: 12px;
+
+      @include flex();
+      @include prefix(border-radius, 50%);
+    }
+  }
+}

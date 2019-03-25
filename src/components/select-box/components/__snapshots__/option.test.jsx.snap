@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Option /> should render correctly 1`] = `
+<span
+  className="test-class"
+  data-id="test-id"
+  onClick={[Function]}
+>
+  <span
+    className="test-class__roundBox"
+  />
+  <p
+    className="selectBox__option__optionName"
+    style={Object {}}
+  >
+    test-content
+  </p>
+</span>
+`;

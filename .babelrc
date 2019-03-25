@@ -1,0 +1,31 @@
+{
+  "plugins": [
+    "syntax-dynamic-import",
+    "transform-react-jsx"
+  ],
+  "presets": [
+    [
+      "es2015",
+      {
+        "modules": false
+      }
+    ],
+    "stage-0",
+    "react"
+  ],
+  "env": {
+    "production": {
+      "plugins": ["transform-react-remove-prop-types"]
+    },
+    "test": {
+      "presets":[
+        "es2015",
+        "stage-0",
+        "react"],
+      "plugins": [
+        "syntax-dynamic-import",
+        "transform-react-jsx"
+      ]
+    }
+  }
+}

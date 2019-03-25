@@ -1,0 +1,326 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('sidebarMenu') {
+  z-index: 10;
+  position: absolute;
+  min-height: 100vh;
+  top: 0;
+  height: 100%;
+
+  padding-top: $headerHeight;
+
+  background-color: setColor('cod-grey');
+
+  @include flex();
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 100%;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-image: linear-gradient(to left, setColor('black', 0), setColor('black'));
+    pointer-events: none;
+
+    @include prefix(transition, width .35s linear);
+  }
+
+  > div {
+    overflow: hidden;
+    width: $sidebarWidth;
+    @include prefix(transition, width 350ms linear);
+  }
+
+  &:hover {
+    &:after {
+      width: 20px;
+    }
+
+    > div {
+      width: $sidebarItemWidth;
+    }
+
+    .sidebarMenu__slider-icon {
+      .icon-group-3 {
+        @include prefix(transform, rotate(0deg));
+      }
+    }
+  }
+
+  @include element('slider-icon') {
+    padding-left: setMultipliedSize(9, 3);
+    padding-top: setMultipliedSize(4);
+    padding-bottom: setMultipliedSize(1, -1);
+
+     .icon-group-3 {
+      @include prefix(transition, 350ms);
+      @include prefix(transform, rotate(180deg));
+      display: inline-block;
+      transform-origin: center;
+     }
+  }
+
+  @include element('item') {
+    align-items: center;
+    width: $sidebarItemWidth;
+    padding: 0 0 0 setMultipliedSize(8);
+
+
+    color: setColor('orange');
+    font-size: setFontSizeNew('h2', 'big');
+    text-decoration: none;
+    cursor: pointer;
+
+    @include flex(row);
+    @include prefix(transition, color 450ms ease);
+
+    &:hover {
+      color: setColor('white');
+    }
+
+    @include element('arrow-icon') {
+      height: 100%;
+      margin-left: setMultipliedSize(3);
+      margin-right: 0;
+      font-size: setFontSizeNew('h5','big');
+      color: setColor('white');
+
+      @include prefix(transition, transform 450ms ease);
+
+      @include state('rotate') {
+        @include prefix(transform, rotate(180deg));
+      }
+    }
+
+    @include state('active') {
+      color: setColor('white');
+    }
+
+    @include element('icon') {
+      width: 30px;
+      height: 22px;
+      margin-right: setMultipliedSize(8);
+      text-align: center;
+      font-size: 2.2rem;
+      flex: 1 0 30px;
+    }
+
+    @include element('label') {
+      width: 100%;
+      color: setColor('white');
+      font-size: setFontSizeNew('h4');
+      margin: 0;
+      line-height: 5.2rem;
+      white-space: nowrap;
+    }
+
+    @include element('dropdown-title') {
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      white-space: nowrap;
+
+      p {
+        height: auto;
+        width: auto;
+        display: inline-block;
+        border-bottom: 0;
+      }
+    }
+
+    @include element('dropdown-item') {
+      width: 100%;
+      padding: setMultipliedSize(1, -1) 0 setMultipliedSize(1, -1) setMultipliedSize(8);
+      align-items: center;
+
+      @include flex(row);
+
+      @include state('active') {
+        div {
+          border-bottom: 1px solid transparent;
+          transition: .1s;
+        }
+      }
+    }
+
+    @include element('dropdown-list') {
+      background-color: darken(setColor('cod-grey'), 3);
+      max-height: 0;
+      overflow: hidden;
+      display: flex;
+
+      @include prefix(transition, max-height 450ms ease);
+      @include flex(column);
+
+      @for $i from 1 through 8 {
+        @include state('no-items-#{$i}') {
+          max-height: 52px * $i;
+        }
+      }
+
+      p {
+        border-bottom: 0;
+      }
+    }
+
+    @include modifier('dropdown') {
+      align-items: flex-start;
+      justify-content: center;
+      padding: 0;
+
+      @include flex(column);
+    }
+  }
+}
+
+.menu_icon {
+  width: 50px;
+  height: 32px;
+  position: relative;
+  padding-top: 16px;
+  z-index: 5;
+
+  span, span:before, span:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 3px;
+      width: 24px;
+      background: white;
+      position: absolute;
+      display: block;
+      content: '';
+      @include prefix(transition, all 500ms ease-in-out);
+  }
+  span {
+      &:before {
+          top: -8px;
+      }
+      &:after {
+          bottom: -8px;
+      }
+  }
+  .hamberger_icon {
+      position: absolute;
+      top: 18px;
+      @include prefix(transition, all 0.4s);
+  }
+  &.active {
+      z-index: 101;
+      span {
+          background-color: transparent;
+
+          &:before, &:after {
+              top: 0;
+          }
+          &:before {
+              transform: rotate(45deg);
+          }
+          &:after {
+              transform: rotate(-45deg);
+          }
+      }
+  }
+}
+
+@include block('sidebarMenu1') {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  bottom: 0;
+  z-index: 1;
+  @include prefix(transition, all 0.4s);
+  @include prefix(user-select, none);
+
+
+  @include state('active') {
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+
+  @include element('overlay') {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: setColor('black', 0.7);
+    z-index: -1;
+  }
+
+  @include element('content') {
+    width: 270px;
+    height: 100%;
+    margin-left: -270px;
+    padding: 85px 10px 10px 40px;
+    background-color: setColor('default-dark');
+    box-shadow: 0 0 10px 5px setColor('black');
+    @include prefix(transition, margin 0.4s);
+
+
+    @include state('active') {
+      margin-left: 0;
+      // &:after {
+      //   content: '';
+      //   position: absolute;
+      //   top: 0;
+      //   left: 0;
+      //   bottom: 0;
+      //   right: 0;
+      //   background-color: rgba(0, 0, 0, 0.7);
+      //   z-index: -1;
+      // }
+    }
+  }
+
+  @include element('logo') {
+    width: 110px;
+    margin-bottom: 20px;
+    margin-top: -15px;
+  }
+}
+
+@include block('menu1') {
+  @include element('item') {
+    @include flex(row);
+    align-items: center;
+    margin: 20px 0;
+    color: setColor('white', 0.6);
+    font-size: setFontSizeNew('h4');
+    line-height: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include prefix(transition, color 0.4s ease);
+
+    &:hover {
+      color: #068FC8; // todo: use function to set the color
+    }
+
+    [class^="icon-"], [class*=" icon-"]  {
+      padding-right: 15px;
+    }
+
+    .icon-chevron-down {
+      margin-left: auto;
+      padding: 0;
+      @include prefix(transition, transform 0.4s ease);
+      margin-bottom: 1px solid setColor('light-grey'); // todo: please review this rule!!!
+    }
+
+    @include state('active') {
+      color: #068FC8; // todo: use function to set the color
+    }
+
+    @include state('open') {
+      .icon-chevron-down {
+        @include prefix(transform, rotate(180deg));
+      }
+    }
+
+    @include state('subitem') {
+      margin-left: 30px;
+    }
+  }
+}

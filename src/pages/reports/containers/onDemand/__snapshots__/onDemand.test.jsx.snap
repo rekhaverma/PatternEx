@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OnDemand /> modal:  render:  should match with snapshot 1`] = `
+<section
+  className="onDemand"
+>
+  <Modal
+    className="ptrx-modal"
+    style={Object {}}
+    type=""
+  >
+    <div
+      className="onDemand__row +header +spaceBetween"
+    >
+      <FormattedMessage
+        id="reports.onDemandHeading"
+        values={Object {}}
+      />
+      <span
+        className="icon-close2"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="onDemand__row"
+    >
+      <WithBoxHOC
+        activeOption="customRange"
+        allowEnableDatesHours={true}
+        disableDays={true}
+        enableDates={Array []}
+        endDate={"2017-02-14T12:51:48.000Z"}
+        label="Select Date Range"
+        onMonthChange={[Function]}
+        showHoursList={false}
+        startDate={"2017-02-14T12:51:48.000Z"}
+        theme="rowWithLabel"
+        updateDateRange={[Function]}
+      />
+    </div>
+    <div
+      className="onDemand__row +rightSide"
+    >
+      <Button
+        className="button--success +small"
+        onClick={[Function]}
+      >
+        <FormattedMessage
+          id="reports.apply"
+          values={Object {}}
+        />
+      </Button>
+      <Button
+        className="button--dark +small"
+        onClick={[Function]}
+      >
+        <FormattedMessage
+          id="reports.cancel"
+          values={Object {}}
+        />
+      </Button>
+    </div>
+  </Modal>
+</section>
+`;

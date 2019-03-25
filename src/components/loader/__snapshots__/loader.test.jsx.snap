@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loader /> should match with snapshot 1`] = `
+<div
+  className="loader"
+>
+  <div
+    className="loader__content"
+  >
+    <div
+      className="bullet"
+    />
+    <div
+      className="bullet"
+    />
+    <div
+      className="bullet"
+    />
+    <div
+      className="bullet"
+    />
+    <div
+      className="loader__text"
+    >
+      Crunching Numbers. Please wait!
+    </div>
+  </div>
+</div>
+`;

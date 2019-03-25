@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DeleteReport /> modal:  render:  should match with snapshot 1`] = `
+<Modal
+  className="ptrx-modal"
+  style={Object {}}
+  type=""
+>
+  <section
+    className="deleteReport"
+  >
+    <div
+      className="deleteReport__row +spaceBetween firstrow"
+    >
+      <span
+        className="deleteReport__title"
+      >
+        <FormattedMessage
+          id="reports.deleteReport.title"
+          values={
+            Object {
+              "reportName": undefined,
+            }
+          }
+        />
+      </span>
+      <span
+        className="icon-close"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="deleteReport__row +spaceBetween"
+    >
+      <FormattedMessage
+        id="reports.deleteReport.confirmation"
+        values={
+          Object {
+            "reportName": undefined,
+          }
+        }
+      />
+    </div>
+    <div
+      className="deleteReport__row +rightSide"
+    >
+      <Button
+        className="button--success +small"
+        onClick={[Function]}
+      >
+        <FormattedMessage
+          id="reports.delete"
+          values={Object {}}
+        />
+      </Button>
+      <Button
+        className="button--dark +small"
+        onClick={[Function]}
+      >
+        <FormattedMessage
+          id="reports.cancel"
+          values={Object {}}
+        />
+      </Button>
+    </div>
+  </section>
+</Modal>
+`;

@@ -1,0 +1,24 @@
+@import 'xbem';
+@import 'theme';
+
+.svgContainer{
+    height: 90px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: setMultipliedSize(8, -2);
+}
+
+.svgContainer svg {
+    height: 100%;
+    width: 100%;
+}
+
+@include block('textLabels') {
+    font-size : setFontSizeNew('h5','big');
+    fill: setColor('white');
+    
+    @include modifier('displayElement'){
+        display: inline-block;
+    }
+}

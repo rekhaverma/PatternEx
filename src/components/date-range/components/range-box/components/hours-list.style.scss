@@ -1,0 +1,54 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('hours') {
+  @include element('wrapper') {
+    @include flex();
+    align-items: center;
+    justify-content: center;
+
+    padding: setMultipliedSize(2) 0;
+    border-left: 1px solid setColor('light-grey');
+  }
+
+  @include element('list-wrapper') {
+    max-height: 330px;
+    margin: setMultipliedSize(1, -1) 0;
+    overflow: hidden;
+  }
+
+  @include element('list') {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+
+    list-style: none;
+    text-align: center;
+
+    transition: tranform 0.3s linear;
+
+    li {
+      font-size: setFontSizeNew('h5','big');
+      color: setColor('white');
+      user-select: none;
+
+      padding: setMultipliedSize(1, -1) setMultipliedSize(4);
+      cursor: pointer;
+
+      @include state('selected') {
+        background-color: setColor('orange');
+      }
+      @include state('inactive') {
+        color: setColor('mid-grey');
+        pointer-events: none;
+      }
+    }
+  }
+
+  @include element('arrow') {
+    color: setColor('orange');
+    font-size: setFontSizeNew('h5','big');
+
+    cursor: pointer;
+  }
+}

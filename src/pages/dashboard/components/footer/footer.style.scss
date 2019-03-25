@@ -1,0 +1,15 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('footer') {
+    @include flex(row);
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+
+    @include element('info') {
+        font-size: setFontSizeNew('h5','big');
+        font-weight: 500;
+        color: setColor('silver');
+    }
+}

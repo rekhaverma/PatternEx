@@ -1,0 +1,25 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('heatMap') {
+    @include element('legend') {
+        @include flex($direction: row);
+        padding: setMultipliedSize(4);
+
+        font-size: setFontSizeNew('h5','big');
+        font-weight: setFontWeight('normal');
+    }
+
+    @include element('gradient') {
+        width: 150px;
+        height: 6px;
+        margin: setMultipliedSize(1, -1);
+        border-radius: setRadius('normal');
+        background: linear-gradient(to right,
+            setColor('severity-trivial') 20%,
+            setColor('severity-low-risk') 40%,
+            setColor('severity-needs-attention') 60%,
+            setColor('severity-medium-risk') 80%,
+            setColor('severity-high-risk'));
+    }
+}

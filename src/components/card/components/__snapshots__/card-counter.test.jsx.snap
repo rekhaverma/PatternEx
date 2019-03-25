@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardCounter /> should match with snapshot 1`] = `
+<span
+  className="card__counter"
+>
+  1
+</span>
+`;

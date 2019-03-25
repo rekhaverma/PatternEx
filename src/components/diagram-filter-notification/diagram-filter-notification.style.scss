@@ -1,0 +1,49 @@
+@import 'xbem';
+
+
+@include block('filter_notification') {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include element('close') {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 20px;
+        height: 20px;
+        background-color: setColor('orange');
+        border-radius: 50%;
+
+        .icon-close {
+            color: #262728; // todo: use function to set the color
+            cursor: pointer;
+        }
+    }
+
+    z-index: 10;
+    width: 245px;
+    height: 34px;
+    border-radius: 6px;
+    background-color: #262728; // todo: use function to set the color
+    border: solid 1px setColor('orange');
+
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-align: center;
+
+    @include element('info') {
+        margin: 5px 5px;
+        font-size: setFontSizeNew('h5','big');
+        letter-spacing: 0.4px;
+        text-align: center;
+        color: setColor('white');
+    }
+}

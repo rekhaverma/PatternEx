@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FeatureSelectionModal /> page render:  should match with snapshot 1`] = `
+<section
+  className="featureSelection"
+>
+  <div
+    className="featureSelection__row featureSelection__heading +spaceBetween +marginBottom"
+  >
+    <span
+      className="featureSelection__heading__text"
+    >
+      <FormattedHTMLMessage
+        id="model.features.addFeatures"
+        values={Object {}}
+      />
+    </span>
+    <span
+      className="icon-close2"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="featureSelection__row +marginBottom featureSelection__featureSection"
+  >
+    <div
+      className="featureSelection__column featureSelection__filters"
+    >
+      <span
+        className="featureSelection__filters__heading"
+      >
+        <FormattedHTMLMessage
+          id="model.features.filters"
+          values={Object {}}
+        />
+      </span>
+      <div
+        className="featureSelection__filters__values"
+      />
+    </div>
+    <div
+      className="featureSelection__column featureSelection__featuresList"
+    >
+      <div
+        className="featureSelection__row +spaceBetween"
+      >
+        <span
+          className="featureSelection__featuresList__heading"
+        >
+          <FormattedHTMLMessage
+            id="model.features.features"
+            values={Object {}}
+          />
+        </span>
+        <Search
+          className="featureSelection__search"
+          inputProps={
+            Object {
+              "onChange": [Function],
+              "placeholder": "Search for features",
+              "value": "",
+            }
+          }
+          resetTags={[Function]}
+          style={Object {}}
+          tag={null}
+        />
+      </div>
+      <div
+        className="featureSelection__featuresList__listing"
+      >
+        <NoData
+          className="noData"
+          intlDefault=""
+          intlId="model.features.noFeatures"
+          intlValues={Object {}}
+          message=""
+          withIcon={true}
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="featureSelection__row +right +marginBottom"
+  >
+    <Button
+      className="button--dark +small"
+      onClick={[Function]}
+    >
+      <FormattedHTMLMessage
+        id="model.features.cancel"
+        values={Object {}}
+      />
+    </Button>
+    <Button
+      className="button--success +small"
+      onClick={[Function]}
+    >
+      <FormattedHTMLMessage
+        id="model.features.addFeatures"
+        values={Object {}}
+      />
+    </Button>
+  </div>
+</section>
+`;

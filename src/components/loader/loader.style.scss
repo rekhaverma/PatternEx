@@ -1,0 +1,267 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('loader') {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: setColor('black', 0.7);
+  z-index: 100;
+
+  @include element('content') {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 220px;
+    @include prefix(transform, translate(-50%, -50%));
+  }
+
+  @include element('text') {
+    padding-top: 26px;
+    font-size: setFontSizeNew('h2');
+    text-align: center;
+  }
+
+  @include block('bullet') {
+    position: absolute;
+    padding: 5px;
+    border-radius: 50%;
+    background: #65A3FF; // todo: use function to set the color
+    -webkit-animation: animIn 1s ease-in-out 0s infinite;
+    animation: animIn 1s ease-in-out 0s infinite;
+
+    &:nth-child(1) {
+      -webkit-animation-delay: 0s;
+      animation-delay: 0s;
+    }
+
+    &:nth-child(2) {
+      -webkit-animation-delay: 0.15s;
+      animation-delay: 0.15s;
+    }
+
+    &:nth-child(3) {
+      -webkit-animation-delay: 0.3s;
+      animation-delay: 0.3s;
+    }
+
+    &:nth-child(4) {
+      -webkit-animation-delay: 0.45s;
+      animation-delay: 0.45s;
+    }
+  }
+
+
+}
+
+$color: #fd7000; // todo: use function to set the color
+$size: 12px;
+$time: 1;
+@include block('loaderV2') {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparentize(#090707, 0.25); // todo: use function to set the color
+  z-index: 100;
+
+  @include modifier(small) {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
+  @include element('content') {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include prefix(transform, translate(-50%, -50%));
+  }
+
+  @include block('rowTriangle') {
+    display: flex;
+  }
+
+  .arrow {
+    width: 0;
+    height: 0;
+    margin: 0 (-$size / 2);
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: ($size * 1.8) solid $color;
+    animation: blink $time + s infinite;
+    filter: drop-shadow(0 0 ($size * 1.5) $color);
+
+    &.down {
+      transform: rotate(180deg);
+    }
+
+    @for $i from 1 through 18 {
+      &.outer-#{$i} {
+        animation-delay: -($time / 18) * $i + s;
+      }
+    }
+
+    @for $i from 1 through 6 {
+      &.inner-#{$i} {
+        animation-delay: -($time / 6) * $i + s;
+      }
+    }
+  }
+
+  @keyframes blink {
+    0% { opacity: 0.1; }
+    30% { opacity: 1; }
+    100% { opacity: 0.1; }
+  }
+}
+
+@-webkit-keyframes animIn {
+  0% {
+      @include prefix(transform, translateX(0px));
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      @include prefix(transform, translateX(220px));
+      opacity: 0;
+  }
+}
+
+@keyframes animIn {
+  0% {
+      @include prefix(transform, translateX(0px));
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      @include prefix(transform, translateX(220px));
+      opacity: 0;
+  }
+}
+
+@include block('loaderSmall') {
+  width: 50px;
+  display: inline-block;
+
+  @include element('circular') {
+    animation: rotate 2s linear infinite;
+  }
+
+  @include element('path') {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+    animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+    stroke-linecap: round;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    @include prefix(transform, rotate(360deg));
+  }
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    @include prefix(transform, rotate(360deg));
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@keyframes color {
+  100%,
+  0% {
+    stroke: setColor('orange');
+  }
+  33% {
+    stroke: setColor('orange-rose');
+  }
+  66% {
+    stroke: setColor('white');
+  }
+}
+
+@-webkit-keyframes color {
+  100%,
+  0% {
+    stroke: setColor('orange');
+  }
+  33% {
+    stroke: setColor('orange-rose');
+  }
+  66% {
+    stroke: setColor('white');
+  }
+}
+
+@include block('loader-bar') {
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  
+  &:before{
+    display: block;
+    position: absolute;
+    content: "";
+    left: -200px;
+    width: 200px;
+    height: 4px;
+    background-color: setColor('orange');
+    animation: loading 2s linear infinite;
+  }
+}
+
+@keyframes loading {
+    from {left: -200px; width: 30%;}
+    50% {width: 30%;}
+    70% {width: 70%;}
+    80% { left: 50%;}
+    95% {left: 120%;}
+    to {left: 100%;}
+}

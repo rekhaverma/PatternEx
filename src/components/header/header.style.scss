@@ -1,0 +1,94 @@
+@import 'xbem';
+@import 'theme';
+@import 'mixins/flex';
+
+@include block('header1') {
+  z-index: 12;
+  @include flex(row);
+  align-items: center;
+  height: $headerHeight;
+  padding: $headerPadding 2 * $headerPadding;
+  background-color: setColor('default-dark');
+  // position: absolute;
+  // top: 0;
+
+  @include state('old') {
+    box-shadow: 0 5px 4px -2px setColor('black', 0.75);
+    background: #2e3742; // todo: use function to set the color
+    margin-bottom: 20px;
+  }
+
+  @include element('version') {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+
+    font-size: setFontSizeNew('h5','big');
+
+    @include prefix(transform, translateX(-50%));
+  }
+
+  @include element('title') {
+    @include H1($col: setColor('mid-grey'));
+    font-weight: setFontWeight('bold');
+    margin: 0;
+  }
+
+  @include element('alert-list') {
+    @include flex(row);
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+  }
+
+  @include element('alert') {
+    @include flex(row);
+    @include prefix(user-select, none);
+    @include prefix(transition, "all 300ms ease");
+    @include H2(setColor('mid-grey'));
+
+
+    align-items: center;
+    height: 6px;
+    padding: 0 $headerPadding;
+
+    font-weight: setFontWeight('bold');
+
+    cursor: pointer;
+
+    @include state('active') {
+      color: setColor('white');
+    }
+
+    @include state('inactive') {
+      opacity: 0.3;
+    }
+  }
+
+  .icon-malicious {
+    color: setColor('red');
+    margin-right: $headerPadding / 4;
+  }
+
+  .icon-suspicious {
+    color: setColor('yellow');
+    margin-right: $headerPadding / 4;
+  }
+
+  .icon-unknown {
+    margin-right: $headerPadding / 4;
+  }
+
+  .icon-profile {
+    border-radius: 50%;
+    color: setColor('orange');
+    font-size: setFontSizeNew('h1', 'big');
+    background-color: setColor('black');
+  }
+
+  .highlight {
+    margin: 0 3px;
+    color: setColor('white');
+    font-weight: setFontWeight('regular');
+  }
+}

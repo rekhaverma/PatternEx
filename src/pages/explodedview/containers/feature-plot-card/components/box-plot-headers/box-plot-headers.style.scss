@@ -1,0 +1,25 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('box-plot-headers') {
+    display: flex;
+    font-size: setFontSizeNew('h5', 'big');
+    margin-bottom: setSize('base');
+    justify-content: space-between;
+    color: setColor('white');
+    font-size: setFontSizeNew('h5', 'big');
+    .deviation {
+        .icon-sort {
+            vertical-align: middle;
+            margin-left: setSize('base');
+        }
+        .icon-sort-asc {
+            vertical-align: middle;
+            margin-left: setSize('base');
+        }
+        .icon-sort-desc {
+            vertical-align: middle;
+            margin-left: setSize('base');
+        }
+    }
+}

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RowTheme /> should match with snapshot 1`] = `
+<div
+  className="row-theme"
+  onClick={[Function]}
+>
+  <div
+    className="row-theme__row"
+  >
+    <FormattedHTMLMessage
+      id="dateRange.row.fromToUntil"
+      values={
+        Object {
+          "valueFrom": "01 - 01 - 2018",
+          "valueUntil": "01 - 07 - 2018",
+        }
+      }
+    />
+    <span
+      className="icon-Calendar-icon"
+    />
+  </div>
+</div>
+`;

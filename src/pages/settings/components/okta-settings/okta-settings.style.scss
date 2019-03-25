@@ -1,0 +1,47 @@
+@import 'xbem';
+@import 'theme';
+
+@include block(okta-settings) {
+	margin-top: setMultipliedSize(4);
+
+	@include  element (row) {
+    display: flex;
+  	width: 100%;
+  	justify-content: space-between;
+  	padding-top: setMultipliedSize();
+  	padding-bottom: setMultipliedSize();
+		&:last-child{
+			margin-top: setMultipliedSize(3);
+		}
+		.okta-input-sso {
+			padding: 0px setMultipliedSize();
+			padding-right: setMultipliedSize(3);
+			width: 100%;
+		}
+		.okta-input-domain {
+			width: 100%;
+			padding: 0px setMultipliedSize();
+			padding-left: setMultipliedSize(3);
+			.div_domain {
+				display: flex;
+				.remove-domain {
+					cursor: pointer;
+					font-size: setFontSizeNew('h4', 'big');
+					padding-top: setMultipliedSize(2);
+				}
+			}
+		}
+	    .okta-actions, .okta-add-domain {
+			display: block;
+	    }
+	}
+	input {
+		font-size: setFontSizeNew('h5','big');
+		padding: setMultipliedSize(2, -2) 0;
+		margin-right: auto;
+	    border: none;
+	    width: 100%;
+	    outline: none;
+	    border-bottom: 1px solid;
+	}
+}

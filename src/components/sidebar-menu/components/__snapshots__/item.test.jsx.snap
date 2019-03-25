@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Item /> should render correctly as DropdownItem 1`] = `
+<DropdownItem
+  active={true}
+  activeDropdown={true}
+  className="dropdownItem__test"
+  disabled={false}
+  icon="test-icon"
+  id="testItem"
+  items={
+    Array [
+      Object {
+        "icon": "icon-test1",
+        "id": "test1",
+        "label": "Test1",
+        "location": "/test",
+        "params": Array [
+          "start_time",
+          "end_time",
+        ],
+        "type": "link",
+      },
+      Object {
+        "icon": "icon-test2",
+        "id": "test2",
+        "label": "Test2",
+        "location": "/test",
+        "params": Array [
+          "start_time",
+          "end_time",
+        ],
+        "type": "link",
+      },
+    ]
+  }
+  label="Test Label"
+  location=""
+  onClick={[Function]}
+  onDropdownClick={[Function]}
+  params={Array []}
+  query={Object {}}
+  style={Object {}}
+  type="dropdown"
+/>
+`;
+
+exports[`<Item /> should render correctly as LinkItem 1`] = `
+<LinkItem
+  active={false}
+  activeDropdown={false}
+  className="sidebarMenu__test"
+  disabled={false}
+  hasPrivileges={false}
+  icon="test-icon"
+  id=""
+  items={Array []}
+  label="Test Label"
+  location="/test"
+  onClick={[Function]}
+  onDropdownClick={[Function]}
+  params={Array []}
+  query={Object {}}
+  style={Object {}}
+  type="link"
+/>
+`;
+
+exports[`<Item /> should render correctly as RegularItem 1`] = `
+<RegularItem
+  active={true}
+  activeDropdown={false}
+  className="sidebarMenu__test"
+  disabled={false}
+  icon="test-icon"
+  id="testItem"
+  items={Array []}
+  label="Test Label"
+  location=""
+  onClick={[Function]}
+  onDropdownClick={[Function]}
+  params={Array []}
+  query={Object {}}
+  style={Object {}}
+  type=""
+/>
+`;

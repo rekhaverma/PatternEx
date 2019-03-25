@@ -1,0 +1,91 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('reportsLayout') {
+  @include flex();
+  padding: setMultipliedSize(4) setMultipliedSize(4) 0;
+
+  @include element('row') {
+    @include flex($direction: row);
+    align-items: center;
+
+    @include state('center') {
+      justify-content: center;
+    }
+
+    @include state('rightSide') {
+      margin-left: auto;
+    }
+  }
+
+  @include block('title') {
+    font-size: setFontSizeNew('h3', 'big');
+    font-weight: setFontWeight('book');
+  }
+
+  @include block('orangeButton') {
+    border: none;
+    background-color: setColor('orange');
+    color: setColor('white');
+    padding: setMultipliedSize(2, -2) setMultipliedSize(3);
+    border-radius: setMultipliedSize(1, -1);
+    font-weight: setFontWeight('bold');
+    cursor: pointer;
+    &:hover {
+      background-color: setColor('orange');
+    }
+    &:first-child {
+      margin-right: setSize('normal');
+    }
+  }
+
+  @include block('reportSearch') {
+    @include flex(row);
+    align-items: center;
+    width: 300px;
+    height: 38px;
+    padding: 0 setMultipliedSize(4) 0 setMultipliedSize(2);
+    border-bottom: setMultipliedSize(1, -4) solid setColor('mid-grey');
+    margin: setMultipliedSize(4) 0;
+
+    @include element('input') {
+      border: 0;
+      background-color: transparent;
+      outline: 0;
+      width: 100%;
+
+      @include H4(setColor('mid-grey'));
+      letter-spacing: -0.2px;
+      line-height: 1;
+    }
+
+    @include element('icon') {
+      margin-left: auto;
+      color: setColor('orange');
+      font-size: setFontSizeNew('h4', 'big');
+    }
+  }
+
+  .icon-edit, 
+  .icon-trash-outline {
+    font-size: setFontSizeNew('h4', 'big');
+    border: 2px solid;
+    border-radius: setRadius('circle');
+    margin-right: setMultipliedSize(2);
+  }
+
+  .icon-edit {
+    color: setColor('blue');
+    border-color: setColor('blue');
+  }
+
+  .icon-trash-outline {
+    color: setColor('vivid-orange');
+    border-color: setColor('vivid-orange');
+  }
+
+  .report-actions {
+    display: flex;
+    align-items: center;
+  }
+}

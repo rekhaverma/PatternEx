@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NXDomainsCard /> render:  should match with snapshot 1`] = `
+<Section
+  className="nxDomain"
+  dropDownOptions={Array []}
+  dropDownState={false}
+  dropdown={false}
+  expandable={true}
+  expandableView={
+    <List
+      behaviorType=""
+      columnFormat={Array []}
+      customClass={
+        Object {
+          "base": "details-card",
+          "modifiers": Array [
+            "+rows-highlight",
+          ],
+        }
+      }
+      data={Array []}
+      endDate={"2018-01-01T23:59:59.999Z"}
+      handlers={Object {}}
+      pipeline=""
+      startDate={"2018-01-01T00:00:00.000Z"}
+      tabData={Array []}
+      title="Domain"
+      type="@@listComponent/nxdomains"
+    />
+  }
+  filterFeatureList={[Function]}
+  isDraggable={true}
+  loaded={true}
+  modalStyle={Object {}}
+  onDropDownClick={[Function]}
+  onDropDownSelection={[Function]}
+  onModalOpen={[Function]}
+  selectedDropDown={Array []}
+  size="small"
+  title="NX Domain"
+>
+  <NoData
+    className="nodata"
+    intlDefault="There is no data to display"
+    intlId="global.nodata"
+    intlValues={Object {}}
+    message=""
+    withIcon={true}
+  />
+</Section>
+`;

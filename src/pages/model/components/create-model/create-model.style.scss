@@ -1,0 +1,143 @@
+@import 'xbem';
+@import 'theme';
+
+@include block(add-new-model) {
+  .selectBox {
+    max-width: none;
+    .selectBox__box{
+      overflow: visible;
+    }
+  }
+  .big-heading {
+    font-size: setFontSizeNew('h2', 'big');
+    margin-top: 0;
+    width: 100%;
+    border-bottom: 1px solid;
+    padding-bottom: setMultipliedSize();
+    margin-bottom: setMultipliedSize(4);
+
+    .new-model-header {
+      margin: 0px;
+    }
+  }
+
+  @include element('inputField') {
+    .materialInput {
+      width: 49%;
+      input{
+        width: 100%;
+      }
+    }
+  }
+  .create-model-row {
+    display: flex;
+    width: 100%;
+    padding-top: setMultipliedSize();
+    padding-bottom: setMultipliedSize(4);
+    justify-content: space-between;
+
+    &.date-row {
+      & > div:first-child {
+        margin-top: setMultipliedSize(1, -3);
+        width: 49%;
+      }
+      .datepicker-container{
+        width: 49%;
+        .dateRange, .dateRange .dateRange__presentation__row {
+          width: 100%;
+        }
+        .react-datepicker-wrapper{
+          display: block;
+          .react-datepicker__input-container{
+            display: block;
+          }
+          input {
+            width: 100%;
+          }
+        }
+        .react-datepicker {
+          font-size: setFontSizeNew('h5');
+        }
+      }
+    }
+
+    &.create-model-actions {
+      text-align: right;
+      display: block;
+      button {
+          font-size: setFontSizeNew('h4');
+          padding: setMultipliedSize(1, -1) setMultipliedSize(2) setMultipliedSize(2, -2);
+      }
+    }
+    .model-name {
+      width: calc(50% - 5px);
+    }
+    .number-days {
+      width: 45%;
+      margin-right: setMultipliedSize(4);
+    }
+    .select-box-width--right {
+      width: 50%;
+      padding-left: setMultipliedSize();
+    }
+    .select-box-width--left {
+      width: 50%;
+      padding-right: setMultipliedSize();
+    }
+    .Select, .Select-menu-outer {
+      width: 100%;
+    }
+    .Select-control .Select-placeholder {
+      font-size: setMultipliedSize(2, 2);
+      color: setColor('silver');
+    } 
+  }
+  input {
+      font-size: setFontSizeNew('h4');
+      padding: setMultipliedSize(2, -2) 0;
+  }
+}
+
+@include block('create-model-row') {
+  @include element('selectFeatures') {
+    @include flex($direction: row);
+    justify-content: space-between;
+    padding: setMultipliedSize(2, -2) 0;
+    width: 100%;
+    border-bottom: setSize('1px') solid setColor('silver');
+    position: relative;
+
+    .icon-error {
+      font-size: setFontSize('h3');
+      color: setColor('orange');
+      cursor: pointer;
+    }
+
+    .transform45 {
+      transform: rotate(45deg);
+    }
+
+    .redIcon {
+      color: setColor('red');
+      padding-left: setMultipliedSize(1);
+      font-size: setFontSize('h4');
+    }
+
+    @include element('text') {
+      font-size: setFontSize('h3');
+    }
+
+    @include element ('selected') {
+      position: absolute;
+      bottom: setMultipliedSize(5, 3);
+      font-size: setFontSize('h5');
+      color: setColor('mid-grey');
+    }
+
+    @include element('selectedText') {
+      font-size: setFontSize('h4');
+      padding-right: setMultipliedSize(1);
+      color: setColor('white');
+    }
+  }
+}

@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Top3FeaturesCard /> render:  should match with snapshot 1`] = `
+<Section
+  className=""
+  dropDownOptions={Array []}
+  dropDownState={false}
+  dropdown={false}
+  expandable={false}
+  expandableView={null}
+  filterFeatureList={[Function]}
+  isDraggable={true}
+  loaded={true}
+  modalStyle={Object {}}
+  onDropDownClick={[Function]}
+  onDropDownSelection={[Function]}
+  onModalOpen={[Function]}
+  selectedDropDown={Array []}
+  size="small"
+  title="Top 3 Analytics"
+>
+  <List
+    behaviorType=""
+    columnFormat={
+      Array [
+        Object {
+          "description": "Number of connections originated from this IP in which this IP sent packets with empty payloads",
+          "displayName": "Number of connections with empty packets sent",
+          "isFeature": true,
+          "name": "src_ip_30_count_sent_bytes_e_packets_gt",
+          "type": "int",
+        },
+        Object {
+          "description": "Average of the packets sent in the connections originated from this IP.",
+          "displayName": "Average number of packets sent per connection",
+          "isFeature": true,
+          "name": "src_ip_21_avg_packets_sent",
+          "type": "float",
+        },
+      ]
+    }
+    customClass={
+      Object {
+        "base": "standard-card",
+        "modifiers": Array [
+          "+outlayed",
+          "+rows-highlight",
+          "+topAnalytics",
+        ],
+      }
+    }
+    data={
+      Object {
+        "src_ip_15_avg_packets": 2,
+        "src_ip_21_avg_packets_sent": 1,
+        "src_ip_30_count_sent_bytes_e_packets_gt": 0,
+        "src_ip_54_count_low": 0,
+        "tor_distinct_sld_count": 0,
+      }
+    }
+    endDate={"2018-01-01T23:59:59.999Z"}
+    handlers={Object {}}
+    pipeline="sip"
+    startDate={"2018-01-01T00:00:00.000Z"}
+    tabData={Array []}
+    type="@@listComponent/top3Analytics_card"
+  />
+</Section>
+`;

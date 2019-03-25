@@ -1,0 +1,18 @@
+@import 'theme';
+
+$confirmation-modal: '.confirmation-modal';
+
+#{$confirmation-modal} {
+  &__content {
+    color: setColor('white');
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: setFontSizeNew('h5', 'big');
+    padding: 20px 0;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

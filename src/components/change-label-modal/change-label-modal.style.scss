@@ -1,0 +1,42 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('changeModal') {
+  @include element('header') {
+    padding-bottom: setMultipliedSize(2);
+    border-bottom: 1px solid setColor('mid-grey');
+
+    color: setColor('white');
+    font-size: setFontSizeNew('h4', 'big');
+
+    @include flex(row);
+
+    .icon-close {
+      margin-left: auto;
+      cursor: pointer;
+    }
+  }
+
+  @include element('row') {
+    width: 100%;
+
+    margin-top: setMultipliedSize(3);
+
+    @include flex(row);
+
+    @include state('right') {
+      justify-content: flex-end;
+
+      button {
+        margin: 0 5px;
+      }
+    }
+  }
+
+  @include element('cell') {
+    width: 100%;
+    padding: 0 setMultipliedSize(2);
+
+    @include flex();
+  }
+}

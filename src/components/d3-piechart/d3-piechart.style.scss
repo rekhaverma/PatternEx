@@ -1,0 +1,24 @@
+@import 'xbem';
+@import 'theme';
+
+
+@include block('pieContainer') {
+  width: 50%;
+
+  @include respond-to(map-get($viewports, 'medium')) {
+    width: 45%;
+  }
+}
+
+@include block('chart') {
+  width: 100%;
+  height: 95%;
+
+  @include element('piechart') {
+    stroke: none;
+  
+    @include state('isHovered') {
+      stroke-width: 1px;
+    }
+  }
+}

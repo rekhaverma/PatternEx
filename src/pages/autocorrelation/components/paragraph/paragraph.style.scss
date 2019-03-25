@@ -1,0 +1,52 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('paragraph') {
+  width: 445px;
+  padding: setMultipliedSize(3) / 2;
+  margin: setMultipliedSize(1, -1);
+  background-color: setColor(default-dark);
+
+  @include flex();
+  @include prefix(border-radius, setRadius('normal'));
+
+  @include element('header') {
+    padding-bottom: setMultipliedSize(1, -1);
+    color: setColor('white');
+
+    @include flex(row);
+  }
+
+  @include element('title') {
+    font-size: setFontSizeNew('h5');
+    font-weight: setFontWeight('bold');
+  }
+
+  @include element('status') {
+    margin-left: auto;
+
+    font-weight: setFontWeight('regular');
+
+    @include state('finished') {
+      color: setColor('bright-green');
+    }
+
+    @include state('ready') {
+      color: setColor('blue');
+    }
+
+    @include state('error') {
+      color: setColor('orange-rose');
+    }
+  }
+
+  @include element('output') {
+    padding: 0 setMultipliedSize(2);
+    margin-top: setMultipliedSize(2);
+
+    background-color: setColor('cod-grey');
+
+    color: setColor('white');
+    font-size: setFontSizeNew('h5');
+  }
+}

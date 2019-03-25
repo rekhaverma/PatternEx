@@ -1,0 +1,45 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('backToBtn') {
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 35px;
+  height: 35px;
+  padding: setMultipliedSize(3, -2);
+  margin-right: setMultipliedSize(3);
+
+  background: #2E3742; // todo: use function to set the color
+  overflow: hidden;
+  cursor: pointer;
+
+  @include flex($direction: row);
+  @include prefix(border-radius, 26px);
+  @include prefix(transition, width 400ms);
+
+  &:hover {
+    width: 200px;
+    @include prefix(border-radius, 26px);
+  }
+
+  @include element('icon') {
+    margin-right: 11px;
+
+    font-size: setFontSizeNew('h4');
+    color: setColor('white', 0.3);
+  }
+
+  @include element('container') {
+    width: 200px;
+  }
+
+  p {
+    width: 200px;
+
+    color: setColor('white', 0.6);
+    font-size: setFontSizeNew('h4', 'big');
+    font-weight: 400;
+    text-transform: initial;
+  }
+}

@@ -1,0 +1,177 @@
+@import 'theme';
+@import 'xbem';
+
+$arrowSize: 6px;
+
+@include block('multi-step-select') {
+  position: relative;
+  width: 100%;
+
+  color: setColor('white');
+  font-size: setFontSizeNew('h5','big');
+
+  cursor: pointer;
+  
+  @include element('box') {
+    width: 100%;
+    position: relative;
+    padding: setMultipliedSize(2) setMultipliedSize(4) setMultipliedSize(2) 0;
+    border-bottom: 1px solid setColor('silver');
+    @include ellipsis(100%);
+
+    span {
+      cursor: pointer;
+    }
+
+    &:after {
+      content: '\E926';
+      position: absolute;
+      top: 50%;
+      right: setMultipliedSize();
+      font-family: setFontFamily('patternex');
+      font-size: setFontSizeNew('h6');
+      color: setColor('silver');
+
+      @include setFontFamily('patternex');
+      @include prefix(transform, translateY(-50%));
+    }
+  }
+
+  @include element('optionList') {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    max-width: 202px;
+    padding: setMultipliedSize(2) 0;
+    border: 1px solid setColor('light-grey');
+
+    background-color: setColor('cod-grey');
+
+    $radiusSize: setRadius('normal');
+
+    @include flex();
+    @include radius($radiusSize, $radiusSize, $radiusSize, $radiusSize);
+
+    z-index: 100
+  }
+
+  @include element('subOptionList') {
+    position: absolute;
+    top: 80px;
+    left: 205px;
+    max-width: 200px;
+    padding: setMultipliedSize(2) 0;
+    border: 1px solid setColor('light-grey');
+
+    background-color: setColor('cod-grey');
+
+    $radiusSize: setRadius('normal');
+
+    @include flex();
+    @include radius($radiusSize, $radiusSize, $radiusSize, $radiusSize);
+
+    z-index: 100
+  }
+
+  @include element('option') {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: setMultipliedSize() setMultipliedSize(3);
+
+    cursor: pointer;
+
+    @include flex(row);
+    @include prefix('transition', 'all 350ms ease');
+
+    &:hover {
+      background-color: setColor('black');
+    }
+
+    @include element('optionName') {
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
+      @include flex($direction: row);
+      justify-content: space-between;
+
+      .icon-chevron-right {
+        color: setColor('orange');
+      }
+    }
+
+    @include element('roundBox') {
+      display: block;
+      width: 12px;
+      height: 11px;
+      border: 2px solid setColor('white');
+      margin-right: setMultipliedSize(3);
+
+      background-color: transparent;
+
+      @include radius(50%, 50%, 50%, 50%);
+
+      @include state('active') {
+        background-color: setColor('white');
+        @include prefix(box-shadow, inset 0px 0px 0px 2px setColor('black'));
+      }
+    }
+
+    @include element('checkbox') {
+      position: relative;
+      flex-shrink: 0;
+
+      width: 14px;
+      height: 14px;
+      margin-right: 1rem;
+      border: 1px solid setColor('white');
+      background: transparent;
+
+      @include flex();
+
+      &:after {
+        content: '';
+        width: 7px;
+        height: 4px;
+        position: absolute;
+        top: 1px;
+        left: 2px;
+        border: 2px solid setColor('white');
+        border-top: none;
+        border-right: none;
+        background: transparent;
+        opacity: 0;
+        transform: rotate(-45deg);
+      }
+
+      @include state('active') {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+
+    @include state('disabled') {
+      cursor: auto;
+      color: setColor('mid-grey');
+    }
+  }
+
+  @include element('error-message') {
+    color: setColor('red');
+    font-size: setFontSizeNew('h5', 'big');
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 37px;
+
+    @include prefix(transition, .3s);
+
+    @include modifier('active') {
+      max-height: 13px;
+    }
+  }
+}

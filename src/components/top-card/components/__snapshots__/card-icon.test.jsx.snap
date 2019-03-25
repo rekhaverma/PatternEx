@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardIcon /> should render correctly 1`] = `
+<div
+  className="testClass__icon"
+>
+  <span
+    className="details"
+  />
+</div>
+`;

@@ -1,0 +1,331 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('table') {
+  color: setColor('silver');
+  border-collapse: collapse;
+
+  @include modifier('allowOverflow') {
+    overflow: visible !important;
+  }
+
+  @include block('tr-highlighted') {
+    border: 1px solid setColor('white');
+  }
+
+  @include block('tr-activeCluster'){
+    //TODO .. cleanup css and remove important
+    background: setColor('tundora') !important;
+  }
+
+  @include block('tr-central') {
+    td {
+      font-weight: setFontWeight('bold');
+    }
+  }
+
+
+  @include block('tr-odd'){
+    background-color: setColor('black-odd');
+  }
+
+  @include block('sort-column') {
+    position: relative;
+    [class^="icon-"] {
+      right:0;
+      position: absolute;
+    }
+  }
+
+  @include element('headerContainer') {
+    border: none !important;
+  }
+
+  @include element('predictionEntityCell') {
+    display: inline-block;
+    width: 50px;
+
+    @include modifier('flex') {
+      align-items: center;
+      @include flex(row);
+
+      .icon-M-icon {
+        font-size: 19px;
+      }
+
+      @include state('spaceBetween') {
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+
+        color: setColor('white');
+      }
+    }
+  }
+
+  @include element('cell') {
+    align-items: center;
+
+    @include flex($direction: row);
+
+    [class^="icon-"], [class*=" icon-"] {
+      cursor: pointer;
+      font-size: setFontSizeNew('h4', 'big');
+    }
+
+    .icon-inspect {
+      color: setColor('orange');
+    }
+
+    .icon-add {
+      color: setColor('orange');
+    }
+
+    .icon-confirm {
+      color: setColor('bright-green');
+    }
+
+    .icon-deny {
+      color: setColor('red');
+    }
+
+    .icon-Trash-icon {
+      font-size: setFontSizeNew('h5','big');
+      color: setColor('red');
+      padding-left: setMultipliedSize();
+    }
+
+    @include modifier('actions') {
+      flex-wrap: wrap;
+    }
+
+    @include state('inactive') {
+      [class^="icon-"], [class*=" icon-"] {
+        color: setColor('mid-grey');
+        cursor: default;
+      }
+    }
+
+    @include state('ellipsis') {
+      @include ellipsis(100%);
+    }
+
+  }
+
+  @include block('delete-label'){
+    font-size: setFontSizeNew('h5','big');
+    padding-left: setMultipliedSize();
+
+    &:hover{
+      color: setColor('white');
+    }
+  }
+
+  @include element('headerColumn') {
+    text-transform: none;
+
+    @include modifier('entity') {
+      color: setColor('orange');
+      font-weight: setFontWeight('bold');
+
+      [class^="icon-"], [class*=" icon-"] {
+        margin-right: 8px;
+
+        font-size: setFontSizeNew('h4');
+        color: setColor('silver');
+      }
+    }
+
+    @include modifier('highlighted') {
+      color: setColor('white');
+      font-weight: setFontWeight('bold');
+    }
+
+    @include state('noPadding') {
+      padding: 0;
+    }
+  }
+
+  @include element('expandedRowParent') {
+    border: 2px solid setColor('white');
+  }
+
+  @include element('expandedRow') {
+    align-items: center;
+
+    padding: 14px;
+    border: 1px solid setColor('white', 0.38);
+    margin: -8px -10px;
+
+    background-color: setColor('black');
+
+    @include flex($direction: row);
+
+    @include element('metas') {
+      @include flex($grow: 1);
+    }
+
+    @include element('meta') {
+      margin: 0;
+
+      color: setColor('white');
+      font-size: setFontSizeNew('h5');
+      line-height: 2;
+
+      @include flex($direction: row);
+
+      @include modifier('highlight') {
+        margin-right: 5px;
+
+        color: setColor('silver');
+      }
+    }
+
+    @include element('actions') {
+      margin-left: auto;
+      justify-content: space-around;
+
+      color: setColor('orange');
+      font-weight: setFontWeight('bold');
+      font-size: setFontSizeNew('h5');
+      text-decoration: none;
+
+      @include flex($direction: row, $grow: 1);
+
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@include block('react-bs-table') {
+  // workaround found on: https://github.com/AllenFang/react-bootstrap-table/issues/776
+  height: auto !important;
+}
+
+@include block('react-bs-table-pagination') {
+  .row {
+    @include flex($direction: row);
+    width: inherit;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .col-md-6 {
+      height: 25px;
+
+      span:first-child {
+        font-size: setFontSizeNew('h4');
+      }
+
+      &:first-child {
+        border-bottom: solid 1px setColor('white');
+      }
+
+      &:first-child:before {
+        content: 'Show results:';
+        font-size: setFontSizeNew('h4');
+        padding: setMultipliedSize(3) setMultipliedSize(1, -1);
+        color: setColor('white');
+      }
+
+      @include block('caret') {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-left: 2px;
+        vertical-align: middle;
+        border-top: 4px dashed;
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+      }
+
+      @include block('dropdown') {
+        font-size: setFontSizeNew('h4');
+
+        .dropdown-toggle {
+          color: setColor('white');
+          background: transparent;
+          border: 0;
+          cursor: pointer;
+          content: "Show Results";
+        }
+
+        .dropdown-menu {
+          display: none;
+          list-style-type: none;
+          margin-top: 5px;
+          padding: setMultipliedSize() setMultipliedSize(8);
+          li {
+            padding: setMultipliedSize() setMultipliedSize(4);
+            a {
+              color: setColor('white');
+              text-decoration: none;
+            &:hover {
+                color: setColor('orange');
+              }
+            }
+          }
+          position: absolute;
+          background-color: setColor('cod-grey');
+          border: 1px solid setColor('light-grey');
+          @include prefix(border-radius, 5px);
+        }
+
+        &.open > ul {
+          @include flex($direction: column);
+        }
+      }
+    }
+
+    @include block('pagination') {
+      list-style-type: none;
+      flex-wrap: wrap;
+
+      font-size: setFontSizeNew('h4');
+      @include flex($direction: row);
+
+      li {
+        padding: setMultipliedSize(1, -3) setMultipliedSize(1, -1);
+        margin: setMultipliedSize(1, -3) setMultipliedSize(1, -1);
+        a {
+          color: setColor('white');
+          text-decoration: none;
+        }
+
+        &:hover {
+          border-radius: setRadius('normal');
+          border: solid 1px setColor('orange');
+        }
+      }
+
+      li[class^="active"],
+      li[title^="first"],
+      li[title^="last"],
+      li[title^="next"],
+      li[title^="previous"] {
+        border-radius: setRadius('normal');
+        border: solid 1px setColor('orange');
+
+        a {
+          color:setColor('orange');
+        }
+      }
+    }
+  }
+}
+
+.table__cell > div,
+ .table__cell > div > div,
+  span.table__cell > div > div > .table_ellipsis{
+  width: 100%;
+}
+.table_ellipsis{
+  overflow: hidden;
+  // white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.manyCount{
+  color:setColor('orange');
+}

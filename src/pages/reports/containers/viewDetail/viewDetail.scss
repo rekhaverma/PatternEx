@@ -1,0 +1,36 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('viewDetail') {
+	@include flex();
+  justify-content: space-between;
+  
+  @include element('row') {
+	  @include flex($direction: row);
+	  align-items: center;
+    margin-bottom: setMultipliedSize(3);
+    word-break: break-word;
+    
+    @include state ('spaceBetween') {
+      justify-content: space-between;
+    }
+
+    @include state('rightSide') {
+      margin-left: auto;
+    }
+  }
+
+  @include element('title') {
+    @include H2(setColor('white'));
+  }
+
+  .icon-close {
+    font-size: setFontSizeNew('h4', 'big');
+    cursor: pointer;
+  }
+
+  @include block('firstrow') {
+    padding-bottom: setMultipliedSize(3);
+    border-bottom: setMultipliedSize(1, -3) solid setColor('silver');
+  }
+}

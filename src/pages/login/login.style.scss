@@ -1,0 +1,111 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('login') {
+  background: setColor('black') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  width: 100vw;
+
+  @include element('container') {
+    left: 50%;
+    padding-bottom: setMultipliedSize(16, 1);
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+
+    @include prefix(transform, translate(-50%, -50%));
+  }
+
+  @include element('logo') {
+    padding-bottom: setMultipliedSize(8);
+    text-align: center;
+
+    img {
+      display: block;
+      height: 41px;
+      margin: auto;
+      width: auto;
+    }
+  }
+
+  @include element('form-container') {
+    background-color: setColor('black');
+    box-shadow: 6px 8px 11px 0 setColor('black', 0.5);
+    height: 220px;
+    max-width: 100%;
+    padding: 20px 25px 23px;
+    width: 500px;
+  }
+
+  @include element('title') {
+    border-bottom: 2px solid setColor('login-border');
+    color: setColor('white');
+    font-size: setFontSizeNew('h4', 'big');
+    padding-bottom: 12px;
+    width: 100%;
+  }
+
+  @include element('form') {
+    margin: 7px 100px 0;
+  }
+
+  @include element('field') {
+    align-items: center;
+    display: flex;
+    width: 100%;
+  }
+
+  @include element('submit') {
+    margin-top: 10px;
+    button {
+      margin: auto;
+    }
+  }
+
+  @include element('footer') {
+    bottom: 23px;
+    color: setColor('login-footer');
+    font-size: setFontSizeNew('h5', 'big');
+    left: 50%;
+    position: absolute;
+    z-index: 2;
+
+    @include prefix(transform, translateX(-50%));
+  }
+}
+
+@include block('login-field') {
+  @include element('icon') {
+    color: setColor('orange');
+    font-size: setFontSizeNew('h3', 'big');
+    height: 20px;
+    margin-bottom: setMultipliedSize(1, 1);
+    margin-right: setMultipliedSize(4);
+    width: 20px;
+
+    label {
+      cursor: pointer;
+    }
+  }
+
+  @include element('input') {
+    width: 210px;
+
+    input {
+      background: transparent;
+      border: 0;
+      border-bottom: 2px solid setColor('login-border');
+      color: setColor('white');
+      font-size: setFontSizeNew('h5', 'big');
+      font-weight: bold;
+      outline: 0;
+      width: 100%;
+    }
+
+    label {
+      color: setColor('white');
+      font-weight: 300;
+    }
+  }
+}

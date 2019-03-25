@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ComboBox /> should match with snapshot 1`] = `
+<div
+  className="comboBox"
+  style={
+    Object {
+      "maxWidth": 300,
+    }
+  }
+>
+  <div
+    className="comboBox__box"
+    onClick={[Function]}
+  >
+    <LabelList
+      className="comboBox__labelList"
+      labels={Array []}
+      onCancel={[Function]}
+    />
+    <Input
+      autoFocus={false}
+      className="comboBox__input"
+      disabled={false}
+      id=""
+      name=""
+      onChange={[Function]}
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+      onSubmit={[Function]}
+      placeholder="Search option"
+      style={Object {}}
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;

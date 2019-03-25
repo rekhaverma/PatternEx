@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabCountElement /> should render correctly 1`] = `
+<div
+  className="tabCountElement__test--count +active"
+  onClick={[Function]}
+>
+  <span>
+    Test Tab
+  </span>
+  <span
+    className="tabCountElement__test__delimiter +active"
+  />
+  <span
+    className="tabCountElement__test__counter"
+  >
+    102
+  </span>
+</div>
+`;

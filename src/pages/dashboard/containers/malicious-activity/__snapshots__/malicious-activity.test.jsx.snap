@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MaliciousActivity /> should match with snapshot 1`] = `
+<section
+  className="dashboard__content +withGradient"
+  style={
+    Object {
+      "flexWrap": "wrap",
+    }
+  }
+>
+  <div
+    className="row full-width flex-wrap"
+  >
+    <HeatMapDropdown
+      data={Array []}
+      filters={Object {}}
+      resetFilters={[Function]}
+      row={Array []}
+      rowType="pipeline"
+      setFilter={[Function]}
+    />
+    <div
+      className="dashboard__malicious-heatmap"
+    >
+      <HeatMapLegend />
+    </div>
+  </div>
+  <div
+    className="row full-width"
+  >
+    <Listing
+      data={Array []}
+      deleteLabel={[Function]}
+      handleExplodedView={[Function]}
+      isDataLoaded={false}
+      isOldEVPActive={false}
+      searchTags={Array []}
+      setLabelForPrediction={[Function]}
+    />
+  </div>
+  <div
+    className="row full-width"
+  >
+    <div
+      className="dashboard__footer"
+    >
+      <div
+        className="dashboard__toListing"
+      >
+        <Link
+          onlyActiveOnIndex={false}
+          style={Object {}}
+          to=""
+        >
+          <span
+            className="icon-chevron-right"
+          />
+          <FormattedMessage
+            id="malicious.toMaliciousListing"
+            values={Object {}}
+          />
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+`;

@@ -1,0 +1,101 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('userProfile') {
+  position: relative;
+
+  @include prefix(user-select, none);
+
+  .icon-gear {
+    font-size: setFontSizeNew('h2', 'big');
+  }
+
+  .icon-chevron-down {
+    margin-left: 10px;
+    font-size: setFontSizeNew('h5');
+    font-weight: 300;
+  }
+
+  @include element('iconGroup') {
+    @include flex($direction: row);
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 2px 8px 2px 2px;
+    border-radius: 26px;
+
+    @include prefix(transition, background-color .4s linear);
+
+    cursor: pointer;
+
+    &:hover {
+      background: #191919; // todo: use function to set the color
+    }
+  }
+}
+
+@include block('profileBox') {
+  position: absolute;
+  top: 55px;
+  right: -10px;
+  width: 160px;
+  padding: 10px;
+  border: 1px solid setColor('black', 0.15);
+  border-radius: 4px;
+  box-shadow: 0 0 10px 0 #222; // todo: use function to set the color
+  background-color: #2E3742; // todo: use function to set the color
+
+  &:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-bottom: 10px solid #1e2125; // todo: use function to set the color
+    border-top: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    position: absolute;
+    top: -40px;
+    right: 10px;
+  }
+
+  @include element('group') {
+    @include flex($direction: column);
+
+    &:not(:first-child) {
+      &:before {
+        content: "";
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-top: 1px solid #8A88A7; // todo: use function to set the color
+      }
+    }
+  }
+
+  @include element('item') {
+    @include prefix(transition, color 0.4s);
+    padding: 5px 0;
+    margin: 0;
+    color: #337ab7; // todo: use function to set the color
+    font-size: setFontSizeNew('h4');
+    cursor: pointer;
+
+    @include setFontFamily('firaSans');
+
+    [class^="icon-"], [class*=" icon-"]  {
+      padding-right: 5px;
+    }
+
+    &:hover {
+      color: setColor('white', 0.6);
+    }
+
+    @include state('protected') {
+      text-decoration: none;
+      color: setColor('white', 0.6);
+      &:hover {
+        color: #337ab7; // todo: use function to set the color
+      }
+    }
+  }
+}

@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Resources /> should match with snapshot 1`] = `
+<section
+  className="resources"
+>
+  <Loader
+    small={false}
+  />
+  <div
+    className="resources__header"
+  >
+    <h1>
+      <FormattedMessage
+        id="resource.title"
+        values={Object {}}
+      />
+    </h1>
+  </div>
+  <div
+    className="col-md-4 resources__addNewResource"
+  >
+    <Button
+      className="button--success"
+      onClick={[Function]}
+    >
+      <FormattedMessage
+        id="resource.add"
+        values={Object {}}
+      />
+    </Button>
+  </div>
+  <Search
+    className="resourceSearch"
+    inputProps={
+      Object {
+        "onChange": [Function],
+        "placeholder": "Search",
+        "value": "",
+      }
+    }
+    resetTags={[Function]}
+    style={Object {}}
+    tag={null}
+  />
+  <Connect(Table)
+    className="resourceTable"
+    columns={
+      Array [
+        Object {
+          "columnTitle": true,
+          "field": "name",
+          "isKey": true,
+          "label": "Name",
+        },
+        Object {
+          "columnTitle": true,
+          "field": "description",
+          "isKey": false,
+          "label": "Description",
+        },
+        Object {
+          "columnTitle": true,
+          "field": "url",
+          "isKey": false,
+          "label": "URL",
+        },
+        Object {
+          "columnTitle": true,
+          "dataFormat": [Function],
+          "field": "create_time_x",
+          "isKey": false,
+          "label": "Created on",
+          "width": "180px",
+        },
+        Object {
+          "columnTitle": true,
+          "field": "created_by_email",
+          "isKey": false,
+          "label": "Created by",
+        },
+        Object {
+          "columnTitle": true,
+          "dataFormat": [Function],
+          "field": "active",
+          "isKey": false,
+          "label": "Status",
+        },
+        Object {
+          "columnTitle": false,
+          "dataFormat": [Function],
+          "field": "action",
+          "isKey": false,
+          "label": "Actions",
+          "sortableColumns": false,
+          "width": "150px",
+        },
+      ]
+    }
+    data={Array []}
+    expandComponent={[Function]}
+    expandableRow={[Function]}
+    options={Object {}}
+    pagination={true}
+  />
+</section>
+`;

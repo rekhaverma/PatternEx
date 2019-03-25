@@ -1,0 +1,97 @@
+@import 'xbem';
+@import 'theme';
+
+$width: 252px;
+$spanWidth: $width - setMultipliedSize(8);
+$optionHeight: 15px;
+
+@include block('multipleSelectBox') {
+  position: relative;
+  width: $width;
+  height: 30px;
+  margin-right: 50px;
+  margin-left: 50px;
+
+  .track-vertical {
+    position: absolute;
+    width: 6px;
+    right: 2px;
+    bottom: 2px;
+    top: 2px;
+    border-radius: 4px;
+    background-color: #181c22; // todo: use function to set the color
+  }
+
+  .thumb-vertical {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 69px;
+    border-radius: inherit;
+    background-color: #2e3742; // todo: use function to set the color
+    transform: translateY(0px);
+    cursor: pointer;
+  }
+
+  @include element('box') {
+    position: relative;
+    padding: setMultipliedSize(2);
+    border: 1px solid setColor('light-grey');
+
+    @include H3(setColor('white'));
+    line-height: 1;
+
+    span {
+      @include ellipsis($spanWidth);
+      cursor: pointer;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 8px 0 8px;
+      border-color: #a7aaad transparent transparent transparent; // todo: use function to set the color
+
+      @include prefix(transform, translateY(-50%));
+    }
+
+    @include state('open') {
+      &:before {
+        border-width: 0 8px 8px 8px;
+        border-color: transparent transparent #a7aaad transparent; // todo: use function to set the color
+      }
+    }
+  }
+
+  @include element('optionList') {
+    z-index: 50;
+    position: absolute;
+    top: 38;
+    left: 0;
+    width: 100%;
+    padding: setMultipliedSize(2, -2) 0;
+    border: 1px solid setColor('light-grey');
+
+    background-color: setColor('black');
+  }
+
+  @include element('option') {
+    @include ellipsis($width - 2);
+    @include prefix('transition', 'all 300ms ease');
+    width: 100%;
+    height: $optionHeight;
+    padding: 0 setMultipliedSize(2);
+
+    cursor: pointer;
+
+    &:hover {
+      background-color: setColor('blue');
+      color: setColor('white');
+    }
+  }
+}

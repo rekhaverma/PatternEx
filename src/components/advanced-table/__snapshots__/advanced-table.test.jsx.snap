@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AdvancedTable /> should match with snapshot 1`] = `
+<div
+  className="table-section"
+>
+  <div
+    className="table-top-section"
+  >
+    <div />
+    <WithBoxHOC
+      activeOptions={
+        Array [
+          "start_time_formatted",
+        ]
+      }
+      options={
+        Array [
+          Object {
+            "content": "Hash",
+            "disabled": false,
+            "id": "hash",
+          },
+          Object {
+            "content": "Log Date",
+            "disabled": false,
+            "id": "start_time_formatted",
+          },
+        ]
+      }
+      updateOptionsHandler={[Function]}
+    />
+  </div>
+  <ConfigurableTable
+    classname="test"
+    data={
+      Array [
+        Object {
+          "hash": "asd-test",
+          "start_time_formatted": "start-time",
+        },
+      ]
+    }
+    locationPage="@tEST/LOCATION"
+    maxPageSize="5"
+    onRowClick={[Function]}
+    pageSize="5"
+    rowHeight={300}
+    rowHighlightIndex={1}
+    tableConfig={
+      Array [
+        Object {
+          "className": "table__headerColumn",
+          "field": "hash",
+          "hidden": true,
+          "intl": "malicious.table.hash",
+          "isKey": true,
+          "label": "Hash",
+          "resizable": false,
+        },
+        Object {
+          "className": "table__headerColumn",
+          "field": "start_time_formatted",
+          "hidden": false,
+          "intl": "malicious.table.start_time_formatted",
+          "isKey": false,
+          "label": "Log Date",
+          "resizable": true,
+          "width": 100,
+        },
+      ]
+    }
+  >
+    <div />
+  </ConfigurableTable>
+</div>
+`;

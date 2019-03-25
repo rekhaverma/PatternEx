@@ -1,0 +1,14 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('percentages') {
+  text {
+    fill: setColor('light-grey');
+  }
+}
+
+@include block('legend') {
+  text {
+    fill: setColor('light-grey');
+  }
+}

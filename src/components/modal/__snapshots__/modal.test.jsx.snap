@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> should match with snapshot 1`] = `
+<div
+  className="ptrx-modal"
+>
+  <div
+    className="ptrx-modal__content"
+    style={
+      Object {
+        "width": "650px",
+      }
+    }
+  >
+    <div
+      className="testing-modal"
+    />
+  </div>
+</div>
+`;

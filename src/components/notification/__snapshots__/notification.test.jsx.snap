@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Notification /> should match with snapshot 1`] = `
+<div
+  className="notification notification--info"
+>
+  <span
+    className="notification__icon icon-info"
+  />
+  <div>
+    <FormattedMessage
+      id="notification.text"
+      key="0"
+      values={
+        Object {
+          "line": "Updated",
+        }
+      }
+    />
+  </div>
+  <span
+    className="notification__close icon-remove"
+    onClick={[Function]}
+  />
+</div>
+`;

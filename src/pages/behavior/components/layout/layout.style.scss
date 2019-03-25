@@ -1,0 +1,34 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('behaviorLayout') {
+  @include flex();
+
+  padding-top: setMultipliedSize(4);
+
+  @include element('row') {
+    @include flex($direction: row);
+    align-items: center;
+
+    @include state('center') {
+      justify-content: center;
+    }
+
+    @include state('rightSide') {
+      margin-left: auto;
+    }
+
+    @include state('wrap') {
+      padding: 10px 20px;
+    }
+
+    .icon-export {
+      padding: setMultipliedSize(1, -1);
+    }
+  }
+
+  @include element('filter') {
+    width: 15%;
+    padding: setMultipliedSize(4);
+  }
+}

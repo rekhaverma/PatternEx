@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> render:  should match with snapshot 1`] = `
+<div
+  className="app"
+  style={
+    Object {
+      "marginLeft": 0,
+      "marginTop": 0,
+      "paddingTop": 0,
+    }
+  }
+>
+  <div />
+  <div
+    className="notifications-wrapper"
+  />
+</div>
+`;

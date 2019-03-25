@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ChangeModal /> should match with snapshot 1`] = `
+<div
+  className="test-class"
+>
+  <div
+    className="test-class__header"
+  >
+    <span />
+    <span
+      className="icon-close"
+      onClick={[Function]}
+    />
+  </div>
+  <div
+    className="test-class__content"
+  >
+    <div
+      className="test-class__row"
+    >
+      <div
+        className="test-class__cell"
+      >
+        <WithBoxHOC
+          active="selected-label"
+          onItemClick={[Function]}
+          options={
+            Array [
+              "tag",
+            ]
+          }
+          placeholder="Tactic"
+          showLabel={true}
+        />
+      </div>
+      <div
+        className="test-class__cell"
+      >
+        <Input
+          className="materialInput"
+          errorMessage=""
+          inputOptions={
+            Object {
+              "id": "addLabelWeight",
+              "onChange": [Function],
+              "type": "text",
+              "value": "weight",
+            }
+          }
+          label="Weight (Default: 1)"
+        />
+      </div>
+    </div>
+    <div
+      className="test-class__row"
+    >
+      <Textarea
+        className="textarea"
+        onChange={[Function]}
+        placeholder="Description"
+        rows={5}
+        value="description"
+      />
+    </div>
+    <div
+      className="test-class__row +right"
+    >
+      <Button
+        className="button--success"
+        onClick={[Function]}
+      >
+        Save
+      </Button>
+      <Button
+        className="button"
+        onClick={[Function]}
+      >
+        Cancel
+      </Button>
+    </div>
+  </div>
+</div>
+`;

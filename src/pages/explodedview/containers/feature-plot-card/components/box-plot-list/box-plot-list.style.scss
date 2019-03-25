@@ -1,0 +1,8 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('box-plot-list') {
+  .d3-box-plot:nth-child(odd) {
+    background: setColor('cod-grey');
+  }
+}

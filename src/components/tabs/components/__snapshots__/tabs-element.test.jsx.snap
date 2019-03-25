@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabElement /> should render correctly 1`] = `
+<div
+  className="tabCountElement__test +active"
+  onClick={[Function]}
+>
+  <span>
+    Test Tab
+  </span>
+</div>
+`;

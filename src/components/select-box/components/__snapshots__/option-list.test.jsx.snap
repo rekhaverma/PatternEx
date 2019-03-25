@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OptionList /> should render correctly 1`] = `
+<div
+  className="optionList__test"
+>
+  <Option
+    className="selectBox__option"
+    content="All values"
+    disabled={false}
+    id="all"
+    isActive={true}
+    key="all"
+    label="All Values"
+    onClick={[Function]}
+    singleSelect={true}
+    style={
+      Object {
+        "marginRight": 20,
+      }
+    }
+  />
+  <Option
+    className="selectBox__option"
+    content="Value1"
+    disabled={false}
+    id="value1"
+    isActive={false}
+    key="value1"
+    label="Value1"
+    onClick={[Function]}
+    singleSelect={true}
+    style={
+      Object {
+        "marginRight": 20,
+      }
+    }
+  />
+  <Option
+    className="selectBox__option"
+    content="Value2"
+    disabled={false}
+    id="value2"
+    isActive={false}
+    key="value2"
+    label="Value2"
+    onClick={[Function]}
+    singleSelect={true}
+    style={
+      Object {
+        "marginRight": 20,
+      }
+    }
+  />
+</div>
+`;

@@ -1,0 +1,181 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('topCard') {
+  position: relative;
+
+  max-width: 400px;
+  min-width: 320px;
+
+  background-color:#1b1b1b;
+
+  height: 120px;
+  padding: setMultipliedSize(4);
+
+  .icon-price-tag {
+    font-size: setFontSizeNew('h2');
+    color: setColor('olive');
+  }
+
+  .icon-precision {
+    font-size: setFontSizeNew('h2');
+    color: setColor('seance');
+  }
+
+  .icon-ipo {
+    font-size: setFontSizeNew('h2');
+    color: setColor('silver');
+  }
+
+  .icon-malicious {
+    font-size: setFontSizeNew('h2');
+    color: setColor('red');
+  }
+
+  .icon-suspicious {
+    font-size: setFontSizeNew('h2');
+    color: setColor('yellow');
+  }
+
+  @include state('disabled') {
+    background-image: radial-gradient(circle at 50% -95%, #4a4a4a, #1b1b1b, #1b1b1b); // todo: use function to set the color
+    @include respond-to(map-get($viewports, 'small')) {
+      max-width: 100%;
+      background-image: radial-gradient(circle at 99% 260%, rgba(#4a4a4a, 0.4), #1b1b1b, #1b1b1b); // todo: use function to set the color
+    }
+
+    .icon-price-tag,
+    .icon-precision,
+    .icon-malicious,
+    .icon-suspicious {
+      color: setColor('silver');
+    }
+  }
+
+  @include state('ipo') {
+    background-image: radial-gradient(circle at 50% -95%, #898989, #1b1b1b, #1b1b1b); // todo: use function to set the color
+    @include respond-to(map-get($viewports, 'small')) {
+      max-width: 100%;
+      background-image: radial-gradient(circle at 99% 260%, rgba(#898989, 0.4), #1b1b1b, #1b1b1b); // todo: use function to set the color
+    }
+  }
+  @include state('malicious') {
+    background-image: radial-gradient(circle at 50% -95%, #a00606, #1b1b1b, #1b1b1b); // todo: use function to set the color
+    @include respond-to(map-get($viewports, 'small')) {
+      max-width: 100%;
+      background-image: radial-gradient(circle at 99% 260%, rgba(#a00606, 0.4), #1b1b1b, #1b1b1b); // todo: use function to set the color
+    }
+  }
+  @include state('suspicious') {
+    background-image: radial-gradient(circle at 50% -95%, #a8800a, #1b1b1b, #1b1b1b); // todo: use function to set the color
+    @include respond-to(map-get($viewports, 'small')) {
+      max-width: 100%;
+      background-image: radial-gradient(circle at 99% 260%, rgba(#a8800a, 0.4), #1b1b1b, #1b1b1b); // todo: use function to set the color
+    }
+  }
+  @include state('precision') {
+    background-image: radial-gradient(circle at 50% -95%, setColor('seance'), #1b1b1b, #1b1b1b); // todo: use function to set the color
+    @include respond-to(map-get($viewports, 'small')) {
+      max-width: 100%;
+      background-image: radial-gradient(circle at 99% 260%, setColor('seance', 0.4), #1b1b1b, #1b1b1b); // todo: use function to set the color
+    }
+  }
+  @include state('price-tag') {
+    background-image: radial-gradient(circle at 50% -95%, setColor('olive'), #1b1b1b, #1b1b1b); // todo: use function to set the color
+    @include respond-to(map-get($viewports, 'small')) {
+      max-width: 100%;
+      background-image: radial-gradient(circle at 99% 260%, setColor('olive', 0.4), #1b1b1b, #1b1b1b); // todo: use function to set the color
+    }
+  }
+
+  @include flex($direction: row, $grow: 1);
+  @include respond-to(map-get($viewports, 'small')) {
+    max-width: 100%;
+  }
+
+  @include element('icon') {
+    align-items: center;
+    justify-content: center;
+
+    width: 80px;
+    height: 80px;
+
+    background-color: setColor('cod-grey');
+
+    @include flex();
+    @include prefix(border-radius, setRadius('circle'));
+    @include prefix(box-shadow, inset 0 0 12px 0 setColor('black'));
+  }
+
+  @include element('meta') {
+    margin-left: auto;
+    align-items: flex-end;
+    justify-content: center;
+
+    padding-right: setMultipliedSize(8);
+    border-right: solid 1px #2a2a2a; // todo: use function to set the color
+
+    @include flex();
+  }
+
+  @include element('topText') {
+    color: setColor('silver');
+    font-size: setFontSizeNew('h5','big');
+    font-weight: setFontWeight('book');
+  }
+
+  @include element('mainText') {
+    color: setColor('silver');
+    font-size: setFontSizeNew('h3');
+    font-weight: setFontWeight('book');
+    line-height: 1.5;
+  }
+
+  @include element('footer') {
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: auto;
+
+    font-size: setFontSizeNew('h4');
+    font-weight: setFontWeight('book');
+    color: setColor('white');
+
+    cursor: pointer;
+
+    @include flex($direction: row);
+
+    .icon-chevron-right {
+      padding: setMultipliedSize(2);
+
+      color: setColor('orange');
+      font-size: setFontSizeNew('h5');
+    }
+
+    a {
+      text-decoration: none;
+      color: setColor('white');
+    }
+  }
+
+  @include element('icons') {
+    @include flex($direction: column);
+
+    .icon-chevron-up,
+    .icon-chevron-down {
+      padding: 0 setMultipliedSize(2);
+      color: setColor('orange');
+      font-size: setFontSizeNew('h5');
+
+    }
+  }
+
+  @include element('gradient') {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 60px;
+
+    background-image: radial-gradient(circle at 50% -50%, #8f0505, setColor('cod-grey')); // todo: use function to set the color
+  }
+}

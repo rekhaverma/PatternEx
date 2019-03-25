@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LabelList /> should match with snapshot 1`] = `
+<div
+  className="comboBox__labelList"
+>
+  <OptionLabel
+    className="comboBox__label"
+    hasCancel={true}
+    key="Test"
+    onCancel={[Function]}
+    text="Test"
+  />
+  <OptionLabel
+    className="comboBox__label"
+    hasCancel={true}
+    key="Another Test"
+    onCancel={[Function]}
+    text="Another Test"
+  />
+</div>
+`;

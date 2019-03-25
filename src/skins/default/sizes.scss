@@ -1,0 +1,76 @@
+$headerPadding: 10px;
+$headerHeight: 60px;
+
+$timelineHeight: 58px;
+
+$minCorrelationWidth: 1200px;
+$maxCorrelationWidth: 1280px;
+
+$sidebarWidth: 94px;
+$sidebarItemWidth: 250px;
+
+$toolbarHeight: 50px;
+$toolbarWidthExpanded: 520px;
+
+$base: 5px;
+
+$paddingSize: (
+  '1px': 1px,
+  'tiny': 2px,
+  '4px': 4px,
+  'normal': 10px,
+
+  'normalV2': 15px,
+  'mediumV2': 20px,
+  'largeV2': 38px,
+
+  'small': $base / 2,
+  'base': $base,
+  'regular': $base * 2,
+  'large': $base * 3,
+  'extra-large': $base * 4,
+);
+
+/**
+ * return the multiplied base size
+ */
+@function setMultipliedSize($multiplier: 1, $extra: 0) {
+  @if type_of($multiplier) != number {
+    @error "multiplier `#{$multiplier}` need to be number, instead is `#{$multiplier}`";
+  }
+
+  @if type_of($extra) != number {
+    @error "extra `#{$extra}` need to be number, instead is `#{$extra}`";
+  }
+
+  @if $extra > 4 or $extra < -4 {
+    @warn "extra `#{$extra}` must be between -4 and 4!";
+  }
+
+  @return $base * $multiplier + $extra;
+}
+/**
+ * @deprecated
+ * use setMultipliedSize function instead
+ */
+
+@function setSize($key) {
+  @if not map-has-key($paddingSize, $key) {
+    @warn "Key `#{$key}` not found in $paddingSize map.";
+  }
+  @return map-get($paddingSize, $key);
+}
+
+$radiusSize: (
+  'small': 3px,
+  'normal': 4px,
+  'medium': 6px,
+  'heatMap': 12px,
+  'circle': 50%,
+);
+@function setRadius($key) {
+  @if not map-has-key($radiusSize, $key) {
+    @warn "Key `#{$key}` not found in $radiusSize map.";
+  }
+  @return map-get($radiusSize, $key);
+}

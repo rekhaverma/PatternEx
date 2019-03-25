@@ -1,0 +1,448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReportDetail /> modal:  render:  should match with snapshot 1`] = `
+<ReportDetail
+  availableDates={Array []}
+  fetchColumnFormat={[Function]}
+  fetchReportResults={[Function]}
+  fetchReportResultsCSV={[Function]}
+  fetchReportSummary={[Function]}
+  fetchRules={[Function]}
+  getReportById={[Function]}
+  goBackUrl={[Function]}
+  handleExplodedView={[Function]}
+  isLoading={false}
+  isOldEVPActive={false}
+  listingData={
+    Object {
+      "columns": Array [],
+      "items": Array [],
+    }
+  }
+  location={
+    Object {
+      "query": Object {
+        "endTime": "1487076708",
+        "pipeline": "sip_byday",
+        "reportId": "laksdfjokdsf0832lsdk",
+        "startTime": "1487076708",
+      },
+    }
+  }
+  onDemandPost={[Function]}
+  reportDetail={Object {}}
+  reportResultsCSVUrl=""
+  reportResultsCompleted={false}
+  reportResultsCsvCompleted={false}
+  reportSummaryCompleted={false}
+  resetDownloadCSV={[Function]}
+  router={
+    Object {
+      "push": [Function],
+    }
+  }
+  rules={Array []}
+  totalDataCount={0}
+  updateLocation={[Function]}
+>
+  <IntlProvider
+    locale="en"
+    messages={
+      Object {
+        "autocorrelation.toolbar": "Select a cluster from the list",
+        "autocorrelations.footerText": "Choose Cluster from list to view details",
+        "autocorrelations.toAutocorrelations": "See Autocorrelations",
+        "autocorrelations.toAutocorrelationsCluster": "See Cluster Details",
+        "behaviorSummary.legend.cluster": "Clusters",
+        "behaviorSummary.legend.malicious": "Malicious",
+        "behaviorSummary.legend.suspicious": "Suspicious",
+        "card.autocorrelation.bottom": "Autocorrelation",
+        "card.autocorrelation.main": "Autocorrelation",
+        "card.labels.main": "<span style=\\"color: white\\">{count}</span> Labels",
+        "card.labels.top": "Marked Items",
+        "card.malicious.bottom": "Performance Report",
+        "card.malicious.main": "<span style=\\"color: white\\">{count}</span> Malicious",
+        "card.malicious.top": "Unsolved Alerts",
+        "card.performance.bottom": "Monitoring Layout",
+        "card.precisions.main": "<span style=\\"color: white\\">{count}</span> Precision",
+        "card.precisions.top": "Overall Rating",
+        "card.report.main": "Dashboard",
+        "card.report.noContentTop": "No data for Selected Range",
+        "card.report.top": "Last update {date}",
+        "card.seeDetails": "See details",
+        "card.suspicious.main": "<span style=\\"color: white\\">{count}</span> Suspicious",
+        "card.suspicious.top": "Need your Attention",
+        "cluster.metas.entities": "<span style=\\"color: white\\">{count}</span> Entities",
+        "cluster.metas.mainEntity": "<span style=\\"color: #ff5d3a\\">{name}</span> main entity cluster",
+        "cluster.metas.relations": "<span style=\\"color: white\\">{count}</span> Relations",
+        "dashboard.filters.reset": "Reset Filters",
+        "dashboard.reset": "Reset",
+        "dateRange.from": "From: <span style=\\"color: white; font-weight: 500\\">{value}</span>",
+        "dateRange.row.fromToUntil": "{valueFrom} to {valueUntil}",
+        "dateRange.rowV2.fromToUntil": "<span style=\\"color: #A1A8A9\\">From: <span style=\\"color: white; font-weight: 500\\">{valueFrom}</span> / To: <span style=\\"color: white; font-weight: 500\\">{valueUntil}</span></span>",
+        "dateRange.rowV2.label": "{label}",
+        "dateRange.until": "Until: <span style=\\"color: white; font-weight: 500\\">{value}</span>",
+        "filter.entity": "Filter by Entity",
+        "filter.severity": "Filter by Severity",
+        "footer.email": "support@patternex.com",
+        "footer.info": "support@patternex.com  ::  ver {version}",
+        "global.no": "No",
+        "global.nodata": "There is no data to display",
+        "global.yes": "Yes",
+        "header.refresh": "Auto Refresh",
+        "header.welcome": "Welcome, {user}",
+        "heatmap.cluster.title": "Cluster Threat Tactics",
+        "heatmap.legend.end": "High Risk",
+        "heatmap.legend.start": "Low Risk",
+        "heatmap.subtitle": "No. of Entities",
+        "heatmap.tag.actionsOnObjective": "Actions on Objective",
+        "heatmap.tag.commandAndControl": "Command and Control",
+        "heatmap.tag.delivery": "Delivery",
+        "heatmap.tag.lateralMovement": "Lateral Movement",
+        "heatmap.tag.reconnaissance": "Reconnaissance",
+        "heatmap.title": "Threat Tactics",
+        "logsStats.filtered": "Filtered Logs",
+        "logsStats.total": "Total Logs",
+        "malicious.table.actions": "Actions",
+        "malicious.table.entity_name": "Entity",
+        "malicious.table.hash": "Hash",
+        "malicious.table.score": "Score",
+        "malicious.table.start_time_formatted": "Log Date",
+        "malicious.table.threat": "Threat Tactic",
+        "malicious.toMaliciousListing": "See Malicious Listing",
+        "reports.addNewRule": "Add new rule",
+        "reports.apply": "Apply",
+        "reports.cancel": "Cancel",
+        "reports.close": "Close",
+        "reports.delete": "Delete",
+        "reports.deleteReport.confirmation": "Are you sure you want to delete { reportName } report?",
+        "reports.deleteReport.title": "Delete report - { reportName }",
+        "reports.detail.viewDetail": "View Details",
+        "reports.details": "Details",
+        "reports.download": "Download",
+        "reports.downloadCSV": "Click to download CSV",
+        "reports.edit": "Edit",
+        "reports.noDataFound": "No Data Found",
+        "reports.onDemandHeading": "Run report",
+        "reports.reportDetail.title": "{ reportDetailTitle }",
+        "reports.reportModal.title": "{ modalTitle }",
+        "reports.reportModalButton": "Add new report",
+        "reports.reset": "Reset",
+        "reports.save": "Save",
+        "reports.table.id": "Actions",
+        "reports.table.name": "Name",
+        "reports.table.pipeline": "Module",
+        "reports.table.update_time": "Last Updated",
+        "reports.title": "Custom Reports",
+        "reports.viewDetail.backButtonText": "Back to Custom Reports",
+        "reports.viewDetail.mode": "{mode}",
+        "reports.viewDetail.pipeline": "{pipeline}",
+        "reports.viewDetail.rulesCaption": "Choosen rules",
+        "reports.viewDetail.title": "Report Details",
+        "suspicious.listByMethod": "Suspicious entities by method",
+        "suspicious.listByType": "Suspicious entites by type",
+        "suspicious.setLabel": "Set label",
+        "suspicious.table.actions": "Actions",
+        "suspicious.table.entity_name": "Entity",
+        "suspicious.table.global_rank": "Global Rank",
+        "suspicious.table.id": "Id",
+        "suspicious.table.method_name": "Type",
+        "suspicious.table.method_score": "Score",
+        "suspicious.table.start_time_formatted": "Log Date",
+        "suspicious.toSuspiciousListing": "See Suspicious Listing",
+        "tabs.count.correlations": "( {count} Clusters )",
+        "tabs.count.malicious": "( {count} Entities )",
+        "tabs.count.suspicious": "( {count} Entities )",
+        "tooltip.addLabel": "Add Label",
+        "tooltip.delete": "Delete",
+        "tooltip.details": "Details",
+        "tooltip.disable": "Disable",
+        "tooltip.enable": "Enable",
+        "tooltip.icon-select-box": "Show/Hide Elements",
+        "tooltip.investigate": "Investigate entity",
+        "tooltip.investigateCluster": "Investigate Cluster",
+        "tooltip.openNewTab": "Open in new tab",
+        "tooltip.removeLabel": "Remove Label",
+        "tooltip.seeDetails": "See details",
+      }
+    }
+  >
+    <section
+      className="reportDetail"
+    >
+      <div
+        className="reportDetail__row +center"
+      >
+        <span
+          className="reportDetail__heading"
+        >
+          <FormattedMessage
+            id="reports.reportDetail.title"
+            values={
+              Object {
+                "reportDetailTitle": " ",
+              }
+            }
+          >
+            <span>
+               
+            </span>
+          </FormattedMessage>
+        </span>
+      </div>
+      <div
+        className="reportDetail__row +spaceBetween"
+      >
+        <span
+          className="reportDetail__backButton"
+          onClick={[Function]}
+        >
+          <span
+            className="icon-chevron-left"
+          />
+          <FormattedMessage
+            id="reports.viewDetail.backButtonText"
+            values={Object {}}
+          >
+            <span>
+              Back to Custom Reports
+            </span>
+          </FormattedMessage>
+        </span>
+        <div
+          className="reportDetail__row +center"
+        >
+          <Component
+            activeOption="customRange"
+            allowEnableDatesHours={true}
+            disableDays={true}
+            enableDates={Array []}
+            endDate={"2017-02-14T00:00:00.000Z"}
+            onMonthChange={[Function]}
+            showHoursList={false}
+            startDate={"2017-02-14T00:00:00.000Z"}
+            theme="row"
+            updateDateRange={[Function]}
+          >
+            <div
+              id="mock"
+            >
+              mock
+            </div>
+          </Component>
+          <Button
+            className="button--success +small"
+            onClick={[Function]}
+          >
+            <button
+              className="button--success +small"
+              onClick={[Function]}
+            >
+              <FormattedMessage
+                id="reports.apply"
+                values={Object {}}
+              >
+                <span>
+                  Apply
+                </span>
+              </FormattedMessage>
+            </button>
+          </Button>
+          <Button
+            className="button--dark +small"
+            onClick={[Function]}
+          >
+            <button
+              className="button--dark +small"
+              onClick={[Function]}
+            >
+              <FormattedMessage
+                id="reports.reset"
+                values={Object {}}
+              >
+                <span>
+                  Reset
+                </span>
+              </FormattedMessage>
+            </button>
+          </Button>
+        </div>
+        <div
+          className="reportDetail__row +center "
+        >
+          <div
+            className="reportDetail__downloadLoader"
+          >
+            <LoaderSmall>
+              <div
+                className="loaderSmall"
+              >
+                <svg
+                  className="loaderSmall__circular"
+                  viewBox="25 25 50 50"
+                >
+                  <circle
+                    className="loaderSmall__path"
+                    cx="50"
+                    cy="50"
+                    fill="none"
+                    r="20"
+                    strokeMiterlimit="10"
+                    strokeWidth="3"
+                  />
+                </svg>
+              </div>
+            </LoaderSmall>
+          </div>
+          <Button
+            className="button--dark +small"
+            onClick={[Function]}
+          >
+            <button
+              className="button--dark +small"
+              onClick={[Function]}
+            >
+              <FormattedMessage
+                id="reports.detail.viewDetail"
+                values={Object {}}
+              >
+                <span>
+                  View Details
+                </span>
+              </FormattedMessage>
+            </button>
+          </Button>
+          <span>
+            <Tooltip
+              hideWhenHoveringTooltipContent={false}
+              managerStyle={
+                Object {
+                  "display": "flex",
+                }
+              }
+              position="bottom"
+              style={Object {}}
+              trigger={
+                <span
+                  className="icon-retrain"
+                  onClick={[Function]}
+                />
+              }
+            >
+              <div
+                className="tooltip"
+              >
+                <Manager
+                  style={
+                    Object {
+                      "display": "flex",
+                    }
+                  }
+                  tag="div"
+                >
+                  <div
+                    style={
+                      Object {
+                        "display": "flex",
+                      }
+                    }
+                  >
+                    <Target
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                    >
+                      <div
+                        onMouseEnter={[Function]}
+                        onMouseLeave={[Function]}
+                      >
+                        <span
+                          className="icon-retrain"
+                          onClick={[Function]}
+                        />
+                      </div>
+                    </Target>
+                  </div>
+                </Manager>
+              </div>
+            </Tooltip>
+          </span>
+        </div>
+      </div>
+      <div
+        className="reportDetail__row"
+      >
+        <div
+          className="reportDetail__row reportDetail__subheading"
+        >
+          <b>
+            Number of Entities
+          </b>
+        </div>
+      </div>
+      <div
+        className="reportDetail__row"
+      >
+        <div
+          className="barChart reportDetail__loading"
+        >
+          <LoaderSmall>
+            <div
+              className="loaderSmall"
+            >
+              <svg
+                className="loaderSmall__circular"
+                viewBox="25 25 50 50"
+              >
+                <circle
+                  className="loaderSmall__path"
+                  cx="50"
+                  cy="50"
+                  fill="none"
+                  r="20"
+                  strokeMiterlimit="10"
+                  strokeWidth="3"
+                />
+              </svg>
+            </div>
+          </LoaderSmall>
+        </div>
+      </div>
+      <div
+        className="reportDetail__row reportDetail__subheading"
+      >
+        <b>
+          Details
+        </b>
+      </div>
+      <div
+        className="reportDetail__row"
+      >
+        <div
+          className="detailListing reportDetail__loading"
+        >
+          <LoaderSmall>
+            <div
+              className="loaderSmall"
+            >
+              <svg
+                className="loaderSmall__circular"
+                viewBox="25 25 50 50"
+              >
+                <circle
+                  className="loaderSmall__path"
+                  cx="50"
+                  cy="50"
+                  fill="none"
+                  r="20"
+                  strokeMiterlimit="10"
+                  strokeWidth="3"
+                />
+              </svg>
+            </div>
+          </LoaderSmall>
+        </div>
+      </div>
+    </section>
+  </IntlProvider>
+</ReportDetail>
+`;

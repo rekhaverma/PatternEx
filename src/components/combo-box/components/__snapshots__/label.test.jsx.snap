@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<OptionLabel /> should match with snapshot with "hasCancel" 1`] = `
+<div
+  className="comboBox__label"
+>
+  <span>
+    Untitled label
+  </span>
+  <span
+    className="icon-close"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`<OptionLabel /> should match with snapshot without "hasCancel" 1`] = `
+<div
+  className="comboBox__label"
+>
+  <span>
+    Untitled label
+  </span>
+</div>
+`;

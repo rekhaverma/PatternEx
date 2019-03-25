@@ -1,0 +1,23 @@
+@import 'theme';
+
+$advanced-tag: '.advanced-tag';
+
+#{$advanced-tag} {
+  border: 1px solid setColor('mid-grey');
+  border-radius: 5px;
+  color: setColor('white');
+  padding: 2px 7px;
+  cursor: default;
+
+  span {
+    font-size: setFontSizeNew('h5') !important;
+    padding: 0 !important;
+    margin: 0;
+    line-height: 11px;
+  }
+
+  & &__remove {
+    cursor: pointer;
+    margin: 0 0 0 10px;
+  }
+}

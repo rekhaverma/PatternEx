@@ -1,0 +1,200 @@
+@import 'xbem';
+@import 'theme';
+
+@include block(models) { // styles here
+  padding: setMultipliedSize(2);
+  @include element(modelHeading) {
+    text-align: center;
+      font-weight: setFontWeight('book');
+    font-size: setFontSizeNew('h3', 'big');
+    margin: 0;
+  }
+  @include element('createModal') {
+    .ptrx-modal__content {
+      max-width: 50%;
+      top: 40%;
+    }
+  }
+  @include element(addNewModel) {
+    text-align: right;
+    margin-bottom:setMultipliedSize(3);
+  }
+  .d-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .select-box-width {
+      width : 20%;
+      padding: 0px setMultipliedSize(2);
+    }
+  }
+
+  .buttons-wrapper {
+    margin-left: auto;
+  }
+
+  .dateRange{
+    display: inline-block;
+    margin-right: setMultipliedSize(4);
+    cursor: pointer;
+  }
+
+  .applyButton, .resetButton{
+    padding: setMultipliedSize() setMultipliedSize(4);
+    border: none;
+    color: setColor('white');
+    border-radius: setRadius('normal');
+    margin-right: setMultipliedSize(4);
+    cursor: pointer;
+  }
+
+  .resetButton{
+     background-color: setColor('cod-grey');
+     border: 1px solid setColor('silver');
+  }
+
+  input{
+    background: none;
+    border: none;
+    border-bottom: 1px solid setColor('silver');
+    outline: 0;
+    color: white;
+  }
+
+  .react-bs-table-container .react-bs-table-search-form{
+    text-align: right;
+    input{
+      background: none;
+      border: none;
+      border-bottom: 1px solid setColor('mid-grey');
+      outline: 0;
+      color: white;
+    }
+  }
+
+  .models{
+    padding: setMultipliedSize(3);
+  }
+
+  .tabsV2__element{
+    font-size:setFontSizeNew('h4')
+  }
+  .modelTable {
+    position:relative;
+    margin-top:setMultipliedSize(2);
+
+    td:focus {
+      outline: 0;
+    }
+
+    .react-bs-table-search-form {
+      width: 35%;
+      position:absolute;
+      top:-45px;
+
+      input{
+        font-size: setFontSizeNew('h4');
+        padding:setMultipliedSize() 0;
+        width: calc(100% - 16px);
+      }
+      &:after{
+        content: "\e908";
+        font-family: 'patternex' !important; // todo: check if we can remove this line
+        position: relative;
+        right: 16px;
+        font-size: setFontSizeNew('h3');
+        color: setColor('orange');
+
+        @include setFontFamily('patternex');
+      }
+    }
+    .deployedRow {
+      color: setColor('white');
+      td {
+        font-weight: setFontWeight('strong');
+      }
+    }
+  }
+  .table{
+    &.table-striped{
+      tr{
+        &:nth-child(2n){
+        background:setColor('cod-grey');
+        }
+        cursor: text;
+      }
+    }
+
+    td{
+      padding:setMultipliedSize(2);
+    }
+  }
+  .react-bs-container-header{
+    border:none;
+  }
+  .trainedNotDeployed, .blue-text {
+    color: setColor('blue');
+  }
+  .deployedPrimary, .green-text {
+    color: setColor('green-cyan');
+  }
+  .deployedSecondary, .yellow-text {
+    color: setColor('vivid-orange');
+  }
+  .inTraining {
+    color: setColor('white');
+  }
+  .trainingFailed {
+    color: setColor('white');
+  }
+
+  .red-text{
+    color:setColor('red');
+  }
+  .grey-text{
+    color:setColor('dark-grey');
+  }
+  .dateRange__range{
+    background:setColor('cod-grey');
+    z-index: 999;
+  }
+
+  .model-action{
+    display: flex;
+    align-items: center;
+
+ 	 [class^="icon-"], [class*=" icon-"]{
+ 		  font-size:setFontSizeNew('h3');
+ 		  border: 1px solid;
+      border-radius: setRadius('circle');
+      margin-right: setMultipliedSize(2);
+ 	 }
+ 	 .disabledDeploy {
+ 		 display: none;
+ 	 }
+ 	 span {
+ 		 cursor: pointer;
+ 	 }
+	
+	.icon-retrain {
+		color: setColor('bright-green');
+		border: unset !important;
+		font-size: setFontSizeNew('h2') !important;
+	}
+	}
+
+  .model-success-message {
+    color: setColor('green-cyan');
+    font-size: setFontSizeNew('h4');
+    font-weight: setFontWeight('bold');
+  }
+  .model-fail-message {
+    color: setColor('red');
+    font-size: setFontSizeNew('h4');
+    font-weight: setFontWeight('bold');
+  }
+  .icon-speaker.faded,
+  .icon-mute.faded {
+    opacity: 0.5;
+  }
+}

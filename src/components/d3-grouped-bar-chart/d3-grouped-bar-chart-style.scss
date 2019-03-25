@@ -1,0 +1,21 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('grouped_bar_chart_container') {
+	overflow-x: auto
+}
+
+@include block('legend') {
+	font-family: sans-serif; // todo: define font
+	font-size: setMultipliedSize(2);
+}
+
+@include block('grid') {
+	path {
+		stroke: setColor('red');
+	}
+
+	text {
+		fill: transparent;
+	}
+}

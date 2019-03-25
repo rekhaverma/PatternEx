@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RelatedUsers /> render:  should match with snapshot 1`] = `
+<Section
+  className=""
+  dropDownOptions={Array []}
+  dropDownState={false}
+  dropdown={false}
+  expandable={false}
+  expandableView={null}
+  filterFeatureList={[Function]}
+  isDraggable={true}
+  loaded={true}
+  modalStyle={Object {}}
+  onDropDownClick={[Function]}
+  onDropDownSelection={[Function]}
+  onModalOpen={[Function]}
+  selectedDropDown={Array []}
+  size="small"
+  title="Related Users"
+>
+  <NoData
+    className="nodata"
+    intlDefault="There is no data to display"
+    intlId="global.nodata"
+    intlValues={Object {}}
+    message=""
+    withIcon={true}
+  />
+</Section>
+`;

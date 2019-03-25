@@ -1,0 +1,23 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('noData') {
+  color: setColor('white');
+  text-align: center;
+}
+
+@include block('no-data') {
+  @include flex($direction: column);
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  h1 {
+    font-size: setFontSizeNew('h4');
+    font-weight: setFontWeight('normal');
+  }
+ 
+  @include element('icon') {
+    font-size: setFontSizeNew('h3', 'big');
+  }
+}

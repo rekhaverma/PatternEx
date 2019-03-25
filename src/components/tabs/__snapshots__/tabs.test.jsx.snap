@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tab /> should render correctly 1`] = `
+<div
+  className="tab__test "
+  style={Object {}}
+>
+  <TabCountElement
+    active={false}
+    className="tab__test__element"
+    count="10"
+    id="test"
+    key="test"
+    onClick={[Function]}
+    title="Test"
+  />
+  <TabCountElement
+    active={true}
+    className="tab__test__element"
+    count="0"
+    id="test_tab"
+    key="test_tab"
+    onClick={[Function]}
+    title="Tab"
+  />
+</div>
+`;

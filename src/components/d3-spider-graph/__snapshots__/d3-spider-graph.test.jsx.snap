@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<D3SpiderGraph /> renders correctly 1`] = `
+<D3SpiderGraph
+  clientHeight={0}
+  clientWidth={0}
+  config={
+    Object {
+      "svgHeight": 600,
+    }
+  }
+  data={
+    Object {
+      "links": Array [],
+      "nodes": Array [],
+    }
+  }
+  selectedEntity=""
+  setSelectedEntity={[Function]}
+>
+  <svg
+    height={600}
+    width={0}
+  >
+    <g
+      className="diagram__group"
+    >
+      <g
+        className="links"
+      />
+      <g
+        className="nodes"
+      />
+      <g
+        className="icons"
+      />
+    </g>
+  </svg>
+</D3SpiderGraph>
+`;

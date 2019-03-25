@@ -1,0 +1,152 @@
+$font-families: (
+  'roboto': 'Roboto',
+  'monospace': monospace,
+  'firaSans': 'Fira Sans',
+  'lato': 'Lato',
+  'patternex': 'patternex',
+);
+
+@function setFontFamily($key) {
+  @if not map-has-key($font-families, $key) {
+    @warn "Key `#{$key}` not found in $font-families map.";
+  }
+
+  @if $key = 'roboto' or $key = 'lato' {
+    @return map-get($font-families, $key), sans-serif;
+  }
+
+  @return map-get($font-families, $key);
+}
+
+@mixin setFontFamily($key) {
+  font-family: setFontFamily($key);
+}
+
+$font-weights: (
+    'lighter': 100,
+    'light': 200,
+    'book': 300,
+    'normal': 400,
+    'regular': 500,
+    'medium':600,
+    'bold': 700,
+    'bolder': 800,
+    'strong': 900,
+);
+@function setFontWeight($key) {
+  @if not map-has-key($font-weights, $key) {
+    @warn "Key `#{$key}` not found in $font-weights map.";
+  }
+  @return map-get($font-weights, $key);
+}
+
+$font-sizes-new: (
+    'h1': (
+        'big': 3.4rem,
+        'base': 3rem,
+    ),
+    'h2': (
+        'big': 2.4rem,
+        'base': 2.2rem,
+    ),
+    'h3': (
+        'big': 2rem,
+        'base': 1.8rem,
+    ),
+    'h4': (
+        'big': 1.6rem,
+        'base': 1.4rem,
+    ),
+    'h5': (
+        'big': 1.2rem,
+        'base': 1.0rem,
+    ),
+    'h6': (
+        'big': 0.9rem,
+        'base': 0.7rem,
+    )
+);
+
+
+@function setFontSizeNew($type, $variation: 'base') { // todo: once merged with master, please rename this
+  @if not map-has-key($font-sizes-new, $type) {
+    @warn "Type `#{$type}` not found in $font-sizes-new map.";
+  }
+
+  @if not map_has_key(map_get($font-sizes-new, $type), $variation) {
+    @warn "Variation `#{$variation}` not found in $font-sizes-new map, Type `#{$type}`.";
+  }
+  @return map_get(map-get($font-sizes-new, $type), $variation);
+}
+
+$font-sizes: (
+    'h1': 2rem,
+    'h2': 1.6rem,
+    'h3': 1.4rem,
+    'h4': 1.2rem,
+    'h5': 1rem,
+    'h6': 0.9rem,
+    'small': 0.7rem,
+    'h1V2': 3.4rem,
+    'h2V2': 3.0rem,
+    'h3V2': 2.4rem,
+    'h4V2': 2.2rem,
+    'h5V2': 1.8rem,
+);
+@function setFontSize($type) {
+  @if not map-has-key($font-sizes, $type) {
+    @warn "Type `#{$type}` not found in $font-sizes map.";
+  }
+
+  @return map-get($font-sizes, $type);
+}
+
+@mixin typography($color: null, $size: "h4", $variation: "base", $weight: "normal") {
+  @if ($color) {
+    color: $color;
+  }
+  font-size: setFontSizeNew($size);
+  font-weight: setFontWeight($weight);
+}
+
+@mixin truncate($size: 120px) {
+  width: $size;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin H1($col) {
+  @include typography($col, "h3", "big");
+  line-height: 1.13;
+  letter-spacing: -0.4px;
+}
+
+@mixin H2($col) {
+  @include typography($col, "h4", "big");
+  line-height: 1.5;
+  letter-spacing: -0.4px;
+}
+
+@mixin H3($col) {
+  @include typography($col, "h4");
+  line-height: 1.8;
+  letter-spacing: -0.2px;
+}
+
+@mixin H4($col) {
+  @include typography($col, "h5", "big");
+  line-height: 2;
+  letter-spacing: -0.3px;
+}
+
+@mixin H5($col) {
+  @include typography($col, "h5");
+  line-height: 1.75;
+  letter-spacing: -0.2px;
+}
+
+@mixin small($col) {
+  @include typography($col, "h6", "base", "regular");
+  letter-spacing: -0.3px;
+}

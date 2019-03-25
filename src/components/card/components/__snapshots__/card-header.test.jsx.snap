@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardHeader /> should match with snapshot 1`] = `
+<div
+  className="card__header"
+>
+  <span
+    className="card__header__title"
+  >
+    Card Header Test
+  </span>
+  <CardCounter
+    value={1}
+  />
+  <div
+    className="card__header__more"
+    onClick={[Function]}
+  >
+    <span
+      className="icon-chevron-down"
+    />
+    <span
+      className="card__header__more__text"
+    >
+      More
+    </span>
+  </div>
+  <span
+    className="icon-question"
+    onClick={[Function]}
+  />
+</div>
+`;

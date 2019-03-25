@@ -1,0 +1,100 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('d3-timeline-graph') {
+  position: relative;
+
+  @include element('message') {
+    font-weight: setFontWeight('bold');
+    font-size: setFontSize('h4');
+    fill: setColor('light-grey');
+  }
+
+  @include element('xAxis') {
+    path {
+      stroke: transparent;
+    }
+    text {
+      fill: setColor('white');
+      font-weight: setFontWeight('bolder');
+    }
+    .tick {
+        line {
+            stroke: transparent;
+        }
+    }
+  }
+
+  @include element('yAxis') {
+    path {
+      stroke-dasharray: 3, 3;
+      stroke: setColor('mid-grey');
+    }
+
+    text {
+      font-weight: setFontWeight('bolder');
+      fill: setColor('light-grey');
+    }
+
+    .tick {
+      line {
+        stroke: transparent;
+      }
+    }
+
+    &.entities {
+      text {
+        font-weight: setFontWeight('bolder');
+        fill: setColor('purple');
+      }
+    }
+
+    &.storage {
+      text {
+        font-weight: setFontWeight('bolder');
+        fill: setColor('viking');
+      }
+    }
+  }
+
+  @include element('lines') {
+    .entities-line {
+      fill: transparent;
+      stroke: setColor('purple');
+    }
+
+    .storage-line {
+      fill: transparent;
+      stroke: setColor('viking');
+    }
+  }
+
+  @include element('dashedLineGroup') {
+    line {
+      stroke-dasharray: 3, 3;
+      stroke: setColor('mid-grey');
+    }
+  }
+}
+
+@include block('timeline-legend') {
+  @include flex($direction: row);
+  padding: setSize('mediumV2');
+
+  @include element('item') {
+    cursor: pointer;
+    padding-left: setSize('mediumV2');
+    padding-right: setSize('mediumV2');
+
+    @include flex($direction: row);
+    align-items: center;
+  }
+
+  @include element('item__bullet') {
+    width: 14px;
+    height: 14px;
+    margin-right: setMultipliedSize(2);
+
+    @include radius(50%, 50%, 50%, 50%);
+  }
+}

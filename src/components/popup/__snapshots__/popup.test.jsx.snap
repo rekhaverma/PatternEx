@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Popup /> should match with snapshot with another version and context "LABELSPOPUP" 1`] = `
+<DynamicPopup
+  className="popupV2"
+  onClick={[Function]}
+  text="No Data Found"
+/>
+`;
+
+exports[`<Popup /> should match with snapshot with another version and context "NOCSVDATA" 1`] = `
+<Connect(NoCSVData)
+  className="popupV2"
+  text="No data found."
+/>
+`;
+
+exports[`<Popup /> should match with snapshot with another version and context "SETLABELFAILED" 1`] = `
+<Connect(NoCSVData)
+  className="popupV2"
+  text={
+    <span
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      <p>
+        Set label failed.
+      </p>
+      <p>
+        Please contact the admin.
+      </p>
+    </span>
+  }
+/>
+`;
+
+exports[`<Popup /> should match with snapshot with another version and context "SETLABELSUCCESS" 1`] = `
+<Connect(NoCSVData)
+  className="popupV2"
+  text={
+    <span
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      <p>
+        Set label succeded.
+      </p>
+    </span>
+  }
+/>
+`;
+
+exports[`<Popup /> should match with snapshot with version 1 1`] = `
+<div
+  className="popup"
+>
+  <div
+    className="popup__wrapper"
+    style={Object {}}
+  >
+    <div
+      className="popup__header"
+    >
+      <span
+        className="icon-close"
+        onClick={[Function]}
+      />
+    </div>
+    <div
+      className="popup__content"
+    >
+      <div
+        className="testing-popup"
+      />
+    </div>
+  </div>
+  <div
+    className="popup__overlay"
+    onClick={[Function]}
+  />
+</div>
+`;

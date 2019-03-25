@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ListItem /> should match with snapshot - DOMAIN_INFO_RESOLUTIONS 1`] = `
+<div
+  className=""
+>
+  <div
+    className="__key"
+  >
+    <span
+      className="__key__label"
+    >
+      <span>
+        demo
+      </span>
+    </span>
+  </div>
+  <span
+    className="__value"
+  >
+    1
+  </span>
+</div>
+`;
+
+exports[`<ListItem /> should match with snapshot - LABEL_HISTORY 1`] = `
+<div
+  className=""
+>
+  <div
+    className="__key"
+  >
+    <span
+      className="icon-Trash-icon +disabled"
+      key="icon-undefined"
+    />
+    <span
+      className="__key__label"
+    >
+      <span>
+        demo
+      </span>
+      <span>
+        :
+      </span>
+    </span>
+  </div>
+  <span
+    className="__value"
+  >
+    1
+  </span>
+</div>
+`;
+
+exports[`<ListItem /> should match with snapshot - VALUES_PROP 1`] = `
+<div
+  className=""
+>
+  demo
+</div>
+`;
+
+exports[`<ListItem /> should match with snapshot default 1`] = `
+<div
+  className=""
+>
+  <div
+    className="__key"
+  >
+    <span
+      className="__key__label"
+    >
+      <span>
+        demo
+      </span>
+      <span>
+        :
+      </span>
+    </span>
+  </div>
+  <span
+    className="__value"
+  >
+    1
+  </span>
+</div>
+`;

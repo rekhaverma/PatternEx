@@ -1,0 +1,104 @@
+@import 'xbem';
+@import 'theme';
+
+%labelActive {
+  top: 2px !important;
+  font-size: setFontSizeNew('h6', 'big') !important;
+}
+
+@include block('mat-field') {
+  position: relative;
+  padding: 12px 0 17px;
+    
+  @include prefix(transition, .3s);
+
+  @include modifier('has-value') {
+    label {
+      @extend %labelActive;
+    }
+  }
+
+  @include modifier('error') {
+    input {
+      border-bottom-color: setColor('red');
+    }
+    
+    label {
+      color: setColor('red');
+    }
+
+    .mat-field__error-message {
+      max-height: 13px;
+    }
+  }
+
+  @include element('error-message') {
+    font-size: setFontSizeNew('h5','big');
+    overflow: hidden;
+    max-height: 0;
+    position: absolute;
+    top: 37px;
+    left: 0;
+    color: setColor('red');
+    
+    @include prefix(transition, .3s);
+  }
+
+  @include element('action') {
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 20px;
+    cursor: pointer;
+    min-width: 20px;
+    min-height: 20px;
+    display: flex;
+    align-items: center;
+
+    svg {
+      path {
+        fill: setColor('white');
+      }
+    }
+
+    @include modifier('active') {
+      svg {
+        circle {
+          fill: setColor('orange');
+        }
+      }
+    }
+  }
+
+  label {
+    position: absolute;
+    top: 16px;
+    left: 0;
+    font-size: setFontSizeNew('h5','big');
+    z-index: 2;
+    pointer-events: none;
+    
+    @include prefix(transition, .3s);
+  }
+
+  input {
+    background: transparent;
+    border: 0;
+    border-bottom: 2px solid setColor('login-border');
+    color: setColor('white');
+    font-size: setFontSizeNew('h5', 'big');
+    font-weight: bold;
+    outline: 0;
+    width: 100%;
+    height: 22px;
+
+    &:-webkit-autofill {
+      -webkit-box-shadow: 0 0 0 30px setColor('black') inset;
+      -webkit-text-fill-color: setColor('white');
+    }
+  }
+
+  input:focus + label {
+    @extend %labelActive;
+  }
+}

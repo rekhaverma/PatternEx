@@ -1,0 +1,297 @@
+@import 'xbem';
+@import 'theme';
+
+$backgroundOpacity: 0.4;
+$shadowOpacity: 0.5;
+$sectionHeight: 250px;
+$scrollbar-height: 10px;
+
+
+@include block('section') {
+  position: relative;
+  margin: setMultipliedSize(2);
+  padding: setMultipliedSize(3) setMultipliedSize(4);
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  height: 310px;
+
+  background: linear-gradient(109deg, setColor('cod-grey',$backgroundOpacity), setColor('black', $backgroundOpacity));
+  box-shadow: 5px 4px 9px 0 setColor('black', 0.5);
+
+  .icon-drag {
+    visibility: hidden;
+    cursor: pointer;
+    font-size: setFontSize('h2');
+  }
+
+  &:hover .icon-drag {
+    visibility: visible;
+  }
+
+  @include state('nxDomain'){
+    .section__children > div{
+      display:flex;
+      justify-content: space-evenly;
+    }
+
+    .\+rows-highlight.card .card__item{
+      padding: 0;
+    }
+
+    .section__content {
+      overflow: initial;
+      overflow-y:initial;
+    }
+
+    .details-card{
+      overflow: hidden;
+      overflow-y: auto;
+
+      flex-grow: 1;
+
+      &::-webkit-scrollbar {
+        width: 7px;
+        height: $scrollbar-height;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: setColor('dark-grey');
+        border-radius: setRadius('medium');
+        height: 38px;
+      }
+    }
+
+    .card__item__key{
+      width: 100%;
+    }
+
+    .card__item__value{
+      width:0;
+    }
+  }
+
+  @include element('header') {
+    @include flex($direction: row);
+    justify-content: space-between;
+    .tooltip {
+    font-size: setFontSizeNew('h4','base');
+    }
+  }
+
+  @include element('expand') {
+    cursor: pointer;
+    color: setColor('orange');
+    font-size: setFontSizeNew('h4', 'big');
+  }
+
+  @include element('dropdown') {
+    cursor: pointer;
+    color: setColor('orange');
+    font-size: setFontSizeNew('h4', 'big');
+
+    &.icon-gear {
+      &.active:before {
+        color: setColor('white');
+      }
+    }
+  }
+
+  // title style
+  @include element('title'){
+    font-size: setFontSizeNew('h4');
+    font-weight: setFontWeight('regular');
+    color: setColor('white');
+    margin-bottom: setMultipliedSize(2);
+    
+    .icon-information {
+      font-size: setFontSizeNew('h3','base');
+      vertical-align: middle;
+      margin-left: setSize('base');
+      position: relative;
+      cursor: pointer;
+      .feature-plot-tooltip {
+        visibility: hidden;
+        width: setMultipliedSize(50);
+        bottom: 100%;
+        left: 50%; 
+        margin-left: setMultipliedSize(-24);
+        background-color: setColor('black');
+        color: setColor('white');
+        padding: setSize('base');
+        border-radius: setMultipliedSize(1, 1);
+        position: absolute;
+        z-index: 1;
+        font-size: setFontSizeNew('h4', 'base');
+      }
+      .feature-plot-tooltip::after {
+        content: " ";
+        position: absolute;
+        top: 100%; /* At the bottom of the tooltip */
+        left: 50%;
+        margin-left: setMultipliedSize(-1);
+        border-width: setSize('base');
+        border-style: solid;
+        border-color: setColor('black') transparent transparent transparent;
+      }
+    }
+    .icon-information:hover {
+      .feature-plot-tooltip {
+        visibility: visible;
+      }
+    }
+  }
+
+  // content style
+  @include element('content'){
+    height: $sectionHeight;
+    margin-top: setMultipliedSize(4);
+
+    overflow: hidden;
+    overflow-y: auto;
+
+    color: setColor('login-footer');
+
+    &::-webkit-scrollbar {
+      width: 7px;
+      height: $scrollbar-height;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: setColor('dark-grey');
+      border-radius: setRadius('medium');
+      height: 38px;
+    }
+  }
+
+  // children style
+
+  @include element('children') {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include block('card') {
+      @include element('item') {
+
+      }
+    }
+  }
+
+  @include element('dropdownmenu') {
+    border: 1px solid setColor('white');
+    position: absolute;
+    z-index: 999;
+    width: 95%;
+    top: setMultipliedSize(7);
+    border-radius: setRadius('normal');
+    background: setColor('cod-grey');
+    padding: setMultipliedSize(2);
+    .checkbox {
+      .check-tick {
+        .check-label {
+          font-size: setFontSizeNew('h4', 'big');
+        }
+      }
+    }
+    .searchbox {
+      background: grey;
+      height: setMultipliedSize(6);
+      margin-bottom: setMultipliedSize(2); 
+      display: flex; 
+      .icon-search {
+        display: inline-block;
+        padding: setMultipliedSize(1, 2) setMultipliedSize(2);
+        font-size: setFontSizeNew('h4', 'big');
+        color: setColor('white');
+      }
+      input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: setColor('white');
+        font-size: setFontSizeNew('h4', 'big');
+        width: 100%;
+        &::placeholder {
+          color: setColor('light-grey');
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  // states
+
+  @include state('no-background') {
+    background: none;
+    box-shadow: none;
+  }
+
+  @include state('no-height') {
+    height: auto;
+
+    @include element('content') {
+      height: auto;
+    }
+  }
+
+  @include state('analytics-tab'){
+    padding-top:0;
+    max-width: 100%;
+
+    .section__content{
+      margin: 0;
+    }
+
+    .no-data{
+      padding-top:setMultipliedSize(3);
+    }
+
+  }
+
+  @include state('half-height') {
+    height: auto;
+    @include element('content') {
+      height: $sectionHeight / 2;
+    }
+  }
+
+  @include state('full-height') {
+    @include element('content') {
+      height: 100%;
+    }
+  }
+
+  @include state('no-margin') {
+    padding: 0;
+    @include element('content') {
+      margin: 0;
+    }
+
+    .icon-expand-square {
+      padding-top: setMultipliedSize(2);
+      padding-right: setMultipliedSize(6);
+    }
+    .icon-gear {
+      padding-top: setMultipliedSize(2);
+      padding-right: setMultipliedSize(6);
+    }
+  }
+
+  @include state('no-overflow'){
+    overflow:visible;
+  }
+
+  @include state('overflow-visible') {
+    @include element('content') {
+      overflow: visible;
+      overflow-y: inherit;
+      height:100%;
+    }
+  }
+
+  @include state('analitycs-section'){
+    padding-left:0;
+    padding-right:0;
+  }
+}

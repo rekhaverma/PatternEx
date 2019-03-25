@@ -1,0 +1,125 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('tabs') {
+  @include flex($direction: row);
+  align-items: center;
+
+  @include element('element') {
+    padding: 5px;
+    border-radius: 3px;
+
+    font-size: setFontSizeNew('h4');
+    cursor: pointer;
+
+    @include state('active') {
+      color: setColor('white');
+      background: #2E3742; // todo: use function to set the color
+    }
+  }
+}
+
+@include block('oldTabs') {
+  @include flex($direction: row);
+  @include prefix(user-select, none);
+  align-items: center;
+
+  @include element('element') {
+    span {
+      padding: 5px;
+      border-radius: 3px;
+
+      font-size: setFontSizeNew('h4');
+      cursor: pointer;
+    }
+
+    & + & {
+      &:before {
+        content: "";
+        border-left: 1px solid setColor('white', 0.6);
+        margin: 0 5px;
+      }
+    }
+
+    @include state('active') {
+      span {
+        color: setColor('white');
+        background: #2E3742; // todo: use function to set the color
+      }
+    }
+  }
+}
+
+@include block('tabsV2') {
+  align-items: center;
+  color: setColor('silver');
+  font-size: setFontSizeNew('h3', 'big');
+  font-weight: setFontWeight('book');
+
+  @include flex($direction: row);
+  @include prefix(user-select, none);
+
+  @include element('element') {
+    padding: setMultipliedSize(3);
+    border-bottom: solid 1px setColor('dark-grey');
+
+    cursor: pointer;
+    opacity: 0.7;
+
+    @include prefix(transition, "color 450ms ease, border-color 450ms ease");
+
+    @include state('active') {
+      border-bottom: solid 3px setColor('orange');
+      opacity: 1;
+
+      color: setColor('white');
+    }
+
+    @include state('fullWidth') {
+      width: 100%;
+      text-align: center;
+    };
+
+    @include modifier('count') {
+      border: 0;
+      text-align: center;
+
+      @include flex();
+
+      @include state('active') {
+        border: 0;
+      }
+    }
+
+
+    @include element('delimiter') {
+      display: block;
+      height: 1px;
+      margin: setMultipliedSize() setMultipliedSize(-3) setMultipliedSize(2);
+
+      background-color: setColor('dark-grey');
+      @include prefix(transition, background-color 450ms linear);
+
+      @include state('active') {
+        height: 3px;
+        background-color: setColor('orange');
+      }
+    }
+
+    @include element('counter') {
+      font-size: setFontSizeNew('h5','big');
+    }
+  }
+
+  @include modifier('slim') {
+    padding: 5px;
+    font-size: setFontSizeNew('h4');
+  }
+
+  @include state('absoluteCenter') {
+    position: absolute;
+    left: 50%;
+
+    @include prefix(transform, translateX(-50%));
+  }
+}

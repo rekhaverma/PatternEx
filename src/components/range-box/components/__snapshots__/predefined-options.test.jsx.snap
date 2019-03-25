@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PredefinedOptions /> should match with snapshot 1`] = `
+<ul
+  className="test-class"
+>
+  <li
+    className="test-class__element"
+    key="1"
+  >
+    <span
+      onClick={[Function]}
+    >
+      test-option
+    </span>
+  </li>
+  <div>
+    <Button
+      className="button--success +small"
+      onClick={[Function]}
+    >
+      <span>
+        Apply
+      </span>
+    </Button>
+    <Button
+      className="button--dark +small"
+      onClick={[Function]}
+      style={
+        Object {
+          "marginLeft": 15,
+        }
+      }
+    >
+      <span>
+        Cancel
+      </span>
+    </Button>
+  </div>
+</ul>
+`;

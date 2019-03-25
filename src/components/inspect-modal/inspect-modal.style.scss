@@ -1,0 +1,31 @@
+@import 'xbem';
+@import 'theme';
+
+@include block('inspect-modal') {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 450px;
+  padding: setMultipliedSize(2);
+  border: solid 1px setColor('mid-grey');
+  background-color: setColor('black');
+  transform: translate(-95%, -50%);
+  z-index: 100;
+
+  h3 {
+    margin: 0;
+
+    @include H4(setColor('yellow'));
+    font-weight: setFontWeight('bold');
+  }
+
+  p {
+    margin: 0;
+
+    @include H4(setColor('mid-grey'));
+  }
+
+  @include state('malicious') {
+    color: setColor('red');
+  }
+}

@@ -1,0 +1,38 @@
+@import 'xbem';
+@import 'theme';
+
+@mixin iconStyle($color) {
+  margin-right: setMultipliedSize();
+  color: setColor($color);
+  font-size: setFontSizeNew('h5');
+}
+
+@include block('clusterTable') {
+  @include element('row') {
+    color: setColor('white');
+    font-size:  setFontSizeNew('h5','big');
+    letter-spacing: -0.4px;
+
+    @include prefix(transition, background-color 450ms ease);
+
+    &:hover {
+      background-color: setColor('default-dark');
+    }
+  }
+
+  @include element('count') {
+    margin: setMultipliedSize();
+
+    .icon-malicious {
+      @include iconStyle('red');
+    }
+
+    .icon-suspicious {
+      @include iconStyle('yellow');
+    }
+
+    .icon-unknown {
+      @include iconStyle('silver');
+    }
+  }
+}
